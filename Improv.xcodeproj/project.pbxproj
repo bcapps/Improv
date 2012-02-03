@@ -13,8 +13,7 @@
 		F286101E14DB6B410014B045 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F286101C14DB6B410014B045 /* InfoPlist.strings */; };
 		F286102014DB6B410014B045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F286101F14DB6B410014B045 /* main.m */; };
 		F286102414DB6B410014B045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F286102314DB6B410014B045 /* AppDelegate.m */; };
-		F286102714DB6B410014B045 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F286102614DB6B410014B045 /* ViewController.m */; };
-		F286102A14DB6B410014B045 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F286102814DB6B410014B045 /* ViewController.xib */; };
+		F286102714DB6B410014B045 /* GamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F286102614DB6B410014B045 /* GamesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +27,8 @@
 		F286102114DB6B410014B045 /* Improv-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Improv-Prefix.pch"; sourceTree = "<group>"; };
 		F286102214DB6B410014B045 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F286102314DB6B410014B045 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F286102514DB6B410014B045 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F286102614DB6B410014B045 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F286102914DB6B410014B045 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		F286102514DB6B410014B045 /* GamesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamesTableViewController.h; sourceTree = "<group>"; };
+		F286102614DB6B410014B045 /* GamesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +77,8 @@
 			children = (
 				F286102214DB6B410014B045 /* AppDelegate.h */,
 				F286102314DB6B410014B045 /* AppDelegate.m */,
-				F286102514DB6B410014B045 /* ViewController.h */,
-				F286102614DB6B410014B045 /* ViewController.m */,
-				F286102814DB6B410014B045 /* ViewController.xib */,
+				F286102514DB6B410014B045 /* GamesTableViewController.h */,
+				F286102614DB6B410014B045 /* GamesTableViewController.m */,
 				F286101A14DB6B410014B045 /* Supporting Files */,
 			);
 			path = Improv;
@@ -125,6 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Lickability;
 			};
 			buildConfigurationList = F286100914DB6B410014B045 /* Build configuration list for PBXProject "Improv" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -149,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F286101E14DB6B410014B045 /* InfoPlist.strings in Resources */,
-				F286102A14DB6B410014B045 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +159,7 @@
 			files = (
 				F286102014DB6B410014B045 /* main.m in Sources */,
 				F286102414DB6B410014B045 /* AppDelegate.m in Sources */,
-				F286102714DB6B410014B045 /* ViewController.m in Sources */,
+				F286102714DB6B410014B045 /* GamesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,14 +172,6 @@
 				F286101D14DB6B410014B045 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F286102814DB6B410014B045 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F286102914DB6B410014B045 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -274,6 +263,7 @@
 				F286102F14DB6B410014B045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

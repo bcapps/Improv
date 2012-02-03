@@ -3,17 +3,17 @@
 //  Improv
 //
 //  Created by Andrew Harrison on 2/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lickability. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class GamesTableViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UINavigationController <UIApplicationDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) GamesTableViewController *viewController;
 
 @end

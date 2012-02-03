@@ -1,14 +1,14 @@
 //
-//  ViewController.m
+//  GamesTableViewController.m
 //  Improv
 //
 //  Created by Andrew Harrison on 2/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Lickability. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GamesTableViewController.h"
 
-@implementation ViewController
+@implementation GamesTableViewController
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,6 +21,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
+
+    self.view = tableView;
+    UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:nil];
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    self.toolbarItems = [NSArray arrayWithObjects:random,space,add, nil];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
