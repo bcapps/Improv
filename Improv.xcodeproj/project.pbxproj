@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F280FE4514E89D6E00C7C7A0 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4314E89D6E00C7C7A0 /* lamp.png */; };
+		F280FE4614E89D6E00C7C7A0 /* lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */; };
 		F286101414DB6B410014B045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F286101314DB6B410014B045 /* UIKit.framework */; };
 		F286101614DB6B410014B045 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F286101514DB6B410014B045 /* Foundation.framework */; };
 		F286101814DB6B410014B045 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F286101714DB6B410014B045 /* CoreGraphics.framework */; };
@@ -14,9 +16,18 @@
 		F286102014DB6B410014B045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F286101F14DB6B410014B045 /* main.m */; };
 		F286102414DB6B410014B045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F286102314DB6B410014B045 /* AppDelegate.m */; };
 		F286102714DB6B410014B045 /* GamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F286102614DB6B410014B045 /* GamesTableViewController.m */; };
+		F29B4F0B14E88C7700F57207 /* dice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F0714E88C7700F57207 /* dice@2x.png */; };
+		F29B4F0C14E88C7700F57207 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F0814E88C7700F57207 /* dice.png */; };
+		F29B4F0D14E88C7700F57207 /* sliders@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F0914E88C7700F57207 /* sliders@2x.png */; };
+		F29B4F0E14E88C7700F57207 /* sliders.png in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F0A14E88C7700F57207 /* sliders.png */; };
+		F29B4F1114E88D9900F57207 /* equalizer.png in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F0F14E88D9800F57207 /* equalizer.png */; };
+		F29B4F1214E88D9900F57207 /* equalizer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F1014E88D9800F57207 /* equalizer@2x.png */; };
+		F29B4F1414E8913B00F57207 /* ImprovGames.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29B4F1314E8913B00F57207 /* ImprovGames.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F280FE4314E89D6E00C7C7A0 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = "<group>"; };
+		F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp@2x.png"; sourceTree = "<group>"; };
 		F286100F14DB6B410014B045 /* Improv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Improv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F286101314DB6B410014B045 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F286101514DB6B410014B045 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -29,6 +40,13 @@
 		F286102314DB6B410014B045 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F286102514DB6B410014B045 /* GamesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamesTableViewController.h; sourceTree = "<group>"; };
 		F286102614DB6B410014B045 /* GamesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamesTableViewController.m; sourceTree = "<group>"; };
+		F29B4F0714E88C7700F57207 /* dice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dice@2x.png"; sourceTree = "<group>"; };
+		F29B4F0814E88C7700F57207 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
+		F29B4F0914E88C7700F57207 /* sliders@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sliders@2x.png"; sourceTree = "<group>"; };
+		F29B4F0A14E88C7700F57207 /* sliders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliders.png; sourceTree = "<group>"; };
+		F29B4F0F14E88D9800F57207 /* equalizer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equalizer.png; sourceTree = "<group>"; };
+		F29B4F1014E88D9800F57207 /* equalizer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "equalizer@2x.png"; sourceTree = "<group>"; };
+		F29B4F1314E8913B00F57207 /* ImprovGames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImprovGames.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +93,7 @@
 		F286101914DB6B410014B045 /* Improv */ = {
 			isa = PBXGroup;
 			children = (
+				F29B4F1314E8913B00F57207 /* ImprovGames.plist */,
 				F286102214DB6B410014B045 /* AppDelegate.h */,
 				F286102314DB6B410014B045 /* AppDelegate.m */,
 				F286102514DB6B410014B045 /* GamesTableViewController.h */,
@@ -87,12 +106,28 @@
 		F286101A14DB6B410014B045 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F29B4F0514E88C6C00F57207 /* Images */,
 				F286101B14DB6B410014B045 /* Improv-Info.plist */,
 				F286101C14DB6B410014B045 /* InfoPlist.strings */,
 				F286101F14DB6B410014B045 /* main.m */,
 				F286102114DB6B410014B045 /* Improv-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F29B4F0514E88C6C00F57207 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F280FE4314E89D6E00C7C7A0 /* lamp.png */,
+				F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */,
+				F29B4F0F14E88D9800F57207 /* equalizer.png */,
+				F29B4F1014E88D9800F57207 /* equalizer@2x.png */,
+				F29B4F0714E88C7700F57207 /* dice@2x.png */,
+				F29B4F0814E88C7700F57207 /* dice.png */,
+				F29B4F0914E88C7700F57207 /* sliders@2x.png */,
+				F29B4F0A14E88C7700F57207 /* sliders.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +182,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F286101E14DB6B410014B045 /* InfoPlist.strings in Resources */,
+				F29B4F0B14E88C7700F57207 /* dice@2x.png in Resources */,
+				F29B4F0C14E88C7700F57207 /* dice.png in Resources */,
+				F29B4F0D14E88C7700F57207 /* sliders@2x.png in Resources */,
+				F29B4F0E14E88C7700F57207 /* sliders.png in Resources */,
+				F29B4F1114E88D9900F57207 /* equalizer.png in Resources */,
+				F29B4F1214E88D9900F57207 /* equalizer@2x.png in Resources */,
+				F29B4F1414E8913B00F57207 /* ImprovGames.plist in Resources */,
+				F280FE4514E89D6E00C7C7A0 /* lamp.png in Resources */,
+				F280FE4614E89D6E00C7C7A0 /* lamp@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GamesTableViewController : UITableViewController
+@interface GamesTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, retain) NSArray *sortedGames;
 
 @end
