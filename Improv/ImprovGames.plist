@@ -9,12 +9,57 @@
 			<string>Title 1</string>
 			<key>Description</key>
 			<string>Description 1</string>
+			<key>Tags</key>
+			<array>
+				<string>Drama</string>
+				<string>Comedy</string>
+			</array>
+			<key>TimerType</key>
+			<string>TimeCount</string>
+			<key>MinPlayers</key>
+			<integer>1</integer>
+			<key>MaxPlayers</key>
+			<integer>4</integer>
+			<key>Buzzer</key>
+			<true/>
+			<key>MinTime</key>
+			<integer>1</integer>
+			<key>MaxTime</key>
+			<integer>5</integer>
+			<key>Rating</key>
+			<integer>3</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
 		</dict>
 		<dict>
 			<key>Title</key>
 			<string>Title 2</string>
 			<key>Description</key>
 			<string>Description 2</string>
+			<key>Tags</key>
+			<array>
+				<string>Comedy</string>
+			</array>
+			<key>TimerType</key>
+			<string>TimeElapsed</string>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>6</integer>
+			<key>Buzzer</key>
+			<false/>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>4</integer>
+			<key>Rating</key>
+			<integer>4</integer>
+			<key>AudienceParticipation</key>
+			<true/>
+			<key>Variations</key>
+			<array/>
 		</dict>
 	</array>
 </dict>
