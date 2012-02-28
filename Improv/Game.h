@@ -29,4 +29,6 @@
 @property (nonatomic, retain) NSManagedObject *tags;
 @property (nonatomic, retain) Game *similarGames;
 
+- (NSString *)minimumNumberOfPlayersString;
+
 @end

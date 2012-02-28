@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>Image</key>
-			<string>10fingers</string>
+			<string>10Fingers</string>
 			<key>Title</key>
 			<string>10 Fingers</string>
 			<key>Description</key>
@@ -19,7 +19,7 @@
 			<key>MinPlayers</key>
 			<integer>4</integer>
 			<key>MaxPlayers</key>
-			<integer>12</integer>
+			<integer>0</integer>
 			<key>MinTime</key>
 			<integer>2</integer>
 			<key>MaxTime</key>
@@ -35,7 +35,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>3series</string>
+			<string>3Series</string>
 			<key>Title</key>
 			<string>3 Series</string>
 			<key>Description</key>
@@ -49,7 +49,7 @@
 			<key>MinPlayers</key>
 			<integer>4</integer>
 			<key>MaxPlayers</key>
-			<integer>12</integer>
+			<integer>0</integer>
 			<key>MinTime</key>
 			<integer>2</integer>
 			<key>MaxTime</key>
@@ -65,7 +65,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>3some</string>
+			<string>3Some</string>
 			<key>Title</key>
 			<string>3 Some</string>
 			<key>Description</key>
@@ -78,11 +78,105 @@
 			<key>MinPlayers</key>
 			<integer>4</integer>
 			<key>MaxPlayers</key>
-			<integer>20</integer>
+			<integer>0</integer>
 			<key>MinTime</key>
 			<integer>1</integer>
 			<key>MaxTime</key>
 			<integer>5</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>AcceptingCircle</string>
+			<key>Title</key>
+			<string>Accepting Circle</string>
+			<key>Description</key>
+			<string>Get everyone in a big circle. One player starts by making a little gesture perhaps with a little sound. His or her neighbor then tries and does exactly the same. And so on. Although we expect the gesture/sound not to change, it will. Notes Watch for movements that suddenly change left/right arm or leg. This is not really supposed to happen, but it will. Once happened, it should be accepted by the next player. Also watch/listen for little moans or sighs that players might make before or after their turn - these should also be taken over by the next player.</string>
+			<key>Tags</key>
+			<array>
+				<string>Accepting</string>
+				<string>Concentration</string>
+				<string>Exercise</string>
+				<string>Warm-up</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>4</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>10</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Narrative</string>
+			<key>Title</key>
+			<string>Narrative, Color, Emotion</string>
+			<key>Description</key>
+			<string>One players tells a story, solo. Other players tag the player if they want to hear more action (narrative), more emotion or more color. By color we mean environmental detail, as in how does it smell, temperature, weather, colors, sounds.</string>
+			<key>Tags</key>
+			<array>
+				<string>Environment</string>
+				<string>Exercise</string>
+				<string>Narration</string>
+				<string>Object Work</string>
+				<string>Solo</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>4</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>10</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ActionSyllables</string>
+			<key>Title</key>
+			<string>Action Syllables</string>
+			<key>Description</key>
+			<string>Great warm-up that also helps a new group to learn each other&apos;s names. Everyone in a circle. First person says his name, making a gesture (an action) for every syllable. Mary has 2 syllables, so she does something like &amp;quot;Ma-&amp;quot; (wave right hand) &amp;quot;-ry&amp;quot; (claps in hands). Everyone repeats this. Then the second person calls his name, again with a gesture per syllable. Group repeats, and then repeats all previous names and syllables.</string>
+			<key>Tags</key>
+			<array>
+				<string>Concentration</string>
+				<string>Energy</string>
+				<string>Warm-up</string>
+				<string>Icebreaker</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>4</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>10</integer>
 			<key>AudienceParticipation</key>
 			<false/>
 			<key>timerCountsUp</key>

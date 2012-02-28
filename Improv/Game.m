@@ -28,4 +28,12 @@
 @dynamic timerType;
 @dynamic buzzer;
 
+
+- (NSString *)minimumNumberOfPlayersString {
+    [self willAccessValueForKey:@"minimumNumberOfPlayersString"];
+    NSString *playersString = [[NSString alloc] initWithFormat:@"%i", [self.minPlayers intValue]];
+    [self didAccessValueForKey:@"minimumNumberOfPlayersString"];
+    return playersString; 
+}
+
 @end

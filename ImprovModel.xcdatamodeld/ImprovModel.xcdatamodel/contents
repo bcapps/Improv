@@ -9,6 +9,7 @@
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="maxPlayers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="maxTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="minimumNumberOfPlayersString" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
         <attribute name="minPlayers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="minTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -22,7 +23,7 @@
         <relationship name="games" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="tags" inverseEntity="Game" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="160" positionY="192" width="128" height="270"/>
+        <element name="Game" positionX="160" positionY="192" width="128" height="285"/>
         <element name="Tag" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>
