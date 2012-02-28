@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C886C514FD718C00DF473B /* ImprovTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C886C414FD718C00DF473B /* ImprovTableViewCell.m */; };
+		68C886CB14FD76A600DF473B /* 10fingers.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C886C714FD76A600DF473B /* 10fingers.png */; };
+		68C886CC14FD76A600DF473B /* 10fingers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C886C814FD76A600DF473B /* 10fingers@2x.png */; };
+		68C886CD14FD76A600DF473B /* 3series.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C886C914FD76A600DF473B /* 3series.png */; };
+		68C886CE14FD76A600DF473B /* 3series@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C886CA14FD76A600DF473B /* 3series@2x.png */; };
+		68C886D414FD7B5300DF473B /* ImprovModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68C886D214FD7B5300DF473B /* ImprovModel.xcdatamodeld */; };
+		68C8872C14FD7E2100DF473B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C8872B14FD7E2100DF473B /* CoreData.framework */; };
+		68C8872F14FD7E6700DF473B /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C8872E14FD7E6700DF473B /* Game.m */; };
+		68C8873214FD7E7600DF473B /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C8873114FD7E7600DF473B /* Tag.m */; };
 		F280FE4514E89D6E00C7C7A0 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4314E89D6E00C7C7A0 /* lamp.png */; };
 		F280FE4614E89D6E00C7C7A0 /* lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */; };
 		F286101414DB6B410014B045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F286101314DB6B410014B045 /* UIKit.framework */; };
@@ -26,6 +35,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68C886C314FD718C00DF473B /* ImprovTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImprovTableViewCell.h; sourceTree = "<group>"; };
+		68C886C414FD718C00DF473B /* ImprovTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImprovTableViewCell.m; sourceTree = "<group>"; };
+		68C886C714FD76A600DF473B /* 10fingers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10fingers.png; sourceTree = "<group>"; };
+		68C886C814FD76A600DF473B /* 10fingers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10fingers@2x.png"; sourceTree = "<group>"; };
+		68C886C914FD76A600DF473B /* 3series.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3series.png; sourceTree = "<group>"; };
+		68C886CA14FD76A600DF473B /* 3series@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3series@2x.png"; sourceTree = "<group>"; };
+		68C886D314FD7B5300DF473B /* ImprovModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImprovModel.xcdatamodel; sourceTree = "<group>"; };
+		68C8872B14FD7E2100DF473B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		68C8872D14FD7E6700DF473B /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		68C8872E14FD7E6700DF473B /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		68C8873014FD7E7600DF473B /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		68C8873114FD7E7600DF473B /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		F280FE4314E89D6E00C7C7A0 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = "<group>"; };
 		F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp@2x.png"; sourceTree = "<group>"; };
 		F286100F14DB6B410014B045 /* Improv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Improv.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C8872C14FD7E2100DF473B /* CoreData.framework in Frameworks */,
 				F286101414DB6B410014B045 /* UIKit.framework in Frameworks */,
 				F286101614DB6B410014B045 /* Foundation.framework in Frameworks */,
 				F286101814DB6B410014B045 /* CoreGraphics.framework in Frameworks */,
@@ -63,9 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68C8873314FD7E7B00DF473B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F29B4F1314E8913B00F57207 /* ImprovGames.plist */,
+				68C8873014FD7E7600DF473B /* Tag.h */,
+				68C8873114FD7E7600DF473B /* Tag.m */,
+				68C8872D14FD7E6700DF473B /* Game.h */,
+				68C8872E14FD7E6700DF473B /* Game.m */,
+				68C886D214FD7B5300DF473B /* ImprovModel.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		F286100414DB6B410014B045 = {
 			isa = PBXGroup;
 			children = (
+				68C8872B14FD7E2100DF473B /* CoreData.framework */,
 				F286101914DB6B410014B045 /* Improv */,
 				F286101214DB6B410014B045 /* Frameworks */,
 				F286101014DB6B410014B045 /* Products */,
@@ -93,11 +129,13 @@
 		F286101914DB6B410014B045 /* Improv */ = {
 			isa = PBXGroup;
 			children = (
-				F29B4F1314E8913B00F57207 /* ImprovGames.plist */,
+				68C8873314FD7E7B00DF473B /* Model */,
 				F286102214DB6B410014B045 /* AppDelegate.h */,
 				F286102314DB6B410014B045 /* AppDelegate.m */,
 				F286102514DB6B410014B045 /* GamesTableViewController.h */,
 				F286102614DB6B410014B045 /* GamesTableViewController.m */,
+				68C886C314FD718C00DF473B /* ImprovTableViewCell.h */,
+				68C886C414FD718C00DF473B /* ImprovTableViewCell.m */,
 				F286101A14DB6B410014B045 /* Supporting Files */,
 			);
 			path = Improv;
@@ -106,6 +144,10 @@
 		F286101A14DB6B410014B045 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68C886C714FD76A600DF473B /* 10fingers.png */,
+				68C886C814FD76A600DF473B /* 10fingers@2x.png */,
+				68C886C914FD76A600DF473B /* 3series.png */,
+				68C886CA14FD76A600DF473B /* 3series@2x.png */,
 				F29B4F0514E88C6C00F57207 /* Images */,
 				F286101B14DB6B410014B045 /* Improv-Info.plist */,
 				F286101C14DB6B410014B045 /* InfoPlist.strings */,
@@ -191,6 +233,10 @@
 				F29B4F1414E8913B00F57207 /* ImprovGames.plist in Resources */,
 				F280FE4514E89D6E00C7C7A0 /* lamp.png in Resources */,
 				F280FE4614E89D6E00C7C7A0 /* lamp@2x.png in Resources */,
+				68C886CB14FD76A600DF473B /* 10fingers.png in Resources */,
+				68C886CC14FD76A600DF473B /* 10fingers@2x.png in Resources */,
+				68C886CD14FD76A600DF473B /* 3series.png in Resources */,
+				68C886CE14FD76A600DF473B /* 3series@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +250,10 @@
 				F286102014DB6B410014B045 /* main.m in Sources */,
 				F286102414DB6B410014B045 /* AppDelegate.m in Sources */,
 				F286102714DB6B410014B045 /* GamesTableViewController.m in Sources */,
+				68C886C514FD718C00DF473B /* ImprovTableViewCell.m in Sources */,
+				68C886D414FD7B5300DF473B /* ImprovModel.xcdatamodeld in Sources */,
+				68C8872F14FD7E6700DF473B /* Game.m in Sources */,
+				68C8873214FD7E7600DF473B /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68C886D214FD7B5300DF473B /* ImprovModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68C886D314FD7B5300DF473B /* ImprovModel.xcdatamodel */,
+			);
+			currentVersion = 68C886D314FD7B5300DF473B /* ImprovModel.xcdatamodel */;
+			path = ImprovModel.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F286100614DB6B410014B045 /* Project object */;
 }

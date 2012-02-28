@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GamesTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface GamesTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, retain) NSArray *sortedGames;
-
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end

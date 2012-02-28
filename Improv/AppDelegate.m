@@ -9,15 +9,21 @@
 #import "AppDelegate.h"
 
 #import "GamesTableViewController.h"
+#import "Game.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize managedObjectContext = __managedObjectContext;
+@synthesize managedObjectModel = __managedObjectModel;
+@synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
+@synthesize sortedGames;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     GamesTableViewController *tableViewController = [[GamesTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    tableViewController.managedObjectContext = self.managedObjectContext;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
     navController.toolbarHidden = NO;
     
@@ -25,6 +31,8 @@
     // Override point for customization after application launch.
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
+    
+    [self importInitialData];
     return YES;
 }
 
@@ -66,5 +74,97 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+#pragma mark - Core Data
+
+- (void)saveContext
+{
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    if (managedObjectContext != nil) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        } 
+    }
+}
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (__managedObjectContext != nil) {
+        return __managedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator != nil) {
+        __managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    return __managedObjectContext;
+}
+
+- (NSManagedObjectModel *)managedObjectModel
+{
+    if (__managedObjectModel != nil) {
+        return __managedObjectModel;
+    }
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ImprovModel" withExtension:@"momd"];
+    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return __managedObjectModel;
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    if (__persistentStoreCoordinator != nil) {
+        return __persistentStoreCoordinator;
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Improv.sqlite"];
+    
+    NSError *error = nil;
+    __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }    
+    
+    return __persistentStoreCoordinator;
+}
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void) importInitialData {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ImprovGames" ofType:@"plist"];
+    NSArray *games = [[NSDictionary dictionaryWithContentsOfFile:path] objectForKey:@"Games"];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"Title" ascending:YES];
+    sortedGames = [games sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    
+    for(NSDictionary *dictionary in sortedGames) {
+        Game *game = [NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
+        
+        game.image = [dictionary objectForKey:@"Image"];
+        game.title = [dictionary objectForKey:@"Title"];
+        game.gameDescription = [dictionary objectForKey:@"Description"];
+        //game.tags = 
+        game.timerType = [dictionary objectForKey:@"timerCountsUp"];
+        game.minPlayers = [dictionary objectForKey:@"MinPlayers"];
+        game.maxPlayers = [dictionary objectForKey:@"MaxPlayers"];
+        game.buzzer = [dictionary objectForKey:@"Buzzer"];
+        game.minTime = [dictionary objectForKey:@"MinTime"];
+        game.maxTime = [dictionary objectForKey:@"MaxTime"];
+        game.rating = [dictionary objectForKey:@"Rating"];
+        game.audienceParticipation = [dictionary objectForKey:@"AudienceParticipation"];
+        //game.variations =
+    }
+    
+    [self.managedObjectContext save:nil];
+}
+
 
 @end

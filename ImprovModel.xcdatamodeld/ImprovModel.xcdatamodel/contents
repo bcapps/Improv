@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Game" representedClassName="Game" syncable="YES">
+        <attribute name="alternateNames" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="audienceParticipation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="buzzer" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="gameDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxPlayers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="minPlayers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="minTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="timerType" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="similarGames" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="similarGames" inverseEntity="Game" syncable="YES"/>
+        <relationship name="tags" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="games" inverseEntity="Tag" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="games" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="tags" inverseEntity="Game" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Game" positionX="160" positionY="192" width="128" height="270"/>
+        <element name="Tag" positionX="160" positionY="192" width="128" height="75"/>
+    </elements>
+</model>
