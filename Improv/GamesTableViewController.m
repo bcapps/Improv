@@ -90,7 +90,6 @@
     }
     
     [self configureCell:cell atIndexPath:indexPath];
-    NSLog(@"%@", [self.fetchedResultsController sections]);
     return cell;
 }
 
@@ -212,7 +211,7 @@
 {
     Game *game = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.titleLabel.text = game.title;
-    cell.description.text = game.gameDescription;
+    cell.descriptionLabel.text = game.firstSentenceOfDescription;
     cell.imageView.image = [UIImage imageNamed:game.image];
 }
 

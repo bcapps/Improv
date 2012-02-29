@@ -28,7 +28,7 @@
 @property (nonatomic, retain) NSString * image;
 @property (nonatomic, retain) NSManagedObject *tags;
 @property (nonatomic, retain) Game *similarGames;
-
+@property (nonatomic, retain) NSString *firstSentenceOfDescription;
 - (NSString *)minimumNumberOfPlayersString;
 
 @end
