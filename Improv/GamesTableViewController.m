@@ -9,6 +9,7 @@
 #import "GamesTableViewController.h"
 #import "ImprovTableViewCell.h"
 #import "Game.h"
+#import "GameInfoTableViewController.h"
 
 @implementation GamesTableViewController
 @synthesize fetchedResultsController = __fetchedResultsController;
@@ -27,20 +28,23 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dice"] style:UIBarButtonItemStyleBordered target:nil action:nil];
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    
+    UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:nil action:nil];
+    UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lamp"] style:UIBarButtonItemStylePlain target:nil action:nil];
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     
     UIButton *timerLabel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
     [timerLabel setTitle:@"0:30" forState:UIControlStateNormal];
     
     UIBarButtonItem *timerButton = [[UIBarButtonItem alloc] initWithCustomView:timerLabel];
-    
-    UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lamp"] style:UIBarButtonItemStyleBordered target:nil action:nil];
+
     self.navigationItem.rightBarButtonItem = add;
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
-
+    
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Games" style: UIBarButtonItemStyleBordered target: nil action: nil];
+    [[self navigationItem] setBackBarButtonItem: newBackButton];
     
     self.navigationItem.title = @"Improv Games";
 	// Do any additional setup after loading the view, typically from a nib.
@@ -106,7 +110,10 @@
     return [sectionInfo numberOfObjects];}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
+    [self.navigationController pushViewController:gameInfo animated:YES];
+
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

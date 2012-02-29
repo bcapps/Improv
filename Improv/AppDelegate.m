@@ -10,6 +10,8 @@
 
 #import "GamesTableViewController.h"
 #import "Game.h"
+#include <QuartzCore/QuartzCore.h>
+
 
 @implementation AppDelegate
 
@@ -32,7 +34,8 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
-    [self importInitialData];
+    //[self importInitialData];
+    
     return YES;
 }
 
