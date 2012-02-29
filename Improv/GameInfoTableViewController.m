@@ -48,16 +48,7 @@
     [containerView addSubview:playButton];
     self.tableView.tableHeaderView = containerView;
     
-    UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:nil action:nil];
-    UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lamp"] style:UIBarButtonItemStylePlain target:nil action:nil];
-    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-    
-    UIButton *timerLabel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
-    [timerLabel setTitle:@"0:30" forState:UIControlStateNormal];
-    
-    UIBarButtonItem *timerButton = [[UIBarButtonItem alloc] initWithCustomView:timerLabel];
-        
-    self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
+    self.toolbarItems = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).toolbarItems;
     
     self.title = game.title;
 }
