@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Game;
 @interface GameInfoTableViewController : UITableViewController
-
+@property (nonatomic, strong) Game *game;
 @end

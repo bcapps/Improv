@@ -111,7 +111,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    
+    gameInfo.game = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self.navigationController pushViewController:gameInfo animated:YES];
 
 }

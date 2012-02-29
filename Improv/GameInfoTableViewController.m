@@ -7,12 +7,13 @@
 //
 
 #import "GameInfoTableViewController.h"
-
+#import "Game.h"
 @interface GameInfoTableViewController ()
 
 @end
 
 @implementation GameInfoTableViewController
+@synthesize game;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -58,8 +59,7 @@
         
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
     
-
-
+    self.title = game.title;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
