@@ -34,14 +34,21 @@
     UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:nil];
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     
-    UIButton *timerLabel = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
-    [timerLabel setTitle:@"0:30" forState:UIControlStateNormal];
+    UIButton *internalTimerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
+    [internalTimerButton setTitle:@"0:30" forState:UIControlStateNormal];
+    internalTimerButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+    internalTimerButton.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
     
-    UIBarButtonItem *timerButton = [[UIBarButtonItem alloc] initWithCustomView:timerLabel];
+    UIBarButtonItem *timerButton = [[UIBarButtonItem alloc] init];
+    timerButton.style = UIBarButtonItemStyleBordered;
+    timerButton.title = @"    0:30    ";
+    [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
+    
 
     self.navigationItem.rightBarButtonItem = addButton;
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
+
     
     UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Games" style: UIBarButtonItemStyleBordered target: nil action: nil];
     [[self navigationItem] setBackBarButtonItem: newBackButton];
