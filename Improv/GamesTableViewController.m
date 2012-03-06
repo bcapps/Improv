@@ -11,6 +11,8 @@
 #import "Game.h"
 #import "GameInfoTableViewController.h"
 
+#define RANDOM_ACTION_SHEET_TAG 100
+
 @implementation GamesTableViewController
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
@@ -28,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonClicked)];
     UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:nil];
@@ -45,25 +47,44 @@
     [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
     
 
-    self.navigationItem.rightBarButtonItem = addButton;
+    self.navigationItem.rightBarButtonItem = suggestionButton;
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
 
     
-    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Games" style: UIBarButtonItemStyleBordered target: nil action: nil];
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Games" style: UIBarButtonItemStyleBordered target: nil action:nil];
     [[self navigationItem] setBackBarButtonItem: newBackButton];
     
     self.navigationItem.title = @"Improv Games";
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+
+
 - (void)randomButtonClicked {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose Random Game" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Game With Filters", nil];
+    sheet.tag = RANDOM_ACTION_SHEET_TAG;
     [sheet showFromToolbar:self.navigationController.toolbar];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(actionSheet.tag = RANDOM_ACTION_SHEET_TAG) {
+        if(buttonIndex == 0) {
+            GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            gameInfo.game = [self.fetchedResultsController objectAtIndexPath:[self selectRandomGame]];
+            [self.navigationController pushViewController:gameInfo animated:YES];
+        }
+        else if (buttonIndex == 1) {
+
+        }
+    }
+}
+
+- (NSIndexPath *)selectRandomGame {
+    int numberOfSections = [self numberOfSectionsInTableView:self.tableView];
+    int randomSection = arc4random() % numberOfSections;
     
+    return [NSIndexPath indexPathForRow:arc4random() % [self.tableView numberOfRowsInSection:randomSection] inSection:randomSection];
 }
 
 - (void)viewDidUnload

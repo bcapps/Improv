@@ -7,6 +7,7 @@
 //
 
 #import "GameInfoTableViewController.h"
+#import "GamesTableViewController.h"
 #import "Game.h"
 @interface GameInfoTableViewController ()
 
@@ -27,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
+    
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 75)];
     UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-normal"] forState:UIControlStateNormal];
@@ -48,9 +52,31 @@
     [containerView addSubview:playButton];
     self.tableView.tableHeaderView = containerView;
     
+    self.navigationItem.rightBarButtonItem = suggestionButton;
+    
     self.toolbarItems = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).toolbarItems;
     
     self.title = game.title;
+    
+    UIButton *backButton = [UIButton buttonWithType:101];
+    [backButton addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
+    [backButton setTitle:@"Games" forState:UIControlStateNormal];
+    
+    UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backItem;
+    //[[self navigationItem] setBackBarButtonItem: backItem];
+}
+
+- (void)pop{
+    
+	BOOL didPop = NO;
+	for (UIViewController *vC in self.navigationController.viewControllers){
+		if ([vC isKindOfClass: [GamesTableViewController class]]){					
+			[self.navigationController popToViewController:(UIViewController *)vC animated:YES];
+			didPop = YES;
+			break;
+		}
+	}
 }
 
 - (void)viewDidAppear:(BOOL)animated {
