@@ -101,10 +101,6 @@
     dateFormatter.locale = [NSLocale currentLocale];
     dateFormatter.dateFormat = dateFormat;
     timerButton.title = [dateFormatter stringFromDate:date];
-    
-    
-
-
 }
 
 - (void)pop{
@@ -142,11 +138,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == 0) {
         NSString *cellText = game.gameDescription;
-        UIFont *cellFont = [UIFont boldSystemFontOfSize:12.0f];
-        CGSize constraintSize = CGSizeMake(200.0f, MAXFLOAT);
+        
+        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+        UIFont *cellFont = cell.textLabel.font;
+        CGSize constraintSize = CGSizeMake(cell.contentView.frame.size.width - 40.0f, MAXFLOAT);
         CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
         
-        return labelSize.height + 10.0f;
+        return labelSize.height + 20.0f;
 
     }
     return 44.0f;
@@ -175,12 +173,15 @@
         cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:12.0f];
 
         if(indexPath.row == 0) {
-            cell.textLabel.text = @"Description";
-            cell.detailTextLabel.text = game.gameDescription;
-            cell.detailTextLabel.numberOfLines = 0;
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            
+            //cell.textLabel.text = @"description";
+            cell.textLabel.text = game.gameDescription;
+            cell.textLabel.numberOfLines = 0;
+            cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
         }
         else if(indexPath.row == 1) {
-            cell.textLabel.text = @"Players";
+            cell.textLabel.text = @"players";
             cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:12.0f];
             if(![game.maxPlayers intValue]) {
                 cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", game.minPlayers];
@@ -189,12 +190,12 @@
             }
         }
         else if(indexPath.row == 2) {
-            cell.textLabel.text = @"Time";
+            cell.textLabel.text = @"time";
             
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ minutes", game.minTime, game.maxTime];
         }
         else if(indexPath.row == 3) {
-            cell.textLabel.text = @"Audience";
+            cell.textLabel.text = @"audience";
             if([game.audienceParticipation boolValue]) {
                 cell.detailTextLabel.text = @"Yes";
             } else {
@@ -202,7 +203,7 @@
             }
         }
         else if(indexPath.row == 4) {
-            cell.textLabel.text = @"Tags";
+            cell.textLabel.text = @"tags";
             NSString *tagsString = [[NSString alloc] init];
             int count = 0;
             
