@@ -35,7 +35,7 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
-    //[self importInitialData];
+    [self importInitialData];
     
     return YES;
 }
@@ -157,10 +157,24 @@
         game.gameDescription = [dictionary objectForKey:@"Description"];
         //game.tagArray = [[NSMutableArray alloc] init];
         for(NSManagedObject *obj in [dictionary objectForKey:@"Tags"]) {
-            Tag *tag = [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
             
-            tag.name = [obj description];
-            [game addTagsObject:tag];
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            NSEntityDescription *detailsEntity=[NSEntityDescription entityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
+            [fetchRequest setEntity:detailsEntity];
+            
+            [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K like %@", @"name",[obj description]]];
+            
+            NSArray *fetchArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+            
+            if ([fetchArray count] > 0) {
+                [game addTagsObject:[fetchArray objectAtIndex:0]];
+            } 
+            else {
+                Tag *tag = [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
+                tag.name = [obj description];
+                [game addTagsObject:tag];
+            }
+
         }
         
         game.timerType = [dictionary objectForKey:@"timerCountsUp"];
