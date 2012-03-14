@@ -136,16 +136,33 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    UIFont *cellFont = cell.textLabel.font;
+    CGSize constraintSize = CGSizeMake(cell.contentView.frame.size.width - 40.0f, MAXFLOAT);
+    
     if(indexPath.row == 0) {
         NSString *cellText = game.gameDescription;
         
-        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-        UIFont *cellFont = cell.textLabel.font;
-        CGSize constraintSize = CGSizeMake(cell.contentView.frame.size.width - 40.0f, MAXFLOAT);
         CGSize labelSize = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
         
         return labelSize.height + 20.0f;
 
+    } else if (indexPath.row == 4) {
+        int count = 0;
+        NSString *tagsString = nil;
+        
+        for(NSString *string in [game tagsAsStringsArray]) {
+            if(count == 0) {
+                tagsString = [tagsString stringByAppendingFormat:@"%@", string];
+            } else {
+                tagsString = [tagsString stringByAppendingFormat:@", %@", string];
+            }
+            count++;
+        }    
+        
+        CGSize labelSize = [tagsString sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+        
+        return labelSize.height + 44.0f;
     }
     return 44.0f;
 }
@@ -215,6 +232,7 @@
                 }
                 count++;
             }
+            cell.detailTextLabel.numberOfLines = 0;
             cell.detailTextLabel.text = tagsString;
         }
     }

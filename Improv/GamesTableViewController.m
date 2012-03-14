@@ -81,10 +81,24 @@
 }
 
 - (NSIndexPath *)selectRandomGame {
-    int numberOfSections = [self numberOfSectionsInTableView:self.tableView];
-    int randomSection = arc4random() % numberOfSections;
+    int numberOfSections = [self numberOfSectionsInTableView:self.tableView];    
+    int numberOfGames = [[self.fetchedResultsController fetchedObjects] count];
+    int randomGame = arc4random() % numberOfGames;
+
     
-    return [NSIndexPath indexPathForRow:arc4random() % [self.tableView numberOfRowsInSection:randomSection] inSection:randomSection];
+    int count = 0;
+    
+    while(count < numberOfSections) {
+        if(randomGame < [self.tableView numberOfRowsInSection:count]) {
+            return [NSIndexPath indexPathForRow:randomGame inSection:count];
+        }
+        else {
+            randomGame -= [self.tableView numberOfRowsInSection:count];
+        }
+        count++;
+    }
+    
+    return 0;
 }
 
 - (void)viewDidUnload
