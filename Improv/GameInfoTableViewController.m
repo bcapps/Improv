@@ -15,6 +15,7 @@
 
 @implementation GameInfoTableViewController
 @synthesize game;
+@synthesize timeAsInt;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +38,8 @@
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-disabled"] forState:UIControlStateDisabled];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-highlighted"] forState:UIControlStateHighlighted];
     playButton.frame = CGRectMake(10, 20, 300, 51);
+    [playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
     
     UILabel *buttonLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 51)];
     buttonLabel.text = @"Play Game";
@@ -65,6 +68,43 @@
     UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backItem;
     //[[self navigationItem] setBackBarButtonItem: backItem];
+}
+
+- (void)playButtonTapped {
+    timeAsInt = 0;
+    NSTimeInterval interval = 1.0;
+    NSMutableArray *items = [self.toolbarItems mutableCopy];
+    UIBarButtonItem *timerButton = [items objectAtIndex:2];
+    
+    if (game.timerType) {
+        NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:interval target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        NSRunLoop *loop = [NSRunLoop mainRunLoop];
+        [loop addTimer:timer forMode:NSRunLoopCommonModes];
+        
+    } else {
+
+        timerButton.title = [NSString stringWithFormat:@"    %@    ", game.maxTime];
+    }
+}
+
+- (void)updateTimer {
+    NSMutableArray *items = [self.toolbarItems mutableCopy];
+    UIBarButtonItem *timerButton = [items objectAtIndex:2];
+    
+    timeAsInt += 1;
+
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeAsInt];
+    
+    NSString *dateFormat = @"    m:ss    ";
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [NSLocale currentLocale];
+    dateFormatter.dateFormat = dateFormat;
+    timerButton.title = [dateFormatter stringFromDate:date];
+    
+    
+
+
 }
 
 - (void)pop{

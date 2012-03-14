@@ -10,4 +10,5 @@
 @class Game;
 @interface GameInfoTableViewController : UITableViewController
 @property (nonatomic, strong) Game *game;
+@property (nonatomic) NSTimeInterval timeAsInt;
 @end

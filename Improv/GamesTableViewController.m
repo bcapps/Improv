@@ -37,15 +37,14 @@
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     
     UIButton *internalTimerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
-    [internalTimerButton setTitle:@"0:30" forState:UIControlStateNormal];
+    [internalTimerButton setTitle:@"0:00" forState:UIControlStateNormal];
     internalTimerButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     internalTimerButton.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
     
     UIBarButtonItem *timerButton = [[UIBarButtonItem alloc] init];
     timerButton.style = UIBarButtonItemStyleBordered;
-    timerButton.title = @"    0:30    ";
+    timerButton.title = @"    0:00    ";
     [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
-    
 
     self.navigationItem.rightBarButtonItem = suggestionButton;
     
