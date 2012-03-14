@@ -2,32 +2,36 @@
 //  Game.m
 //  Improv
 //
-//  Created by Andrew Harrison on 2/28/12.
+//  Created by Andrew Harrison on 3/14/12.
 //  Copyright (c) 2012 Lickability. All rights reserved.
 //
 
 #import "Game.h"
 #import "Game.h"
+#import "Tag.h"
 
 
 @implementation Game
-@synthesize firstSentenceOfDescription;
 
-@dynamic title;
+@dynamic alternateNames;
+@dynamic audienceParticipation;
+@dynamic buzzer;
+@dynamic favorite;
 @dynamic gameDescription;
+@dynamic image;
 @dynamic maxPlayers;
+@dynamic maxTime;
+@dynamic minimumNumberOfPlayersString;
 @dynamic minPlayers;
 @dynamic minTime;
-@dynamic maxTime;
 @dynamic rating;
-@dynamic audienceParticipation;
-@dynamic favorite;
-@dynamic alternateNames;
-@dynamic tags;
-@dynamic similarGames;
-@dynamic image;
 @dynamic timerType;
-@dynamic buzzer;
+@dynamic title;
+@dynamic similarGames;
+@dynamic tags;
+@synthesize tagsAsStringsArray;
+@synthesize firstSentenceOfDescription;
+
 
 - (NSString *)minimumNumberOfPlayersString {
     [self willAccessValueForKey:@"minimumNumberOfPlayersString"];
@@ -50,6 +54,14 @@
     }];
     
     return firstSentence;
+}
+
+- (NSMutableArray*)tagsAsStringsArray {
+    NSMutableArray *stringArray = [[NSMutableArray alloc] init];
+    for(Tag *t in self.tags) {
+        [stringArray addObject:t.name];
+    }
+    return stringArray;
 }
 
 @end

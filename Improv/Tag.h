@@ -2,7 +2,7 @@
 //  Tag.h
 //  Improv
 //
-//  Created by Andrew Harrison on 2/28/12.
+//  Created by Andrew Harrison on 3/14/12.
 //  Copyright (c) 2012 Lickability. All rights reserved.
 //
 
@@ -14,6 +14,14 @@
 @interface Tag : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) Game *games;
+@property (nonatomic, retain) NSSet *game;
+@end
+
+@interface Tag (CoreDataGeneratedAccessors)
+
+- (void)addGameObject:(Game *)value;
+- (void)removeGameObject:(Game *)value;
+- (void)addGame:(NSSet *)values;
+- (void)removeGame:(NSSet *)values;
 
 @end

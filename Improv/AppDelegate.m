@@ -10,6 +10,7 @@
 
 #import "GamesTableViewController.h"
 #import "Game.h"
+#import "Tag.h"
 #include <QuartzCore/QuartzCore.h>
 
 
@@ -154,7 +155,14 @@
         game.image = [dictionary objectForKey:@"Image"];
         game.title = [dictionary objectForKey:@"Title"];
         game.gameDescription = [dictionary objectForKey:@"Description"];
-        //game.tags = 
+        //game.tagArray = [[NSMutableArray alloc] init];
+        for(NSManagedObject *obj in [dictionary objectForKey:@"Tags"]) {
+            Tag *tag = [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
+            
+            tag.name = [obj description];
+            [game addTagsObject:tag];
+        }
+        
         game.timerType = [dictionary objectForKey:@"timerCountsUp"];
         game.minPlayers = [dictionary objectForKey:@"MinPlayers"];
         game.maxPlayers = [dictionary objectForKey:@"MaxPlayers"];
