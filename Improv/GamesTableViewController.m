@@ -16,6 +16,8 @@
 @implementation GamesTableViewController
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize timer;
+@synthesize timeAsInt;
 
 
 - (void)didReceiveMemoryWarning
@@ -45,7 +47,9 @@
     timerButton.style = UIBarButtonItemStyleBordered;
     timerButton.title = @"    0:00    ";
     [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
-
+    [timerButton setTarget:self];
+    [timerButton setAction:@selector(timerButtonPushed)];
+    
     self.navigationItem.rightBarButtonItem = suggestionButton;
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
@@ -56,10 +60,48 @@
     
     self.navigationItem.title = @"Improv Games";
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"furley_bg"]];
+    timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    timeAsInt = -1;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)updateTimer {
+    NSMutableArray *items = [self.toolbarItems mutableCopy];
+    UIBarButtonItem *timerButton = [items objectAtIndex:2];
+    
+    timeAsInt += 1;
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeAsInt];
+    
+    NSString *dateFormat = @"    m:ss    ";
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.locale = [NSLocale currentLocale];
+    dateFormatter.dateFormat = dateFormat;
+    timerButton.title = [dateFormatter stringFromDate:date];
+}
 
+
+- (void)timerButtonPushed {
+    UIBarButtonItem *timerButton = [self.toolbarItems objectAtIndex:2];
+    NSString *time = [timerButton.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if(![time isEqualToString:@"0:00"]) {
+        [self.timer invalidate];
+        timerButton.title = @"    0:00    ";
+    }
+    timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    timeAsInt = -1;
+
+}
+
+- (void)pauseTimer {
+    
+}
+
+- (void)continueTimer {
+    
+}
 
 - (void)randomButtonClicked {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose Random Game" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Game With Filters", nil];

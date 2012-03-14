@@ -15,7 +15,6 @@
 
 @implementation GameInfoTableViewController
 @synthesize game;
-@synthesize timeAsInt;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -71,36 +70,16 @@
 }
 
 - (void)playButtonTapped {
-    timeAsInt = 0;
-    NSTimeInterval interval = 1.0;
     NSMutableArray *items = [self.toolbarItems mutableCopy];
     UIBarButtonItem *timerButton = [items objectAtIndex:2];
     
     if (game.timerType) {
-        NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:interval target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
         NSRunLoop *loop = [NSRunLoop mainRunLoop];
-        [loop addTimer:timer forMode:NSRunLoopCommonModes];
+        [loop addTimer:((GamesTableViewController *)[[[self navigationController] viewControllers] objectAtIndex:0]).timer forMode:NSRunLoopCommonModes];
         
     } else {
-
         timerButton.title = [NSString stringWithFormat:@"    %@    ", game.maxTime];
     }
-}
-
-- (void)updateTimer {
-    NSMutableArray *items = [self.toolbarItems mutableCopy];
-    UIBarButtonItem *timerButton = [items objectAtIndex:2];
-    
-    timeAsInt += 1;
-
-    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:timeAsInt];
-    
-    NSString *dateFormat = @"    m:ss    ";
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.locale = [NSLocale currentLocale];
-    dateFormatter.dateFormat = dateFormat;
-    timerButton.title = [dateFormatter stringFromDate:date];
 }
 
 - (void)pop{
