@@ -55,6 +55,7 @@
     [[self navigationItem] setBackBarButtonItem: newBackButton];
     
     self.navigationItem.title = @"Improv Games";
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"furley_bg"]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -127,6 +128,7 @@
     ImprovTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[ImprovTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.backgroundColor = self.tableView.backgroundColor;
     }
     
     [self configureCell:cell atIndexPath:indexPath];
@@ -256,6 +258,7 @@
     cell.titleLabel.text = game.title;
     cell.descriptionLabel.text = game.firstSentenceOfDescription;
     cell.imageView.image = [UIImage imageNamed:game.image];
+    cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
 }
 
 
