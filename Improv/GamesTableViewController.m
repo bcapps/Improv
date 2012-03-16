@@ -10,6 +10,7 @@
 #import "ImprovTableViewCell.h"
 #import "Game.h"
 #import "GameInfoTableViewController.h"
+#import "FiltersTableViewController.h"
 
 #define RANDOM_ACTION_SHEET_TAG 100
 
@@ -34,8 +35,8 @@
     
     UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
     
-    UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonClicked)];
-    UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
+    UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterButtonPushed)];
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     
     UIButton *internalTimerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
@@ -59,7 +60,7 @@
     [[self navigationItem] setBackBarButtonItem: newBackButton];
     
     self.navigationItem.title = @"Improv Games";
-    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"furley_bg"]];
+    //self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"furley_bg"]];
     timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     timeAsInt = -1;
 	// Do any additional setup after loading the view, typically from a nib.
@@ -81,6 +82,11 @@
     timerButton.title = [dateFormatter stringFromDate:date];
 }
 
+- (void)filterButtonPushed {
+    FiltersTableViewController *filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    
+    [self.navigationController presentModalViewController:filtersTableViewController animated:YES];
+}
 
 - (void)timerButtonPushed {
     UIBarButtonItem *timerButton = [self.toolbarItems objectAtIndex:2];
@@ -103,7 +109,7 @@
     
 }
 
-- (void)randomButtonClicked {
+- (void)randomButtonPushed {
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose Random Game" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Game With Filters", nil];
     sheet.tag = RANDOM_ACTION_SHEET_TAG;
     [sheet showFromToolbar:self.navigationController.toolbar];

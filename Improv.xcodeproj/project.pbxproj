@@ -48,6 +48,7 @@
 		68C8874414FD8DB300DF473B /* AcceptingCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874214FD8DB200DF473B /* AcceptingCircle@2x.png */; };
 		68C8874B14FD8E3900DF473B /* ActionSyllables.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874914FD8E3800DF473B /* ActionSyllables.png */; };
 		68C8874C14FD8E3900DF473B /* ActionSyllables@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874A14FD8E3800DF473B /* ActionSyllables@2x.png */; };
+		68FF8ADF1512B86200D714B0 /* FiltersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FF8ADE1512B86200D714B0 /* FiltersTableViewController.m */; };
 		F280FE4514E89D6E00C7C7A0 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4314E89D6E00C7C7A0 /* lamp.png */; };
 		F280FE4614E89D6E00C7C7A0 /* lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */; };
 		F286101414DB6B410014B045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F286101314DB6B410014B045 /* UIKit.framework */; };
@@ -110,6 +111,8 @@
 		68C8874214FD8DB200DF473B /* AcceptingCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AcceptingCircle@2x.png"; sourceTree = "<group>"; };
 		68C8874914FD8E3800DF473B /* ActionSyllables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSyllables.png; sourceTree = "<group>"; };
 		68C8874A14FD8E3800DF473B /* ActionSyllables@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ActionSyllables@2x.png"; sourceTree = "<group>"; };
+		68FF8ADD1512B86200D714B0 /* FiltersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersTableViewController.h; sourceTree = "<group>"; };
+		68FF8ADE1512B86200D714B0 /* FiltersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersTableViewController.m; sourceTree = "<group>"; };
 		F280FE4314E89D6E00C7C7A0 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = "<group>"; };
 		F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp@2x.png"; sourceTree = "<group>"; };
 		F286100F14DB6B410014B045 /* Improv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Improv.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +296,8 @@
 				F286102314DB6B410014B045 /* AppDelegate.m */,
 				F286102514DB6B410014B045 /* GamesTableViewController.h */,
 				F286102614DB6B410014B045 /* GamesTableViewController.m */,
+				68FF8ADD1512B86200D714B0 /* FiltersTableViewController.h */,
+				68FF8ADE1512B86200D714B0 /* FiltersTableViewController.m */,
 				68794CF514FDEC4800E33F88 /* GameInfoTableViewController.h */,
 				68794CF614FDEC4800E33F88 /* GameInfoTableViewController.m */,
 				F286101A14DB6B410014B045 /* Supporting Files */,
@@ -448,6 +453,7 @@
 				68794CF714FDEC4900E33F88 /* GameInfoTableViewController.m in Sources */,
 				687BD9A215112A2700C4EAB0 /* Game.m in Sources */,
 				687BD9A515112A2700C4EAB0 /* Tag.m in Sources */,
+				68FF8ADF1512B86200D714B0 /* FiltersTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
