@@ -32,6 +32,7 @@
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed)];
     
    [self.navigationItem setRightBarButtonItem:doneButton];
+    self.navigationItem.title = @"Filters";
     
     minStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
     maxStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
@@ -117,6 +118,10 @@
 {
     // Return the number of sections.
     return 1;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Players";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
