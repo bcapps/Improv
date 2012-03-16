@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
+    //UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 75)];
     UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -54,7 +54,7 @@
     [containerView addSubview:playButton];
     self.tableView.tableHeaderView = containerView;
     
-    self.navigationItem.rightBarButtonItem = suggestionButton;
+    self.navigationItem.rightBarButtonItem = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).navigationItem.rightBarButtonItem;
     
     self.toolbarItems = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).toolbarItems;
     

@@ -49,6 +49,10 @@
 		68C8874B14FD8E3900DF473B /* ActionSyllables.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874914FD8E3800DF473B /* ActionSyllables.png */; };
 		68C8874C14FD8E3900DF473B /* ActionSyllables@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874A14FD8E3800DF473B /* ActionSyllables@2x.png */; };
 		68FF8ADF1512B86200D714B0 /* FiltersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FF8ADE1512B86200D714B0 /* FiltersTableViewController.m */; };
+		68FF8C871512C4B500D714B0 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FF8C861512C4B500D714B0 /* TKAlertCenter.m */; };
+		68FF8C8A1512C4E400D714B0 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FF8C891512C4E400D714B0 /* UIView+TKCategory.m */; };
+		68FF8C8D1512C75800D714B0 /* Suggestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68FF8C8C1512C75800D714B0 /* Suggestions.plist */; };
+		68FF8C901512C88200D714B0 /* Suggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FF8C8F1512C88200D714B0 /* Suggestion.m */; };
 		F280FE4514E89D6E00C7C7A0 /* lamp.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4314E89D6E00C7C7A0 /* lamp.png */; };
 		F280FE4614E89D6E00C7C7A0 /* lamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */; };
 		F286101414DB6B410014B045 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F286101314DB6B410014B045 /* UIKit.framework */; };
@@ -113,6 +117,13 @@
 		68C8874A14FD8E3800DF473B /* ActionSyllables@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ActionSyllables@2x.png"; sourceTree = "<group>"; };
 		68FF8ADD1512B86200D714B0 /* FiltersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiltersTableViewController.h; sourceTree = "<group>"; };
 		68FF8ADE1512B86200D714B0 /* FiltersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersTableViewController.m; sourceTree = "<group>"; };
+		68FF8C851512C4B500D714B0 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		68FF8C861512C4B500D714B0 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
+		68FF8C881512C4E400D714B0 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
+		68FF8C891512C4E400D714B0 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
+		68FF8C8C1512C75800D714B0 /* Suggestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Suggestions.plist; sourceTree = "<group>"; };
+		68FF8C8E1512C88200D714B0 /* Suggestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Suggestion.h; path = ../Suggestion.h; sourceTree = "<group>"; };
+		68FF8C8F1512C88200D714B0 /* Suggestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Suggestion.m; path = ../Suggestion.m; sourceTree = "<group>"; };
 		F280FE4314E89D6E00C7C7A0 /* lamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp.png; sourceTree = "<group>"; };
 		F280FE4414E89D6E00C7C7A0 /* lamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp@2x.png"; sourceTree = "<group>"; };
 		F286100F14DB6B410014B045 /* Improv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Improv.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,8 +247,11 @@
 		68C8873314FD7E7B00DF473B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				68FF8C8C1512C75800D714B0 /* Suggestions.plist */,
 				F29B4F1314E8913B00F57207 /* ImprovGames.plist */,
 				68C886D214FD7B5300DF473B /* ImprovModel.xcdatamodeld */,
+				68FF8C8E1512C88200D714B0 /* Suggestion.h */,
+				68FF8C8F1512C88200D714B0 /* Suggestion.m */,
 				687BD9A315112A2700C4EAB0 /* Tag.h */,
 				687BD9A415112A2700C4EAB0 /* Tag.m */,
 				687BD9A015112A2700C4EAB0 /* Game.h */,
@@ -259,9 +273,30 @@
 			name = "Game Icons";
 			sourceTree = "<group>";
 		};
+		68FF8AEB1512BF3D00D714B0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				68FF8C8B1512C72800D714B0 /* TKAlertCenter */,
+			);
+			name = Libraries;
+			path = Improv;
+			sourceTree = "<group>";
+		};
+		68FF8C8B1512C72800D714B0 /* TKAlertCenter */ = {
+			isa = PBXGroup;
+			children = (
+				68FF8C881512C4E400D714B0 /* UIView+TKCategory.h */,
+				68FF8C891512C4E400D714B0 /* UIView+TKCategory.m */,
+				68FF8C851512C4B500D714B0 /* TKAlertCenter.h */,
+				68FF8C861512C4B500D714B0 /* TKAlertCenter.m */,
+			);
+			name = TKAlertCenter;
+			sourceTree = "<group>";
+		};
 		F286100414DB6B410014B045 = {
 			isa = PBXGroup;
 			children = (
+				68FF8AEB1512BF3D00D714B0 /* Libraries */,
 				68C8872B14FD7E2100DF473B /* CoreData.framework */,
 				F286101914DB6B410014B045 /* Improv */,
 				F286101214DB6B410014B045 /* Frameworks */,
@@ -435,6 +470,7 @@
 				68B97FD915115375005855E9 /* furley_bg.png in Resources */,
 				68B97FDC15115711005855E9 /* 3series-white.png in Resources */,
 				68B97FDD15115711005855E9 /* 3series-white@2x.png in Resources */,
+				68FF8C8D1512C75800D714B0 /* Suggestions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +490,9 @@
 				687BD9A215112A2700C4EAB0 /* Game.m in Sources */,
 				687BD9A515112A2700C4EAB0 /* Tag.m in Sources */,
 				68FF8ADF1512B86200D714B0 /* FiltersTableViewController.m in Sources */,
+				68FF8C871512C4B500D714B0 /* TKAlertCenter.m in Sources */,
+				68FF8C8A1512C4E400D714B0 /* UIView+TKCategory.m in Sources */,
+				68FF8C901512C88200D714B0 /* Suggestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

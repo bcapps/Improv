@@ -11,8 +11,11 @@
 #import "Game.h"
 #import "GameInfoTableViewController.h"
 #import "FiltersTableViewController.h"
+#import "TKAlertCenter.h"
+#import "Suggestion.h"
 
 #define RANDOM_ACTION_SHEET_TAG 100
+#define SUGGESTION_ACTION_SHEET_TAG 101
 
 @implementation GamesTableViewController
 @synthesize fetchedResultsController = __fetchedResultsController;
@@ -33,7 +36,7 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:@selector(suggestionButtonPushed)];
     
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
     UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterButtonPushed)];
@@ -82,6 +85,13 @@
     timerButton.title = [dateFormatter stringFromDate:date];
 }
 
+- (void)suggestionButtonPushed {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Relationship", @"Location", @"Profession", nil];
+    sheet.tag = SUGGESTION_ACTION_SHEET_TAG;
+    
+    [sheet showFromToolbar:self.navigationController.toolbar];
+}
+
 - (void)filterButtonPushed {
     FiltersTableViewController *filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
@@ -98,7 +108,6 @@
     }
     timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     timeAsInt = -1;
-
 }
 
 - (void)pauseTimer {
@@ -116,7 +125,7 @@
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if(actionSheet.tag = RANDOM_ACTION_SHEET_TAG) {
+    if(actionSheet.tag == RANDOM_ACTION_SHEET_TAG) {
         if(buttonIndex == 0) {
             GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             gameInfo.game = [self.fetchedResultsController objectAtIndexPath:[self selectRandomGame]];
@@ -124,6 +133,41 @@
         }
         else if (buttonIndex == 1) {
 
+        }
+    }
+    else if(actionSheet.tag == SUGGESTION_ACTION_SHEET_TAG) {
+        if(buttonIndex == actionSheet.cancelButtonIndex) {
+            
+        } else {
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            // Edit the entity name as appropriate.
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Suggestion" inManagedObjectContext:self.managedObjectContext];
+            [fetchRequest setEntity:entity];
+            
+            
+            if(buttonIndex == 0) {
+                [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K like %@",@"type", @"Relationship"]];
+                NSMutableArray *array = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+                
+                NSString *relationship = ((Suggestion *)[array objectAtIndex:arc4random() % [array count]]).name;
+                
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:relationship image:[UIImage imageNamed:@"lightbulb"]];
+            } else if (buttonIndex == 1) {
+                [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K like %@",@"type", @"Location"]];
+                NSMutableArray *array = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+
+                NSString *location = ((Suggestion *)[array objectAtIndex:arc4random() % [array count]]).name;
+                
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:location image:[UIImage imageNamed:@"lightbulb"]];
+            } else if (buttonIndex == 2) {
+                [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K like %@",@"type", @"Profession"]];
+                NSMutableArray *array = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+                
+                NSString *profession = ((Suggestion *)[array objectAtIndex:arc4random() % [array count]]).name;
+                
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:profession image:[UIImage imageNamed:@"lightbulb"]];
+
+            }
         }
     }
 }
@@ -223,6 +267,8 @@
 }
 
 #pragma mark - Fetched Results Controller
+
+
 
 - (NSFetchedResultsController *)fetchedResultsController
 {

@@ -18,6 +18,10 @@
         <relationship name="similarGames" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="similarGames" inverseEntity="Game" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="game" inverseEntity="Tag" syncable="YES"/>
     </entity>
+    <entity name="Suggestion" representedClassName="Suggestion" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="game" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="tags" inverseEntity="Game" syncable="YES"/>
@@ -25,5 +29,6 @@
     <elements>
         <element name="Game" positionX="160" positionY="192" width="128" height="285"/>
         <element name="Tag" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Suggestion" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

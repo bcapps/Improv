@@ -11,6 +11,7 @@
 #import "GamesTableViewController.h"
 #import "Game.h"
 #import "Tag.h"
+#import "Suggestion.h"
 #include <QuartzCore/QuartzCore.h>
 
 
@@ -35,7 +36,8 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
-    //[self importInitialData];
+    //[self importSuggestionData];
+    //[self importGameData];
     
     return YES;
 }
@@ -143,7 +145,33 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-- (void) importInitialData {
+- (void) importSuggestionData {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Suggestions" ofType:@"plist"];
+    NSArray *relationships = [[NSDictionary dictionaryWithContentsOfFile:path] objectForKey:@"Relationships"];
+    for(NSString *obj in relationships) {
+        Suggestion *suggestion = [NSEntityDescription insertNewObjectForEntityForName:@"Suggestion" inManagedObjectContext:self.managedObjectContext];
+        suggestion.name = obj;
+        suggestion.type = @"Relationship";
+    }
+    
+    NSArray *locations = [[NSDictionary dictionaryWithContentsOfFile:path] objectForKey:@"Locations"];
+    for(NSString *obj in locations) {
+        Suggestion *suggestion = [NSEntityDescription insertNewObjectForEntityForName:@"Suggestion" inManagedObjectContext:self.managedObjectContext];
+        suggestion.name = obj;
+        suggestion.type = @"Location";
+    } 
+    
+    NSArray *professions = [[NSDictionary dictionaryWithContentsOfFile:path] objectForKey:@"Professions"];
+    for(NSString *obj in professions) {
+        Suggestion *suggestion = [NSEntityDescription insertNewObjectForEntityForName:@"Suggestion" inManagedObjectContext:self.managedObjectContext];
+        suggestion.name = obj;
+        suggestion.type = @"Profession";
+    }    
+    
+    [self.managedObjectContext save:nil];
+}
+
+- (void) importGameData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ImprovGames" ofType:@"plist"];
     NSArray *games = [[NSDictionary dictionaryWithContentsOfFile:path] objectForKey:@"Games"];
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"Title" ascending:YES];

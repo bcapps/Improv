@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Relationships</key>
+	<array>
+		<string>Siblings</string>
+		<string>Co-Workers</string>
+		<string>Spouses</string>
+		<string>Father and Son</string>
+		<string>Father and Daughter</string>
+		<string>Mother and Son</string>
+		<string>Mother and Daughter</string>
+		<string>Friends</string>
+	</array>
+	<key>Locations</key>
+	<array>
+		<string>Park</string>
+		<string>Firehouse</string>
+		<string>Police Station</string>
+		<string>Home</string>
+		<string>The Mall</string>
+		<string>Post Office</string>
+		<string>Caves</string>
+		<string>Dormitory</string>
+	</array>
+	<key>Professions</key>
+	<array>
+		<string>Doctor</string>
+		<string>Police Officer</string>
+		<string>Artist</string>
+		<string>Mime</string>
+		<string>Beast Tamer</string>
+		<string>Hunter</string>
+		<string>Office Worker</string>
+		<string>Programmer</string>
+	</array>
+</dict>
+</plist>
