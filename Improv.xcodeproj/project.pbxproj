@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68082F521512F33300102582 /* relationship.png in Resources */ = {isa = PBXBuildFile; fileRef = 68082F501512F33300102582 /* relationship.png */; };
+		68082F531512F33300102582 /* relationship@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68082F511512F33300102582 /* relationship@2x.png */; };
+		68082F5A1512F3E100102582 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 68082F581512F3E100102582 /* location.png */; };
+		68082F5B1512F3E100102582 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68082F591512F3E100102582 /* location@2x.png */; };
+		68082F621512F5B300102582 /* profession.png in Resources */ = {isa = PBXBuildFile; fileRef = 68082F601512F5B300102582 /* profession.png */; };
+		68082F631512F5B300102582 /* profession@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68082F611512F5B300102582 /* profession@2x.png */; };
 		68794CF714FDEC4900E33F88 /* GameInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68794CF614FDEC4800E33F88 /* GameInfoTableViewController.m */; };
 		68794CFE14FDF67A00E33F88 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 68794CFC14FDF67A00E33F88 /* test2.png */; };
 		68794CFF14FDF67A00E33F88 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 68794CFD14FDF67A00E33F88 /* test.png */; };
@@ -70,6 +76,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68082F501512F33300102582 /* relationship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = relationship.png; sourceTree = "<group>"; };
+		68082F511512F33300102582 /* relationship@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "relationship@2x.png"; sourceTree = "<group>"; };
+		68082F581512F3E100102582 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		68082F591512F3E100102582 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
+		68082F601512F5B300102582 /* profession.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profession.png; sourceTree = "<group>"; };
+		68082F611512F5B300102582 /* profession@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profession@2x.png"; sourceTree = "<group>"; };
 		68794CF514FDEC4800E33F88 /* GameInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInfoTableViewController.h; sourceTree = "<group>"; };
 		68794CF614FDEC4800E33F88 /* GameInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInfoTableViewController.m; sourceTree = "<group>"; };
 		68794CFC14FDF67A00E33F88 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
@@ -356,6 +368,12 @@
 		F29B4F0514E88C6C00F57207 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				68082F601512F5B300102582 /* profession.png */,
+				68082F611512F5B300102582 /* profession@2x.png */,
+				68082F501512F33300102582 /* relationship.png */,
+				68082F511512F33300102582 /* relationship@2x.png */,
+				68082F581512F3E100102582 /* location.png */,
+				68082F591512F3E100102582 /* location@2x.png */,
 				68B97FD815115375005855E9 /* furley_bg.png */,
 				68800A3214FF186200C99605 /* lightbulb.png */,
 				68800A3314FF186300C99605 /* lightbulb@2x.png */,
@@ -471,6 +489,12 @@
 				68B97FDC15115711005855E9 /* 3series-white.png in Resources */,
 				68B97FDD15115711005855E9 /* 3series-white@2x.png in Resources */,
 				68FF8C8D1512C75800D714B0 /* Suggestions.plist in Resources */,
+				68082F521512F33300102582 /* relationship.png in Resources */,
+				68082F531512F33300102582 /* relationship@2x.png in Resources */,
+				68082F5A1512F3E100102582 /* location.png in Resources */,
+				68082F5B1512F3E100102582 /* location@2x.png in Resources */,
+				68082F621512F5B300102582 /* profession.png in Resources */,
+				68082F631512F5B300102582 /* profession@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

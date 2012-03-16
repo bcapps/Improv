@@ -57,8 +57,11 @@
     self.navigationItem.rightBarButtonItem = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).navigationItem.rightBarButtonItem;
     
     self.toolbarItems = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).toolbarItems;
-    
+
     self.title = game.title;
+    
+    //[timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
+    
     
     UIButton *backButton = [UIButton buttonWithType:101];
     [backButton addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];

@@ -121,7 +121,7 @@
 }
 
 - (void)randomButtonPushed {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Choose Random Game" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Game With Filters", nil];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Game With Filters", nil];
     sheet.tag = RANDOM_ACTION_SHEET_TAG;
     [sheet showFromToolbar:self.navigationController.toolbar];
 }
@@ -153,21 +153,21 @@
                 
                 NSString *relationship = ((Suggestion *)[array objectAtIndex:arc4random() % [array count]]).name;
                 
-                [[TKAlertCenter defaultCenter] postAlertWithMessage:relationship image:[UIImage imageNamed:@"lightbulb"]];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:relationship image:[UIImage imageNamed:@"relationship"]];
             } else if (buttonIndex == 1) {
                 [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K like %@",@"type", @"Location"]];
                 NSMutableArray *array = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
 
                 NSString *location = ((Suggestion *)[array objectAtIndex:arc4random() % [array count]]).name;
                 
-                [[TKAlertCenter defaultCenter] postAlertWithMessage:location image:[UIImage imageNamed:@"lightbulb"]];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:location image:[UIImage imageNamed:@"location"]];
             } else if (buttonIndex == 2) {
                 [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K like %@",@"type", @"Profession"]];
                 NSMutableArray *array = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
                 
                 NSString *profession = ((Suggestion *)[array objectAtIndex:arc4random() % [array count]]).name;
                 
-                [[TKAlertCenter defaultCenter] postAlertWithMessage:profession image:[UIImage imageNamed:@"lightbulb"]];
+                [[TKAlertCenter defaultCenter] postAlertWithMessage:profession image:[UIImage imageNamed:@"profession"]];
 
             }
         }

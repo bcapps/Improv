@@ -45,6 +45,8 @@
     
     [minStepper setStepValue:1.0];
     [maxStepper setStepValue:1.0];
+    minStepper.autorepeat = YES;
+    maxStepper.autorepeat = YES;
     
     minStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MinStepperValue"];
     maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxStepperValue"];
@@ -80,6 +82,7 @@
         [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].detailTextLabel.text = [NSString stringWithFormat:@"%i", [value intValue]];
         
         [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MinStepperValue"];
+        maxStepper.minimumValue = minStepper.value;
 
     } else if(stepper.tag == 101) {
         if(stepper.value < minStepper.value) {
@@ -91,6 +94,7 @@
         [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]].detailTextLabel.text = [NSString stringWithFormat:@"%i", [value intValue]];
         
         [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MaxStepperValue"];
+        minStepper.maximumValue = maxStepper.value;
     }
     
     [self.tableView reloadData];
