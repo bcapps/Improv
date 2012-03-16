@@ -38,7 +38,13 @@
     
     //[self importSuggestionData];
     //[self importGameData];
-    
+    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]) {
+        [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"MinStepperValue"];
+    }
+    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]) {
+        [[NSUserDefaults standardUserDefaults] setInteger:10 forKey:@"MaxStepperValue"];
+    }
+
     return YES;
 }
 

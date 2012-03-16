@@ -13,6 +13,8 @@
 @end
 
 @implementation FiltersTableViewController
+@synthesize minStepper;
+@synthesize maxStepper;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,22 +28,71 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.0f)];
-    
+        
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed)];
-    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    
+   [self.navigationItem setRightBarButtonItem:doneButton];
+    
+    minStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
+    maxStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
+    
+    minStepper.minimumValue = 1;
+    maxStepper.minimumValue = 1;
+    
+    minStepper.tag = 100;
+    maxStepper.tag = 101;
+    
+    [minStepper setStepValue:1.0];
+    [maxStepper setStepValue:1.0];
+    
+    minStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MinStepperValue"];
+    maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxStepperValue"];
+    
+    [self stepperValueChanged:minStepper];
+    [self stepperValueChanged:maxStepper];
+
+    [minStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [maxStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
+
+    self.tableView.allowsSelection = NO;
     
     //[navBar addSubview:doneButton];
     
-    [toolbar setItems:[NSArray arrayWithObjects:flexibleSpace, doneButton, nil]];
-    [self.view addSubview:toolbar];
-
+    //[toolbar setItems:[NSArray arrayWithObjects:flexibleSpace, doneButton, nil]];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)stepperValueChanged:(UIStepper *)stepper {
+    if(stepper.tag == 100) {
+        if(stepper.value > maxStepper.value) {
+            stepper.value = maxStepper.value;
+            [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MinStepperValue"];
+            return;
+        }
+        NSNumber *value = [NSNumber numberWithDouble:minStepper.value];
+
+        [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].detailTextLabel.text = [NSString stringWithFormat:@"%i", [value intValue]];
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MinStepperValue"];
+
+    } else if(stepper.tag == 101) {
+        if(stepper.value < minStepper.value) {
+            stepper.value = minStepper.value;
+            [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MaxStepperValue"];
+            return;
+        }
+        NSNumber *value = [NSNumber numberWithDouble:maxStepper.value];
+        [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]].detailTextLabel.text = [NSString stringWithFormat:@"%i", [value intValue]];
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MaxStepperValue"];
+    }
+    
+    [self.tableView reloadData];
 }
 
 - (void)doneButtonPushed {
@@ -64,22 +115,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+    
+    if(indexPath.row == 0) {
+        cell.textLabel.text = @"min";
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", [[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]];
+        
+        [cell addSubview:minStepper];
+
+    } else if (indexPath.row == 1) {
+        cell.textLabel.text = @"max";
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", [[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]];
+        [cell addSubview:maxStepper];
+    }
     
     // Configure the cell...
     

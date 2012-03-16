@@ -94,8 +94,10 @@
 
 - (void)filterButtonPushed {
     FiltersTableViewController *filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:filtersTableViewController];
+
     
-    [self.navigationController presentModalViewController:filtersTableViewController animated:YES];
+    [self.navigationController presentModalViewController:navController animated:YES];
 }
 
 - (void)timerButtonPushed {

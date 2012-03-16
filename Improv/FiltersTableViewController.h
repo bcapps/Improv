@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FiltersTableViewController : UITableViewController
+@property (nonatomic, strong) UIStepper *minStepper;
+@property (nonatomic, strong) UIStepper *maxStepper;
 
 @end
