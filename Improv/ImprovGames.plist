@@ -186,6 +186,94 @@
 			<key>Variations</key>
 			<array/>
 		</dict>
+		<dict>
+			<key>Image</key>
+			<string>SimpleContinuation</string>
+			<key>Title</key>
+			<string>Simple Continuation</string>
+			<key>Description</key>
+			<string>A scene is started, played by 2 to 4 players. Mid-scene the MC interrupts, and all characters are replaced by new players. The new players should take over the original characters, and stick to the story that was being developed.</string>
+			<key>Tags</key>
+			<array>
+				<string>Continuation</string>
+				<string>Performance</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>6</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Switcheroo</string>
+			<key>Title</key>
+			<string>Switcheroo</string>
+			<key>Description</key>
+			<string>This is like Simple Continuation, except that the MC interrupts the scene several times, and at each interruption all actors in the scene get switched, no new actors join in, and no actors leave.</string>
+			<key>Tags</key>
+			<array>
+				<string>Continuation</string>
+				<string>Performance</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>3</integer>
+			<key>MaxTime</key>
+			<integer>8</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Actor'sNightmare</string>
+			<key>Title</key>
+			<string>Actor's Nightmare</string>
+			<key>Description</key>
+			<string>This one is played by 2 players, one of which gets their lines on paper (like a script). The other player should justify whatever the scripted player says. Notes: You can use existing plays for this, but also lines from comics. Whoever gets the script should not forget to play/act - only his/her lines are defined, not what he/she does, or how he/she does the lines.</string>
+			<key>Tags</key>
+			<array>
+				<string>Limitations</string>
+				<string>Performance</string>
+				<string>Prop</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>2</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>6</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
 	</array>
 </dict>
 </plist>
