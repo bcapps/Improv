@@ -329,9 +329,100 @@
 			<key>Buzzer</key>
 			<false/>
 			<key>Variations</key>
-			<string>At a second clap, allow the player to advance the scene.</string>
+			<array>
+				<string>At a second clap, allow the player to advance the scene.</string>
 			<array/>
 		</dict>
+		<dict>
+			<key>Image</key>
+			<string>Aerobics</string>
+			<key>Title</key>
+			<string>Aerobics</string>
+			<key>Description</key>
+			<string>This is a fun observation game. Place all players in a line. The first player starts walking around the room walking a large circle. The second player starts following the first one and tries to move like the first player. After a few rounds, the first player goes to the back of the line, and the third player starts following and imitating the second one. Notes Tell players to be themselves, don`t try and walk around funny (it`s not the Ministry of Silly Walks after all).</string>
+			<key>Tags</key>
+			<array>
+				<string>Characters</string>
+				<string>Exercise</string>
+				<string>Icebreaker</string>
+				<string>Look and Listen</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>4</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>4</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>ThreeRules</string>
+			<key>Title</key>
+			<string>Three Rules</string>
+			<key>Description</key>
+			<string>Get 3 rules from the audience, e.g. players have only one arm, players can`t use a word that contains an `s` and after every question uttered players needs to yell `Yess!`. Players then play a scene, obeying the 3 rules. For examples of what else might be used as a rule see the other games with a Limitation Tag</string>
+			<key>Tags</key>
+			<array>
+				<string>Limitations</string>
+				<string>Performance</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>4</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>4</integer>
+			<key>MaxTime</key>
+			<integer>12</integer>
+			<key>AudienceParticipation</key>
+			<true/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>BlindLead</string>
+			<key>Title</key>
+			<string>Blind Lead</string>
+			<key>Description</key>
+			<string>One player is blindfolded, and the room is filled with obstacles (put a couple of chairs everywhere, leave all kinds of junk on the floor). The idea is that the rest of the group will lead the blindfolded player through the room, by talking. A helpful reader offered us an explanation for the name `Airplane`: The blindfoldee (or just eyes closed) is led through a maze composed of furniture and the other actors. He is an "Airplane" lost in the fog being talked down by the "Air Traffic Controller", who must remain in his/her "Tower". Standing on a chair/rehearsal block lends visibility for the controller. The airplane also only has a limited amount of fuel left (1-3 minutes, whatever) to reach a safe landing (arriving at the Tower). The airplane is also allowed two "brushes"-limited contact with an obstacle. The third brush or a direct hit or stepping on something directly causes a "crash". They may step around, over or under the obstacles. Also, the airplane can only fly forward. It can turn in any direction, however. The directions must be given from the pilot`s point of view, a good exercise for fledgling directors. You can also destroy all the trust you`ve built up in your class by completely clearing the deck and torturing the Pilot. Believe us someone will suggest it.</string>
+			<key>Tags</key>
+			<array>
+				<string>Exercise</string>
+				<string>Group</string>
+				<string>Trust</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>1</integer>
+			<key>MaxTime</key>
+			<integer>3</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>		
 	</array>
 </dict>
 </plist>
