@@ -274,6 +274,64 @@
 			<key>Variations</key>
 			<array/>
 		</dict>
+		<dict>
+			<key>Image</key>
+			<string>AdjectiveScene</string>
+			<key>Title</key>
+			<string>Adjective Scene</string>
+			<key>Description</key>
+			<string>Ask for an adjective (e.g. sad). Play a scene in which the players are as sad as possible. Alternatively, give every player a different adjective.</string>
+			<key>Tags</key>
+			<array>
+				<string>Limitations</string>
+				<string>Performance</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>4</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>10</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>Image</key>
+			<string>MakeMoreInteresting</string>
+			<key>Title</key>
+			<string>Make More Interesting</string>
+			<key>Description</key>
+			<string>Simple exercise, useful for players that are too verbal. One player starts a scene. As soon as the trainer claps his hands, the player needs to make whatever he was doing more interesting, without advancing. If our player was opening a briefcase at the clap, he needs to make `opening a briefcase` more interesting, he is not allowed to take something out of the briefcase, as that would be advancing, player needs to stick to `opening the briefcase`. Notes Simple to explain but not so easy to play. When done well you move into the clownesque. Think about Chaplin, Laurel & Hardy or Mr. Bean.</string>
+			<key>Tags</key>
+			<array>
+				<string>Exercise</string>
+			</array>
+			<key>MinPlayers</key>
+			<integer>2</integer>
+			<key>MaxPlayers</key>
+			<integer>0</integer>
+			<key>MinTime</key>
+			<integer>2</integer>
+			<key>MaxTime</key>
+			<integer>4</integer>
+			<key>AudienceParticipation</key>
+			<false/>
+			<key>timerCountsUp</key>
+			<true/>
+			<key>Buzzer</key>
+			<false/>
+			<key>Variations</key>
+			<string>At a second clap, allow the player to advance the scene.</string>
+			<array/>
+		</dict>
 	</array>
 </dict>
 </plist>
