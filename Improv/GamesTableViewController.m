@@ -22,7 +22,7 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize timer;
 @synthesize timeAsInt;
-
+@synthesize currentlyPlayingGame;
 
 - (void)didReceiveMemoryWarning
 {
@@ -105,11 +105,15 @@
     NSString *time = [timerButton.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if(![time isEqualToString:@"0:00"]) {
-        [self.timer invalidate];
-        timerButton.title = @"    0:00    ";
+        //[self.timer invalidate];
+        //timerButton.title = @"    0:00    ";
+        GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        gameInfo.game = currentlyPlayingGame;
+        [self.navigationController pushViewController:gameInfo animated:YES];
+        
     }
-    timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-    timeAsInt = -1;
+    //timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    //timeAsInt = -1;
 }
 
 - (void)pauseTimer {

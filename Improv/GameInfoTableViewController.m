@@ -83,6 +83,9 @@
     } else {
         timerButton.title = [NSString stringWithFormat:@"    %@    ", game.maxTime];
     }
+    if(((GamesTableViewController *)[[[self navigationController] viewControllers] objectAtIndex:0]).currentlyPlayingGame == nil) {
+        ((GamesTableViewController *)[[[self navigationController] viewControllers] objectAtIndex:0]).currentlyPlayingGame = game;
+    }
 }
 
 - (void)pop{
@@ -150,20 +153,17 @@
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
     return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -173,7 +173,6 @@
 
         if(indexPath.row == 0) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-            //cell.textLabel.text = @"description";
             cell.textLabel.text = game.gameDescription;
             cell.textLabel.numberOfLines = 0;
             cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
@@ -194,7 +193,12 @@
         else if(indexPath.row == 2) {
             cell.textLabel.text = @"time";
             
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ minutes", game.minTime, game.maxTime];
+            if(game.minTime == game.maxTime) {
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ minutes", game.minTime];
+            } 
+            else {
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ minutes", game.minTime, game.maxTime];
+            }
         }
         else if(indexPath.row == 3) {
             cell.textLabel.text = @"audience";
