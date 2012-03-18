@@ -36,8 +36,8 @@
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
-    //[self importSuggestionData];
-    //[self importGameData];
+    [self importSuggestionData];
+    [self importGameData];
     if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]) {
         [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"MinStepperValue"];
     }
