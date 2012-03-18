@@ -121,7 +121,7 @@
 }
 
 - (void)randomButtonPushed {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Game With Filters", nil];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Filtered Game", nil];
     sheet.tag = RANDOM_ACTION_SHEET_TAG;
     [sheet showFromToolbar:self.navigationController.toolbar];
 }

@@ -173,7 +173,6 @@
 
         if(indexPath.row == 0) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-            
             //cell.textLabel.text = @"description";
             cell.textLabel.text = game.gameDescription;
             cell.textLabel.numberOfLines = 0;
@@ -184,7 +183,11 @@
             cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:12.0f];
             if(![game.maxPlayers intValue]) {
                 cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", game.minPlayers];
-            } else {
+            }
+            else if(game.maxPlayers == game.minPlayers) {
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", game.minPlayers];
+            }
+            else {
                 cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", game.minPlayers, game.maxPlayers];
             }
         }
