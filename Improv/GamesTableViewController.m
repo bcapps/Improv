@@ -107,8 +107,18 @@
     if(![time isEqualToString:@"0:00"]) {
         //[self.timer invalidate];
         //timerButton.title = @"    0:00    ";
+        if([[[self navigationController] topViewController] isKindOfClass:[GameInfoTableViewController class]]) {
+            GameInfoTableViewController *currentGameInfo = (GameInfoTableViewController *)[[self navigationController] topViewController];
+            
+            if([currentlyPlayingGame.gameDescription isEqualToString:currentGameInfo.game.gameDescription]) {
+                return;
+            }
+        }
+
         GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         gameInfo.game = currentlyPlayingGame;
+        
+        
         [self.navigationController pushViewController:gameInfo animated:YES];
         
     }
@@ -136,6 +146,7 @@
             GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             gameInfo.game = [self.fetchedResultsController objectAtIndexPath:[self selectRandomGame]];
             [self.navigationController pushViewController:gameInfo animated:YES];
+             
         }
         else if (buttonIndex == 1) {
 
