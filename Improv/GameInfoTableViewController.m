@@ -15,6 +15,8 @@
 
 @implementation GameInfoTableViewController
 @synthesize game;
+@synthesize playButton;
+@synthesize buttonLabel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,7 +34,7 @@
     //UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 75)];
-    UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-normal"] forState:UIControlStateNormal];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-disabled"] forState:UIControlStateDisabled];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-highlighted"] forState:UIControlStateHighlighted];
@@ -40,7 +42,7 @@
     [playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
     
-    UILabel *buttonLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 51)];
+    buttonLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 51)];
     buttonLabel.text = @"Play Game";
     buttonLabel.textAlignment = UITextAlignmentCenter;
     buttonLabel.font = [UIFont boldSystemFontOfSize:20.0f];
@@ -60,9 +62,6 @@
 
     self.title = game.title;
     
-    //[timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
-    
-    
     UIButton *backButton = [UIButton buttonWithType:101];
     [backButton addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
     [backButton setTitle:@"Games" forState:UIControlStateNormal];
@@ -70,6 +69,31 @@
     UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backItem;
     //[[self navigationItem] setBackBarButtonItem: backItem];
+}
+
+- (UIImage *) newImageFromMaskImage:(UIImage *)mask inColor:(UIColor *) color {
+
+    
+    CGImageRef maskImage = mask.CGImage;
+    CGFloat width = mask.size.width;
+    CGFloat height = mask.size.height;
+    CGRect bounds = CGRectMake(0,0,width,height);
+    
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef bitmapContext = CGBitmapContextCreate(NULL, width, height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGContextDrawImage(bitmapContext, bounds, mask.CGImage);
+
+    CGContextSetBlendMode (bitmapContext, kCGBlendModeMultiply);
+    CGContextClipToMask(bitmapContext, bounds, maskImage);
+    CGContextSetFillColorWithColor(bitmapContext, color.CGColor);    
+    CGContextFillRect(bitmapContext, bounds);
+    
+    CGImageRef mainViewContentBitmapContext = CGBitmapContextCreateImage(bitmapContext);
+    CGContextRelease(bitmapContext);
+    
+    UIImage *result = [UIImage imageWithCGImage:mainViewContentBitmapContext];
+    return result;
 }
 
 - (void)playButtonTapped {
@@ -84,8 +108,14 @@
         timerButton.title = [NSString stringWithFormat:@"    %@    ", game.maxTime];
     }
     if(((GamesTableViewController *)[[[self navigationController] viewControllers] objectAtIndex:0]).currentlyPlayingGame == nil) {
+        
+        [playButton setBackgroundImage:[self newImageFromMaskImage:[UIImage imageNamed:@"glossyButton-copy"] inColor:[UIColor colorWithRed:255.0/255.0 green:20.0/255.0 blue:30.0/255.0 alpha:1]] forState:UIControlStateNormal];
+        buttonLabel.text = @"Stop Game";
+        
         ((GamesTableViewController *)[[[self navigationController] viewControllers] objectAtIndex:0]).currentlyPlayingGame = game;
     }
+    
+    
 }
 
 - (void)pop{

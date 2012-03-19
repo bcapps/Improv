@@ -10,4 +10,6 @@
 @class Game;
 @interface GameInfoTableViewController : UITableViewController
 @property (nonatomic, strong) Game *game;
+@property (nonatomic, strong) UIButton *playButton;
+@property (nonatomic, strong) UILabel *buttonLabel;
 @end
