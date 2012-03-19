@@ -15,5 +15,5 @@
 @property (nonatomic, retain) NSTimer *timer;
 @property (nonatomic) NSTimeInterval timeAsInt;
 @property (nonatomic, strong) Game *currentlyPlayingGame;
-
+@property (nonatomic, strong) UIBarButtonItem *timerButton;
 @end

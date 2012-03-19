@@ -23,6 +23,7 @@
 @synthesize timer;
 @synthesize timeAsInt;
 @synthesize currentlyPlayingGame;
+@synthesize timerButton;
 
 - (void)didReceiveMemoryWarning
 {
@@ -47,7 +48,7 @@
     internalTimerButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     internalTimerButton.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
     
-    UIBarButtonItem *timerButton = [[UIBarButtonItem alloc] init];
+    timerButton = [[UIBarButtonItem alloc] init];
     timerButton.style = UIBarButtonItemStyleBordered;
     timerButton.title = @"    0:00    ";
     [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
@@ -117,7 +118,6 @@
 
         GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         gameInfo.game = currentlyPlayingGame;
-        
         
         [self.navigationController pushViewController:gameInfo animated:YES];
         
