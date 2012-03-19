@@ -17,4 +17,6 @@
 @property (nonatomic, strong) Game *currentlyPlayingGame;
 @property (nonatomic, strong) UIBarButtonItem *timerButton;
 @property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
+@property (strong, nonatomic) NSFetchedResultsController *filteredResultsController;
+@property (strong, nonatomic, readonly) NSFetchedResultsController *currentFetchedResultsController;
 @end

@@ -25,6 +25,8 @@
 @synthesize currentlyPlayingGame;
 @synthesize timerButton;
 @synthesize searchDisplayController;
+@synthesize filteredResultsController = __filteredResultsController;
+@synthesize currentFetchedResultsController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -47,6 +49,8 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     self.searchDisplayController.delegate = self;
+    self.searchDisplayController.searchResultsTableView.rowHeight = 66.0f;
+    self.searchDisplayController.searchResultsDataSource = self;
     
     self.tableView.tableHeaderView = searchBar;
     
@@ -100,11 +104,41 @@
     [sheet showFromToolbar:self.navigationController.toolbar];
 }
 
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS %@", @"title", searchString]];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    self.filteredResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    
+    self.filteredResultsController.delegate = self;
+    
+	NSError *error = nil;
+	if (![self.filteredResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	}
+    
+    return YES;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView {
+    tableView.rowHeight = 66.0f;
+}
+
 - (void)filterButtonPushed {
     FiltersTableViewController *filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:filtersTableViewController];
 
-    
     [self.navigationController presentModalViewController:navController animated:YES];
 }
 
@@ -151,7 +185,7 @@
     if(actionSheet.tag == RANDOM_ACTION_SHEET_TAG) {
         if(buttonIndex == 0) {
             GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-            gameInfo.game = [self.fetchedResultsController objectAtIndexPath:[self selectRandomGame]];
+            gameInfo.game = [self.currentFetchedResultsController objectAtIndexPath:[self selectRandomGame]];
             [self.navigationController pushViewController:gameInfo animated:YES];
              
         }
@@ -198,7 +232,7 @@
 
 - (NSIndexPath *)selectRandomGame {
     int numberOfSections = [self numberOfSectionsInTableView:self.tableView];    
-    int numberOfGames = [[self.fetchedResultsController fetchedObjects] count];
+    int numberOfGames = [[self.currentFetchedResultsController fetchedObjects] count];
     int randomGame = arc4random() % numberOfGames;
 
     
@@ -270,24 +304,35 @@
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.fetchedResultsController sections] count];
+    if([[self.currentFetchedResultsController sections] count] == 0) {
+        return 1;
+    }
+    return [[self.currentFetchedResultsController sections] count];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];}
+    if([self.currentFetchedResultsController fetchedObjects]) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.currentFetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo numberOfObjects];
+    }
+    return 0;
+}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    gameInfo.game = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    gameInfo.game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
     [self.navigationController pushViewController:gameInfo animated:YES];
 
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    Game *game = [self.fetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
     
-    return [NSString stringWithFormat:@"%@ Players", game.minimumNumberOfPlayersString];
+    if(self.currentFetchedResultsController == self.fetchedResultsController) {
+        Game *game = [self.currentFetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
+    
+        return [NSString stringWithFormat:@"%@ Players", game.minimumNumberOfPlayersString];
+    }
+    return nil;
 }
 
 #pragma mark - Fetched Results Controller
@@ -332,6 +377,17 @@
     
     return __fetchedResultsController;
 }    
+
+- (NSFetchedResultsController *)currentFetchedResultsController {
+    
+    if(self.searchDisplayController.active) {
+        return self.filteredResultsController;
+    } 
+    else {
+        return self.fetchedResultsController;
+    }
+    
+}
 
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
@@ -386,11 +442,13 @@
 
 - (void)configureCell:(ImprovTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    Game *game = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    Game *game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
     cell.titleLabel.text = game.title;
     cell.descriptionLabel.text = game.firstSentenceOfDescription;
     cell.imageView.image = [UIImage imageNamed:game.image];
     cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
+    
 }
 
 
