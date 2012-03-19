@@ -105,6 +105,7 @@
             gamesTableViewController = (GamesTableViewController *)vC;
         }
     }    
+    
     if (game.timerType) {
         NSRunLoop *loop = [NSRunLoop mainRunLoop];
         [loop addTimer:gamesTableViewController.timer forMode:NSRunLoopCommonModes];

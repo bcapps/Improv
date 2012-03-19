@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Game.h"
-@interface GamesTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UIActionSheetDelegate>
+@interface GamesTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UIActionSheetDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -16,4 +16,5 @@
 @property (nonatomic) NSTimeInterval timeAsInt;
 @property (nonatomic, strong) Game *currentlyPlayingGame;
 @property (nonatomic, strong) UIBarButtonItem *timerButton;
+@property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
 @end

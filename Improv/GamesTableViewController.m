@@ -24,6 +24,7 @@
 @synthesize timeAsInt;
 @synthesize currentlyPlayingGame;
 @synthesize timerButton;
+@synthesize searchDisplayController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,6 +43,12 @@
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
     UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterButtonPushed)];
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44.0f)];
+    self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+    self.searchDisplayController.delegate = self;
+    
+    self.tableView.tableHeaderView = searchBar;
     
     UIButton *internalTimerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 66, 44)];
     [internalTimerButton setTitle:@"0:00" forState:UIControlStateNormal];
