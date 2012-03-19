@@ -50,6 +50,7 @@
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     self.searchDisplayController.delegate = self;
     self.searchDisplayController.searchResultsTableView.rowHeight = 66.0f;
+    self.searchDisplayController.searchResultsTableView.delegate = self;
     self.searchDisplayController.searchResultsDataSource = self;
     
     self.tableView.tableHeaderView = searchBar;
@@ -110,7 +111,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS %@", @"title", searchString]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS [cd]%@", @"title", searchString]];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
@@ -133,6 +134,7 @@
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView {
     tableView.rowHeight = 66.0f;
+    self.searchDisplayController.searchResultsTableView.delegate = self;
 }
 
 - (void)filterButtonPushed {
