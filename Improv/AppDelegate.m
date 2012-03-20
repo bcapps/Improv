@@ -12,6 +12,7 @@
 #import "Game.h"
 #import "Tag.h"
 #import "Suggestion.h"
+#import "TestFlight.h"
 #include <QuartzCore/QuartzCore.h>
 
 
@@ -26,6 +27,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"GamesAdded"]) {
+        [self importSuggestionData];
+        [self importGameData];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"GamesAdded"];
+    }
+    
     GamesTableViewController *tableViewController = [[GamesTableViewController alloc] initWithStyle:UITableViewStylePlain];
     tableViewController.managedObjectContext = self.managedObjectContext;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
@@ -35,15 +42,17 @@
     // Override point for customization after application launch.
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
-    
-    //[self importSuggestionData];
-    //[self importGameData];
+
     if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]) {
         [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"MinStepperValue"];
     }
     if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]) {
         [[NSUserDefaults standardUserDefaults] setInteger:10 forKey:@"MaxStepperValue"];
     }
+    
+    #ifdef CONFIGURATION_Beta
+        [TestFlight takeOff:@"b6ff894ad79974e300c096c44c7180d1_MzY0MTk4MjAxMi0wMy0yMCAxNToxNjozNS4xNTA3MDI"];
+    #endif
 
     return YES;
 }

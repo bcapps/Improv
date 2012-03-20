@@ -28,6 +28,11 @@
 		68794D2814FE09DC00E33F88 /* Narrative@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68794D2614FE09DC00E33F88 /* Narrative@2x.png */; };
 		68794D2B14FE0A8800E33F88 /* 10fingers.png in Resources */ = {isa = PBXBuildFile; fileRef = 68794D2914FE0A8700E33F88 /* 10fingers.png */; };
 		68794D2C14FE0A8800E33F88 /* 10fingers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68794D2A14FE0A8800E33F88 /* 10fingers@2x.png */; };
+		687A009515190FC4002E7CCD /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 687A009115190FC4002E7CCD /* libTestFlight.a */; };
+		687A009615190FC4002E7CCD /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 687A009215190FC4002E7CCD /* README.txt */; };
+		687A009715190FC4002E7CCD /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 687A009315190FC4002E7CCD /* release_notes.txt */; };
+		687A00A815191201002E7CCD /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 687A00A715191201002E7CCD /* Entitlements.plist */; };
+		687A00AA15191371002E7CCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 687A00A915191371002E7CCD /* libz.dylib */; };
 		687BD9A215112A2700C4EAB0 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 687BD9A115112A2700C4EAB0 /* Game.m */; };
 		687BD9A515112A2700C4EAB0 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 687BD9A415112A2700C4EAB0 /* Tag.m */; };
 		68800A1B14FF157500C99605 /* random.png in Resources */ = {isa = PBXBuildFile; fileRef = 68800A1914FF157500C99605 /* random.png */; };
@@ -132,6 +137,12 @@
 		68794D2614FE09DC00E33F88 /* Narrative@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Narrative@2x.png"; sourceTree = "<group>"; };
 		68794D2914FE0A8700E33F88 /* 10fingers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10fingers.png; sourceTree = "<group>"; };
 		68794D2A14FE0A8800E33F88 /* 10fingers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10fingers@2x.png"; sourceTree = "<group>"; };
+		687A009115190FC4002E7CCD /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		687A009215190FC4002E7CCD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		687A009315190FC4002E7CCD /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		687A009415190FC4002E7CCD /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		687A00A715191201002E7CCD /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = Improv/TestFlightSDK0.8.3/Entitlements.plist; sourceTree = "<group>"; };
+		687A00A915191371002E7CCD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		687BD9A015112A2700C4EAB0 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		687BD9A115112A2700C4EAB0 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		687BD9A315112A2700C4EAB0 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
@@ -230,10 +241,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687A00AA15191371002E7CCD /* libz.dylib in Frameworks */,
 				68C8872C14FD7E2100DF473B /* CoreData.framework in Frameworks */,
 				F286101414DB6B410014B045 /* UIKit.framework in Frameworks */,
 				F286101614DB6B410014B045 /* Foundation.framework in Frameworks */,
 				F286101814DB6B410014B045 /* CoreGraphics.framework in Frameworks */,
+				687A009515190FC4002E7CCD /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +266,17 @@
 				68794D1214FE003800E33F88 /* glossyButton-normal@2x.png */,
 			);
 			name = PlayButton;
+			sourceTree = "<group>";
+		};
+		687A009015190FC4002E7CCD /* TestFlightSDK0.8.3 */ = {
+			isa = PBXGroup;
+			children = (
+				687A009115190FC4002E7CCD /* libTestFlight.a */,
+				687A009215190FC4002E7CCD /* README.txt */,
+				687A009315190FC4002E7CCD /* release_notes.txt */,
+				687A009415190FC4002E7CCD /* TestFlight.h */,
+			);
+			path = TestFlightSDK0.8.3;
 			sourceTree = "<group>";
 		};
 		687E1FC81506B444000E4D68 /* Custom Cells */ = {
@@ -454,6 +478,7 @@
 		68FF8AEB1512BF3D00D714B0 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				687A009015190FC4002E7CCD /* TestFlightSDK0.8.3 */,
 				68FF8C8B1512C72800D714B0 /* TKAlertCenter */,
 			);
 			name = Libraries;
@@ -474,6 +499,8 @@
 		F286100414DB6B410014B045 = {
 			isa = PBXGroup;
 			children = (
+				687A00A915191371002E7CCD /* libz.dylib */,
+				687A00A715191201002E7CCD /* Entitlements.plist */,
 				68FF8AEB1512BF3D00D714B0 /* Libraries */,
 				68C8872B14FD7E2100DF473B /* CoreData.framework */,
 				F286101914DB6B410014B045 /* Improv */,
@@ -695,6 +722,9 @@
 				68F98B6F15157A5A00D4950C /* SimpleContinuation.png in Resources */,
 				683B157C1516BBF20033B784 /* glossyButton-normal-greyscale@2x.png in Resources */,
 				683B157E1516CEEE0033B784 /* glossyButton-highlighted-greyscale@2x.png in Resources */,
+				687A009615190FC4002E7CCD /* README.txt in Resources */,
+				687A009715190FC4002E7CCD /* release_notes.txt in Resources */,
+				687A00A815191201002E7CCD /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +764,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		687A009915190FEF002E7CCD /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Beta;
+		};
+		687A009A15190FEF002E7CCD /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Improv/Improv-Prefix.pch";
+				INFOPLIST_FILE = "Improv/Improv-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Improv/TestFlightSDK0.8.3\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Beta;
+		};
 		F286102B14DB6B410014B045 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -742,13 +809,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -767,7 +832,9 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*libTestFlight.a";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -785,6 +852,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Improv/Improv-Prefix.pch";
 				INFOPLIST_FILE = "Improv/Improv-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Improv/TestFlightSDK0.8.3\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -796,6 +867,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Improv/Improv-Prefix.pch";
 				INFOPLIST_FILE = "Improv/Improv-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Improv/TestFlightSDK0.8.3\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -809,6 +884,7 @@
 			buildConfigurations = (
 				F286102B14DB6B410014B045 /* Debug */,
 				F286102C14DB6B410014B045 /* Release */,
+				687A009915190FEF002E7CCD /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -818,6 +894,7 @@
 			buildConfigurations = (
 				F286102E14DB6B410014B045 /* Debug */,
 				F286102F14DB6B410014B045 /* Release */,
+				687A009A15190FEF002E7CCD /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
