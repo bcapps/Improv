@@ -329,9 +329,7 @@
 			<key>Buzzer</key>
 			<false/>
 			<key>Variations</key>
-			<array>
-				<string>At a second clap, allow the player to advance the scene.</string>
-            </array>
+			<array/>
             </dict>
             <dict>
                 <key>Image</key>
@@ -480,9 +478,7 @@
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-                <array>
-				<string>Invent your own animals (or things) and let players become juke boxes, birds, whatever. Play `majority wins`: animals/things that are most in the minority drop out.</string>
-				</array>
+                <array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -512,9 +508,7 @@
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-                <array>
-					<string>Let the exclusion evolve, allow a player that got excluded to get 2 others to join him and exclude the fourth one. This only works if the excluded player first allows herself to be excluded (a little Chivalry here).</string>
-				</array>
+                <array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -576,9 +570,7 @@
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-				<string>Pair up the players and time them. Ask the left players on the left to name as many words as possible starting with a `t`, and ask their partners to count, for 15 or 20 seconds. Then switch.</string>
-                </array>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -608,9 +600,7 @@
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-                <array>
-					<string>Any player has the option to change the sequence from A-Z to 1-10 and vice versa. Time it. Or change to 1-10.</string>
-				</array>
+                <array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -698,13 +688,11 @@
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-					<string>The thoughts of the players can also be provided by players off-stage.</string>
-                </array>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
-                <string>AmerIdol</string>
+                <string>AmericanIdol</string>
                 <key>Title</key>
                 <string>American Idol</string>
                 <key>Description</key>
@@ -733,9 +721,9 @@
             </dict>	
 			<dict>
                 <key>Image</key>
-                <string>WhatHappens</string>
-                <key>Title</key>
                 <string>WhatHappensNext</string>
+                <key>Title</key>
+                <string>What Happens Next</string>
                 <key>Description</key>
                 <string>One player in the middle, the others sit aside. Any person can give the middle player a task, which she performs, and then she asks `What happens next` ? Any player may suggest what needs to happen next, but the idea is for the group to construct a coherent story. Notes: The player in the middle should only and strictly be doing what she`s told, it is up to the players at the side to construct the story.</string>
 				<key>Tags</key>
@@ -819,10 +807,7 @@
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-					<string>Let 2 players be humans.
-This can be played as an exercise: write totem names on slips of paper. Give every player a totem before they play a scene. You can extend the animal name, make it more specific. Play with things like Bald Eagle rather than Eagle, or Silver Moon, Sitting Bull, etc.</string>
-                </array>
+                <array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -880,9 +865,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-				<string>A character is instead formed by 3 players, 2 players provide hands, one does the voice.</string>
-                </array>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -1028,9 +1011,6 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-					<string> Some groups also involve the guy that actually wrote the script (as in Typewriter).</string>
-					<string> At The Oscars: Start the performance with an Oscar nomination (or win) for the Director.</string>
                 <array/>
             </dict>	
 			<dict>
@@ -1147,9 +1127,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-                <array>
-					<string>The `backwards` gimmick can be used to play any improvized scene.</string>
-				</array>
+                <array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -1179,9 +1157,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-					<string>Countdown: You can time the scene to 1 minute, and then replay in 30 seconds, 15 seconds, 7 seconds and 3 seconds.</string>
-                </array>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -1211,9 +1187,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-					<string>Back to Back: Drop the dance, and have players do a scene sitting back-to-back. In the scene the characters need not be static, they may be walking, running, performing any activity, it's just the players who are sitting down.</string>
-                <array/>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -1242,9 +1216,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-					<string>The same improv Handle can be used for a Long Form structure: see  Balladeer(2)</string>
-                <array/>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -1334,10 +1306,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-				<string>You can really invent any object or create to replace the elephant. Try a car, with 2 wheels and a set of wind screen wipers a cow, with an udder and 2 horns a washing machine, with 2 players building a `box` with both arms, and the middle player waving her arms in a circle in front of her. All go `rumble rumble` a bunny, with 2 paws (middle player) and 2 rabbit ears (neighbors)</string>
-				<string>See Bippety Bop(2) for another variation.</string>
-                <array/>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
@@ -1367,12 +1336,7 @@ This can be played as an exercise: write totem names on slips of paper. Give eve
                 <key>Buzzer</key>
                 <false/>
                 <key>Variations</key>
-				<array>
-				<string>Just say `bop` if anyone else reacts, that person becomes `it`</string>
-				<string>Say `Elephant`, after which 3 players build the elephant: the player picked does the trunk (hold nose and squeeze your other arm through) and her neighbors do the ears. If any of the 3 players screws up or does not react he or she becomes it.</string>
-				<string>Say `mixer`: the player in the middle becomes a mixer, holding arms up in the air, sort of horizontally, while her neighbors position themselves under her hands, and turn around their axises.</string>
-				<string>Say `toaster` : the player in the middle becomes a slice of bread, and her neighbors become the toaster, by `building` the toaster with their arms around the bread. The slice of bread pops up an down too when done!</string></string>
-                </array>
+				<array/>
             </dict>	
 			<dict>
                 <key>Image</key>
