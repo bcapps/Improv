@@ -11,5 +11,5 @@
 @interface FiltersTableViewController : UITableViewController
 @property (nonatomic, strong) UIStepper *minStepper;
 @property (nonatomic, strong) UIStepper *maxStepper;
-
+@property (nonatomic, strong) UIButton *resetButton;
 @end

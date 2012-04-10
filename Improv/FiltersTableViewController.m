@@ -15,6 +15,7 @@
 @implementation FiltersTableViewController
 @synthesize minStepper;
 @synthesize maxStepper;
+@synthesize resetButton;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,6 +35,15 @@
    [self.navigationItem setRightBarButtonItem:doneButton];
     self.navigationItem.title = @"Filters";
     
+    self.resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.resetButton.frame = CGRectMake(70, 340, 180, 51);
+    [self.resetButton setTitle:@"Reset Filters" forState:UIControlStateNormal];
+    [self.resetButton addTarget:self action:@selector(resetButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.resetButton];
+    
+    //[playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];    
+    
     self.minStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
     self.maxStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
     
@@ -48,6 +58,9 @@
     self.minStepper.autorepeat = YES;
     self.maxStepper.autorepeat = YES;
     
+    self.minStepper.continuous = YES;
+    self.maxStepper.continuous = YES;
+    
     self.minStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MinStepperValue"];
     self.maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxStepperValue"];
     
@@ -58,16 +71,6 @@
     [self.maxStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
 
     self.tableView.allowsSelection = NO;
-    
-    //[navBar addSubview:doneButton];
-    
-    //[toolbar setItems:[NSArray arrayWithObjects:flexibleSpace, doneButton, nil]];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)stepperValueChanged:(UIStepper *)stepper {
@@ -98,6 +101,14 @@
     }
     
     [self.tableView reloadData];
+}
+
+- (void)resetButtonTapped {
+    self.minStepper.value = 1;
+    self.maxStepper.value = 15;
+    
+    [self stepperValueChanged:self.minStepper];
+    [self stepperValueChanged:self.maxStepper];
 }
 
 - (void)doneButtonPushed {
