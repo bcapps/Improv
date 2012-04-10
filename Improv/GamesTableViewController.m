@@ -193,10 +193,11 @@
             GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             gameInfo.game = [self.currentFetchedResultsController objectAtIndexPath:[self selectRandomGame]];
             [self.navigationController pushViewController:gameInfo animated:YES];
-             
         }
         else if (buttonIndex == 1) {
-
+            GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            gameInfo.game = [self.currentFetchedResultsController objectAtIndexPath:[self selectRandomGame]];
+            [self.navigationController pushViewController:gameInfo animated:YES];
         }
     }
     else if(actionSheet.tag == SUGGESTION_ACTION_SHEET_TAG) {

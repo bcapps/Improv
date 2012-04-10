@@ -35,6 +35,7 @@
     
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 75)];
     playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-normal"] forState:UIControlStateNormal];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-disabled"] forState:UIControlStateDisabled];
     [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-highlighted"] forState:UIControlStateHighlighted];
@@ -124,6 +125,7 @@
         gamesTableViewController.timerButton.title = @"    0:00    ";
         gamesTableViewController.timeAsInt = -1;
         gamesTableViewController.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:gamesTableViewController selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        [gamesTableViewController.timerButton setEnabled:NO];
         
     }
     else if(gamesTableViewController.currentlyPlayingGame == nil) {
@@ -133,6 +135,7 @@
         buttonLabel.text = @"Stop Game";
         
         gamesTableViewController.currentlyPlayingGame = game;
+        [gamesTableViewController.timerButton setEnabled:YES];
     }
 }
 
@@ -165,7 +168,8 @@
     } 
     
     if([gamesTableViewController.currentlyPlayingGame.gameDescription isEqualToString:self.game.gameDescription]) {
-        [playButton setBackgroundImage:[self newImageFromMaskImage:[UIImage imageNamed:@"glossyButton-copy"] inColor:[UIColor colorWithRed:255.0/255.0 green:20.0/255.0 blue:30.0/255.0 alpha:1]] forState:UIControlStateNormal];
+        [playButton setBackgroundImage:[self newImageFromMaskImage:[UIImage imageNamed:@"glossyButton-normal-greyscale"] inColor:[UIColor colorWithRed:255.0/255.0 green:20.0/255.0 blue:30.0/255.0 alpha:1]] forState:UIControlStateNormal];
+        [playButton setBackgroundImage:[self newImageFromMaskImage:[UIImage imageNamed:@"glossyButton-highlighted-greyscale"] inColor:[UIColor colorWithRed:255.0/255.0 green:20.0/255.0 blue:30.0/255.0 alpha:1]] forState:UIControlStateHighlighted];       
         buttonLabel.text = @"Stop Game";
     }
 }
