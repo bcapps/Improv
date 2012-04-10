@@ -13,6 +13,7 @@
 #import "FiltersTableViewController.h"
 #import "TKAlertCenter.h"
 #import "Suggestion.h"
+#import "ImprovSingleton.h"
 
 #define RANDOM_ACTION_SHEET_TAG 100
 #define SUGGESTION_ACTION_SHEET_TAG 101
@@ -27,6 +28,8 @@
 @synthesize searchDisplayController;
 @synthesize filteredResultsController = __filteredResultsController;
 @synthesize currentFetchedResultsController;
+@synthesize filtersTableViewController;
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -39,7 +42,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+
     UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:@selector(suggestionButtonPushed)];
     
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
@@ -138,8 +142,8 @@
 }
 
 - (void)filterButtonPushed {
-    FiltersTableViewController *filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:filtersTableViewController];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.filtersTableViewController];
 
     [self.navigationController presentModalViewController:navController animated:YES];
 }
@@ -263,6 +267,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.fetchedResultsController = nil;
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -313,7 +319,7 @@
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if([self.currentFetchedResultsController fetchedObjects]) {
+    if([[self.currentFetchedResultsController fetchedObjects] count]) {
         id <NSFetchedResultsSectionInfo> sectionInfo = [[self.currentFetchedResultsController sections] objectAtIndex:section];
         return [sectionInfo numberOfObjects];
     }
@@ -330,9 +336,10 @@
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     if(self.currentFetchedResultsController == self.fetchedResultsController) {
-        Game *game = [self.currentFetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
-    
-        return [NSString stringWithFormat:@"%@ Players", game.minimumNumberOfPlayersString];
+        if([[self.currentFetchedResultsController fetchedObjects] count]) {
+            Game *game = [self.currentFetchedResultsController objectAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section]];
+            return [NSString stringWithFormat:@"%@ Players", game.minimumNumberOfPlayersString];
+        }
     }
     return nil;
 }
@@ -346,7 +353,8 @@
     if (__fetchedResultsController != nil) {
         return __fetchedResultsController;
     }
-    
+    [NSFetchedResultsController deleteCacheWithName:@"Master"];
+
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
@@ -354,6 +362,18 @@
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
+    NSNumber *minStepperValue = [NSNumber numberWithDouble:self.filtersTableViewController.minStepper.value];
+    NSNumber *maxStepperValue = [NSNumber numberWithDouble:self.filtersTableViewController.maxStepper.value];
+
+    if([minStepperValue doubleValue] == 0) {
+        minStepperValue = [[ImprovSingleton sharedImprov] startingMin];
+    }
+    
+    if([maxStepperValue doubleValue] == 0) {
+        maxStepperValue = [[ImprovSingleton sharedImprov] startingMax];
+    }    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K BETWEEN %@ && %K BETWEEN %@", @"minPlayers", arr, @"maxPlayers", arr]];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K >= %f && ((%K == %f && %K <= %f) || (%K != %f && %K <= %f))", @"minPlayers", [minStepperValue floatValue], @"maxPlayers", 0.0f, @"minPlayers", [maxStepperValue floatValue], @"maxPlayers", 0.0f, @"maxPlayers", [maxStepperValue floatValue]]];
     
     // Edit the sort key as appropriate.
     NSSortDescriptor *sectionSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"minPlayers" ascending:YES];

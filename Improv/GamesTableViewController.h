@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Game.h"
+#import "FiltersTableViewController.h"
+
 @interface GamesTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UIActionSheetDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
@@ -19,4 +21,5 @@
 @property (nonatomic, strong) UISearchDisplayController *searchDisplayController;
 @property (strong, nonatomic) NSFetchedResultsController *filteredResultsController;
 @property (strong, nonatomic, readonly) NSFetchedResultsController *currentFetchedResultsController;
+@property (strong, nonatomic) FiltersTableViewController *filtersTableViewController;
 @end

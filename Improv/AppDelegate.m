@@ -13,6 +13,7 @@
 #import "Tag.h"
 #import "Suggestion.h"
 #import "TestFlight.h"
+#import "ImprovSingleton.h"
 #include <QuartzCore/QuartzCore.h>
 
 
@@ -25,8 +26,21 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize sortedGames;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]) {
+        [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"MinStepperValue"];
+    }
+    else {
+        [[ImprovSingleton sharedImprov] setStartingMin:[NSNumber numberWithInt:[[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]]];
+    }
+    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]) {
+        [[NSUserDefaults standardUserDefaults] setInteger:15 forKey:@"MaxStepperValue"];
+    }
+    else {
+        [[ImprovSingleton sharedImprov] setStartingMax:[NSNumber numberWithInt:[[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]]];    }
+    
     if(![[NSUserDefaults standardUserDefaults] boolForKey:@"GamesAdded"]) {
         [self importSuggestionData];
         [self importGameData];
@@ -42,13 +56,6 @@
     // Override point for customization after application launch.
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
-
-    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]) {
-        [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"MinStepperValue"];
-    }
-    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]) {
-        [[NSUserDefaults standardUserDefaults] setInteger:10 forKey:@"MaxStepperValue"];
-    }
     
     #ifdef CONFIGURATION_Beta
         [TestFlight takeOff:@"b6ff894ad79974e300c096c44c7180d1_MzY0MTk4MjAxMi0wMy0yMCAxNToxNjozNS4xNTA3MDI"];

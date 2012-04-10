@@ -34,28 +34,28 @@
    [self.navigationItem setRightBarButtonItem:doneButton];
     self.navigationItem.title = @"Filters";
     
-    minStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
-    maxStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
+    self.minStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
+    self.maxStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
     
-    minStepper.minimumValue = 1;
-    maxStepper.minimumValue = 1;
+    self.minStepper.minimumValue = 1;
+    self.maxStepper.minimumValue = 1;
     
-    minStepper.tag = 100;
-    maxStepper.tag = 101;
+    self.minStepper.tag = 100;
+    self.maxStepper.tag = 101;
     
-    [minStepper setStepValue:1.0];
-    [maxStepper setStepValue:1.0];
-    minStepper.autorepeat = YES;
-    maxStepper.autorepeat = YES;
+    [self.minStepper setStepValue:1.0];
+    [self.maxStepper setStepValue:1.0];
+    self.minStepper.autorepeat = YES;
+    self.maxStepper.autorepeat = YES;
     
-    minStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MinStepperValue"];
-    maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxStepperValue"];
+    self.minStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MinStepperValue"];
+    self.maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxStepperValue"];
     
-    [self stepperValueChanged:minStepper];
-    [self stepperValueChanged:maxStepper];
+    [self stepperValueChanged:self.minStepper];
+    [self stepperValueChanged:self.maxStepper];
 
-    [minStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
-    [maxStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.minStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.maxStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
 
     self.tableView.allowsSelection = NO;
     
@@ -72,21 +72,21 @@
 
 - (void)stepperValueChanged:(UIStepper *)stepper {
     if(stepper.tag == 100) {
-        if(stepper.value > maxStepper.value) {
-            stepper.value = maxStepper.value;
+        if(stepper.value > self.maxStepper.value) {
+            stepper.value = self.maxStepper.value;
             [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MinStepperValue"];
             return;
         }
-        NSNumber *value = [NSNumber numberWithDouble:minStepper.value];
+        NSNumber *value = [NSNumber numberWithDouble:self.minStepper.value];
 
         [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]].detailTextLabel.text = [NSString stringWithFormat:@"%i", [value intValue]];
         
         [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MinStepperValue"];
-        maxStepper.minimumValue = minStepper.value;
+        self.maxStepper.minimumValue = self.minStepper.value;
 
     } else if(stepper.tag == 101) {
-        if(stepper.value < minStepper.value) {
-            stepper.value = minStepper.value;
+        if(stepper.value < self.minStepper.value) {
+            stepper.value = self.minStepper.value;
             [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MaxStepperValue"];
             return;
         }
@@ -94,7 +94,7 @@
         [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]].detailTextLabel.text = [NSString stringWithFormat:@"%i", [value intValue]];
         
         [[NSUserDefaults standardUserDefaults] setInteger:stepper.value forKey:@"MaxStepperValue"];
-        minStepper.maximumValue = maxStepper.value;
+        self.minStepper.maximumValue = self.maxStepper.value;
     }
     
     [self.tableView reloadData];
@@ -144,12 +144,12 @@
         cell.textLabel.text = @"min";
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", [[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]];
         
-        [cell addSubview:minStepper];
+        [cell addSubview:self.minStepper];
 
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"max";
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", [[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]];
-        [cell addSubview:maxStepper];
+        [cell addSubview:self.maxStepper];
     }
     
     // Configure the cell...

@@ -80,6 +80,7 @@
 		68C8874414FD8DB300DF473B /* AcceptingCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874214FD8DB200DF473B /* AcceptingCircle@2x.png */; };
 		68C8874B14FD8E3900DF473B /* ActionSyllables.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874914FD8E3800DF473B /* ActionSyllables.png */; };
 		68C8874C14FD8E3900DF473B /* ActionSyllables@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68C8874A14FD8E3800DF473B /* ActionSyllables@2x.png */; };
+		68D133581534CF2F0047FE16 /* ImprovSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D133571534CF2F0047FE16 /* ImprovSingleton.m */; };
 		68F98B57151576E500D4950C /* AdjectiveScene.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F98B55151576E500D4950C /* AdjectiveScene.png */; };
 		68F98B58151576E500D4950C /* AdjectiveScene@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F98B56151576E500D4950C /* AdjectiveScene@2x.png */; };
 		68F98B5C151576F800D4950C /* AdjectiveScene-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F98B5A151576F800D4950C /* AdjectiveScene-white.png */; };
@@ -193,6 +194,8 @@
 		68C8874214FD8DB200DF473B /* AcceptingCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AcceptingCircle@2x.png"; sourceTree = "<group>"; };
 		68C8874914FD8E3800DF473B /* ActionSyllables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionSyllables.png; sourceTree = "<group>"; };
 		68C8874A14FD8E3800DF473B /* ActionSyllables@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ActionSyllables@2x.png"; sourceTree = "<group>"; };
+		68D133561534CF2F0047FE16 /* ImprovSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImprovSingleton.h; sourceTree = "<group>"; };
+		68D133571534CF2F0047FE16 /* ImprovSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImprovSingleton.m; sourceTree = "<group>"; };
 		68F98B55151576E500D4950C /* AdjectiveScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdjectiveScene.png; sourceTree = "<group>"; };
 		68F98B56151576E500D4950C /* AdjectiveScene@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AdjectiveScene@2x.png"; sourceTree = "<group>"; };
 		68F98B5A151576F800D4950C /* AdjectiveScene-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AdjectiveScene-white.png"; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 				F286102314DB6B410014B045 /* AppDelegate.m */,
 				F286102514DB6B410014B045 /* GamesTableViewController.h */,
 				F286102614DB6B410014B045 /* GamesTableViewController.m */,
+				68D133561534CF2F0047FE16 /* ImprovSingleton.h */,
+				68D133571534CF2F0047FE16 /* ImprovSingleton.m */,
 				68FF8ADD1512B86200D714B0 /* FiltersTableViewController.h */,
 				68FF8ADE1512B86200D714B0 /* FiltersTableViewController.m */,
 				68794CF514FDEC4800E33F88 /* GameInfoTableViewController.h */,
@@ -747,6 +752,7 @@
 				68FF8C871512C4B500D714B0 /* TKAlertCenter.m in Sources */,
 				68FF8C8A1512C4E400D714B0 /* UIView+TKCategory.m in Sources */,
 				68FF8C901512C88200D714B0 /* Suggestion.m in Sources */,
+				68D133581534CF2F0047FE16 /* ImprovSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
