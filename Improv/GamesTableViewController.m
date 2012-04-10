@@ -70,7 +70,8 @@
     [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
     [timerButton setTarget:self];
     [timerButton setAction:@selector(timerButtonPushed)];
-    
+    timerButton.enabled = NO;
+
     self.navigationItem.rightBarButtonItem = suggestionButton;
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
