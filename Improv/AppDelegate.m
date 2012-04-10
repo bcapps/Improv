@@ -26,7 +26,6 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize sortedGames;
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     if(![[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]) {
@@ -46,7 +45,8 @@
         [self importGameData];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"GamesAdded"];
     }
-    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     GamesTableViewController *tableViewController = [[GamesTableViewController alloc] initWithStyle:UITableViewStylePlain];
     tableViewController.managedObjectContext = self.managedObjectContext;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableViewController];

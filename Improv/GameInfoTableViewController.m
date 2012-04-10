@@ -34,26 +34,26 @@
     //UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:nil];
     
     UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 75)];
-    playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.playButton = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-normal"] forState:UIControlStateNormal];
-    [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-disabled"] forState:UIControlStateDisabled];
-    [playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-highlighted"] forState:UIControlStateHighlighted];
-    playButton.frame = CGRectMake(10, 20, 300, 51);
-    [playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-normal"] forState:UIControlStateNormal];
+    [self.playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-disabled"] forState:UIControlStateDisabled];
+    [self.playButton setBackgroundImage:[UIImage imageNamed:@"glossyButton-highlighted"] forState:UIControlStateHighlighted];
+    self.playButton.frame = CGRectMake(10, 20, 300, 51);
+    [self.playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
-    buttonLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 51)];
-    buttonLabel.text = @"Play Game";
-    buttonLabel.textAlignment = UITextAlignmentCenter;
-    buttonLabel.font = [UIFont boldSystemFontOfSize:20.0f];
-    buttonLabel.textColor = [UIColor whiteColor];
-    buttonLabel.backgroundColor = [UIColor clearColor];
-    buttonLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
-    buttonLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+    self.buttonLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 51)];
+    self.buttonLabel.text = @"Play Game";
+    self.buttonLabel.textAlignment = UITextAlignmentCenter;
+    self.buttonLabel.font = [UIFont boldSystemFontOfSize:20.0f];
+    self.buttonLabel.textColor = [UIColor whiteColor];
+    self.buttonLabel.backgroundColor = [UIColor clearColor];
+    self.buttonLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
+    self.buttonLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
     
-    [playButton addSubview:buttonLabel];
+    [self.playButton addSubview:self.buttonLabel];
 
-    [containerView addSubview:playButton];
+    [containerView addSubview:self.playButton];
     self.tableView.tableHeaderView = containerView;
     
     self.navigationItem.rightBarButtonItem = ((UIViewController *)[self.navigationController.viewControllers objectAtIndex:0]).navigationItem.rightBarButtonItem;

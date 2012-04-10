@@ -76,7 +76,6 @@
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
 
-    
     UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Games" style: UIBarButtonItemStyleBordered target: nil action:nil];
     [[self navigationItem] setBackBarButtonItem: newBackButton];
     
@@ -84,6 +83,8 @@
     //self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"furley_bg"]];
     timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     timeAsInt = -1;
+    
+    [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -369,14 +370,14 @@
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
-    NSNumber *minStepperValue = [NSNumber numberWithDouble:self.filtersTableViewController.minStepper.value];
-    NSNumber *maxStepperValue = [NSNumber numberWithDouble:self.filtersTableViewController.maxStepper.value];
+    NSNumber *minStepperValue = [NSNumber numberWithInt:[[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]];
+    NSNumber *maxStepperValue = [NSNumber numberWithInt:[[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]];
 
-    if([minStepperValue doubleValue] == 0) {
+    if([minStepperValue intValue] == 0) {
         minStepperValue = [[ImprovSingleton sharedImprov] startingMin];
     }
     
-    if([maxStepperValue doubleValue] == 0) {
+    if([maxStepperValue intValue] == 0) {
         maxStepperValue = [[ImprovSingleton sharedImprov] startingMax];
     }    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K BETWEEN %@ && %K BETWEEN %@", @"minPlayers", arr, @"maxPlayers", arr]];
     
