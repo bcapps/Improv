@@ -58,9 +58,6 @@
     self.minStepper.autorepeat = YES;
     self.maxStepper.autorepeat = YES;
     
-    self.minStepper.continuous = YES;
-    self.maxStepper.continuous = YES;
-    
     self.minStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MinStepperValue"];
     self.maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxStepperValue"];
     

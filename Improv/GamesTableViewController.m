@@ -137,6 +137,12 @@
     return YES;
 }
 
+- (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView {
+    [self.tableView reloadData];
+    self.fetchedResultsController = nil;
+    self.filteredResultsController = nil;
+}
+
 - (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView {
     tableView.rowHeight = 66.0f;
     self.searchDisplayController.searchResultsTableView.delegate = self;
@@ -269,7 +275,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.fetchedResultsController = nil;
     [self.tableView reloadData];
 }
 
@@ -466,13 +471,11 @@
 
 - (void)configureCell:(ImprovTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    
-    Game *game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
-    cell.titleLabel.text = game.title;
-    cell.descriptionLabel.text = game.firstSentenceOfDescription;
-    cell.imageView.image = [UIImage imageNamed:game.image];
-    cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
-    
+        Game *game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
+        cell.titleLabel.text = game.title;
+        cell.descriptionLabel.text = game.firstSentenceOfDescription;
+        cell.imageView.image = [UIImage imageNamed:game.image];
+        cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
 }
 
 
