@@ -113,11 +113,14 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     
+    NSLog(@"Search String: %@", searchString);
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS [cd]%@", @"title", searchString]];
+    if(searchString && ![searchString isEqualToString:@""]) {
+        [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K CONTAINS [cd]%@", @"title", searchString]];
+    }
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
@@ -137,11 +140,15 @@
     
     return YES;
 }
-
-- (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView {
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller {
     self.fetchedResultsController = nil;
     self.filteredResultsController = nil;
     [self.tableView reloadData];
+    NSLog(@"Will End");
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView {
+  
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView {
