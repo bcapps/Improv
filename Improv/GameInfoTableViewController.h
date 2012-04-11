@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Game;
-@interface GameInfoTableViewController : UITableViewController
+@interface GameInfoTableViewController : UITableViewController <UIAlertViewDelegate>
 @property (nonatomic, strong) Game *game;
 @property (nonatomic, strong) UIButton *playButton;
 @property (nonatomic, strong) UILabel *buttonLabel;

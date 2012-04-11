@@ -97,6 +97,7 @@
 }
 
 - (void)playButtonTapped {
+    
     NSMutableArray *items = [self.toolbarItems mutableCopy];
     UIBarButtonItem *timerButton = [items objectAtIndex:2];
     GamesTableViewController *gamesTableViewController;
@@ -128,6 +129,11 @@
         [gamesTableViewController.timerButton setEnabled:NO];
         
     }
+    else if(gamesTableViewController.currentlyPlayingGame) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"You are currently playing a game. Would you like to stop that game and start a new one?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        
+        [alertView show];
+    }
     else if(gamesTableViewController.currentlyPlayingGame == nil) {
         
         [playButton setBackgroundImage:[self newImageFromMaskImage:[UIImage imageNamed:@"glossyButton-normal-greyscale"] inColor:[UIColor colorWithRed:255.0/255.0 green:20.0/255.0 blue:30.0/255.0 alpha:1]] forState:UIControlStateNormal];
@@ -136,6 +142,30 @@
         
         gamesTableViewController.currentlyPlayingGame = game;
         [gamesTableViewController.timerButton setEnabled:YES];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    if(buttonIndex == 0) {
+        
+    }
+    else if (buttonIndex == 1) {
+        GamesTableViewController *gamesTableViewController;
+        
+        for(UIViewController *vC in [[self navigationController] viewControllers]) {
+            if ([vC isKindOfClass:[GamesTableViewController class]]) {
+                gamesTableViewController = (GamesTableViewController *)vC;
+            }
+        }    
+        
+        gamesTableViewController.currentlyPlayingGame = nil;
+        [gamesTableViewController.timer invalidate];
+        gamesTableViewController.timerButton.title = @"    0:00    ";
+        gamesTableViewController.timeAsInt = -1;
+        gamesTableViewController.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:gamesTableViewController selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        [gamesTableViewController.timerButton setEnabled:NO];
+        [self playButtonTapped];
     }
 }
 

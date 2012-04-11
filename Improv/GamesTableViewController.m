@@ -139,9 +139,9 @@
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView {
-    [self.tableView reloadData];
     self.fetchedResultsController = nil;
     self.filteredResultsController = nil;
+    [self.tableView reloadData];
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView {
@@ -276,7 +276,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.fetchedResultsController = nil;
+    self.filteredResultsController = nil;
     [self.tableView reloadData];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
