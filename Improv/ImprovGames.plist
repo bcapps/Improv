@@ -1913,757 +1913,757 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 			<string>You can use this for both Last Letter or Free Association Circle games. Try this with two circles. Have one circle associate freely, and another circle on Last Letter. Whenever a player misses a beat she should switch circles. If you do this with 2 circles, you will probably find that the rhythms for both circles synchronize.</string>
 			</array>
 		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>LastLetter</string>
-			<key>Title</key>
-			<string>Last Letter</string>
-			<key>Description</key>
-			<string>This is an Association game, where instead of naming the first word you think of upon hearing a previous word, you name the first word you think of starting with the last letter of the previously heard word. </string>
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>Try in combination with Walk-over Association or Word Ball. </string>
-			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Walkover</string>
-			<key>Title</key>
-			<string>Walk-over Association</string>
-			<key>Description</key>
-			<string>Another way of playing association games. Place all players at one end of the room. Ask them to name, for themselves, all the things they think of when you throw them the word `Banana` (or anything else). For every word they come up with they can take a step. They should keep thinking of stuff until they reach the other side of the room. Then throw them another word. 
-Notes: Watch for players that take unreasonably big steps. Ask them if they are afraid they will run out of ideas. </string>
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>You can combine this with Last Letter. </string>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>WordBall</string>
-			<key>Title</key>
-			<string>Word Ball</string>
-			<key>Description</key>
-			<string>Another association game. All players in a circle. One player starts by tossing a word to another player. The receiver associates on this word, and throws his association to yet another player. </string>
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>Try this in combination with Last Letter or Free Association Lines. Instead of just tossing word, have the players throw a soft ball, or a towel tied in a knot to each other. Try with multiple `tossers` at once. </string>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>FreeLines</string>
-			<key>Title</key>
-			<string>FreeAssociationLines</string>
-			<key>Description</key>
-			<string>Yet another way to play association games. Place all players on 2 lines facing each other. One player starts walking to another player in the other line. Just before he gets to that other player, he throws her a word. The receiver starts crossing the line towards someone else, and the first player takes her place in the line. The receiver now becomes the thrower, throwing the first word she can think of to another player, who then starts walking, and so on. </string>
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>BlindFreeze</string>
-			<key>Title</key>
-			<string>Blind Freeze</string>
-			<key>Description</key>
-			<string>This one is just like Freeze Tag, but here the MC calls Freeze, and calls in another player. If you`re not using an MC, any player might call Freeze and call in any other player. Many groups find this game more exciting than Freeze Tag, as players don`t know when they get pushed in the game, and hence are less prepared, and crazier, more exciting stuff tends to happen. </string>
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-				<string>Performance</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>FreezeTag</string>
-			<key>Title</key>
-			<string>Freeze Tsg</string>
-			<key>Description</key>
-			<string>2 actors start an improvised scene. At any point in time another player can call Freeze. This player then tags out one of the 2 actors, and takes his place. Both players then start a new scene, justifying their positions. 
-Notes: The way this improv game is played quite often goes a bit against good improv, as many groups hardly take the time to develop a story line. If played this way, it`s more a game of wit, and you would probably use it early in a show as an audience (and player) warm-up. Alternatively, you can take your time and play every scene for several minutes, see what develops, and only at the end of each scene tag into another scene. To avoid preconceptions, see Blind Freeze. </string>
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-				<string>Performance</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>BlindHarold</string>
-			<key>Title</key>
-			<string>Blind Harold</string>
-			<key>Description</key>
-			<string>This is really a listening exercise, though it has been performed as a Long Form for audiences. Basically, this is a Harold, played with all players sitting down with their eyes closed. For a performance one would turn all the lights off in the theater. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Limitations</string>
-				<string>Long Form</string>
-				<string>Look and Listen</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>16</integer>
-			<key>MinTime</key>
-			<integer>10</integer>
-			<key>MaxTime</key>
-			<integer>60</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Harold</string>
-			<key>Title</key>
-			<string>Harold</string>
-			<key>Description</key>
-			<string>Harold is a long format, and consists of a number of sub-formats. It basically consists of 3 components: 
-Scenes, with 2 to 4 players
-Games: 
-Monologues: The format starts with a suggestion from the audience - this could really be anything. 
-Players will start associating around the suggestion, and then an opening game is played. In this game, a lot of associated elements round the audience suggestion are presented. The opening game might be a song a monologue, or simply a group association based on the audience suggestion. The idea is to use the elements and themes that come up or about in the opening game in what follows. Then follow 3 rounds of scenes, all based on the themes found in the opening game. Each round exists out of 3 scenes, all unrelated, but each loosely based on the themes and associations form the opening game. Since these themes originated for the same audience suggestion, the audience will (hopefully) feel some links between the scenes. After the first round of 3 scenes, an improv game is played, this game is unrelated to the 3 scenes played before. Then, in the second round, each of the 3 previous scenes is continued, and more or less obvious links between the scenes start to emerge. This is again followed by an improv game, and then the 3 scenes are played into a conclusion. It`s quite possible that in the third round not every scene is continued scenes may disappear or even merge with one another. A Harold can be played with a decent number of players (up to 12 or so) players can act in multiple scenes, as the same or as different characters. A Harold can be played with or without props, with or without directors. Whether one sticks to the 3 rounds or not is really not relevant, anything and any combination of games and loose scenes that finally more or less come together can be considered a Harold. 
-Origin: This is an American format, described in Del Close`s book Truth in Comedy. We`re not sure whether it`s copyrighted - if you know please let us know.</string>
-			<key>Tags</key>
-			<array>
-				<string>Format</string>
-				<string>Long Form</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>16</integer>
-			<key>MinTime</key>
-			<integer>10</integer>
-			<key>MaxTime</key>
-			<integer>60</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>BlindLine</string>
-			<key>Title</key>
-			<string>Blind Line Offers</string>
-			<key>Description</key>
-			<string>Line up the players, give`em each a number. Call out 2 numbers. Those players step on stage immediately, with a physical Offer (do something, eat an apple, wipe the floor, whatever) as well as a vocal offer (say something). The idea is that the players accept and explore each other`s offers and figure out what the scene is about. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>BlindMusical</string>
-			<key>Title</key>
-			<string>Blind Musical</string>
-			<key>Description</key>
-			<string>This is like a musical version of Pockets: ask the audience to write simple sentences on slips of paper. Hand each player 2 or 3 slips (they`re not allowed to read them yet). Play a scene or series of improvised scenes. Players draw slips of paper at random, and every time they do, they start a song that starts with the sentence on the slip. Try to integrate the info on the slips into the story, of course! </string>
-			<key>Tags</key>
-			<array>
-				<string>Performance</string>
-				<string>SingSong</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Pockets</string>
-			<key>Title</key>
-			<string>Pockets</string>
-			<key>Description</key>
-			<string>Before the show, ask the audience to write simple sentences on slips of paper. Anything goes. The game is played by 2 players. Ask for a location, or a profession, and have every player draw 3 of these slips. Players put these in their pockets without reading them. Then a scene is played, in which at any point in time, players replace what they might have said, by whatever is on the piece of paper they draw out of their pocket. Try to incorporate/justify whatever is your line into the scene. 
-Notes: Try to avoid thinks like `My granny always said` - you want your character to say whatever is on the piece of paper - don`t try to put those words into someone else`s mouth. See also a game called Bucket that uses audience lines as well. </string>
-			<key>Tags</key>
-			<array>
-				<string>Audience Participation</string>
-				<string>Limitations</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>Image</key>
-			<string>BlindfoldedScene</string>
-			<key>Title</key>
-			<string>Blindfolded Scene</string>
-			<key>Description</key>
-			<string>Players are blindfolded and then play a scene. </string>
-			<key>Tags</key>
-			<array>
-				<string>Limitations</string>
-				<string>Performance</string>
-				<string>Trust</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>2</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Scorpion</string>
-			<key>Title</key>
-			<string>Scorpion</string>
-			<key>Description</key>
-			<string>A number of players stand in the middle of the room, eyes closed, while the others stand by the walls. One of the middle players is tapped on the shoulder, and becomes the `killer` or the `vampire`. The trainer give a go-sign, and all `blinded` players start milling around the room. When the killer bumps into someone, the killer squeezes that person’s forearm to `kill` him. When a victim dies, he utters a scream, opens his eyes and is `out`. Game is over when all potential victims are dead. 
-Notes: You may need people by the walls to make sure that blind players don`t bump into stuff or hurt themselves. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Trust</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>6</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>3</integer>
-			<key>MaxTime</key>
-			<integer>15</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>When a `vampire` runs into a victim, the victim becomes a vampire too; When 2 vampires bump into one another, they become normal mortal souls again. See also Death and Retriever. </string>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Deathand</string>
-			<key>Title</key>
-			<string>Death and Retriever</string>
-			<key>Description</key>
-			<string>This one is like Scorpion, but in this version killed players are not `out`, but can be revived. Everyone eyes closed, one player becomes the killer (tap him on the shoulder) and another one becomes the retriever. The retriever gets a towel of a scarf around her neck. Dead players scream when they are killed, keep their eyes closed and stand still. When the retriever bumps into someone that does not move (a dead body) she can revive the dead by rubbing them with the towel. When the retriever gets killed, she screams and stops moving. When another living person bumps into the retriever (recognized by the scarf), the retriever is revived, and the one that revived the retriever becomes the new retriever. Play till everyone is dead or bored. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Group</string>
-				<string>Trust</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>6</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>3</integer>
-			<key>MaxTime</key>
-			<integer>15</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>BluesJam</string>
-			<key>Title</key>
-			<string>Blues Jam</string>
-			<key>Description</key>
-			<string>Ask the audience for 5 things that give them the blues. Then improvise a blues jam about those elements. </string>
-			<key>Tags</key>
-			<array>
-				<string>Performance</string>
-				<string>SingSong</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Bobsledding</string>
-			<key>Title</key>
-			<string>Bobsledding Bodies</string>
-			<key>Description</key>
-			<string>This is a physical team game. Form teams of 4 - 6 players. Teams sit in a line and wrap their legs around the person in front of them. Place masking tape about 10 - 15 feet away to mark the end line. On "GO", teams must only use their hands to slide their way to the end. If a team breaks apart, they must get back together before they continue. </string>
-			<key>Tags</key>
-			<array>
-				<string>Energy</string>
-				<string>Icebreakers</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>8</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>BodyHide</string>
-			<key>Title</key>
-			<string>Body Hide</string>
-			<key>Description</key>
-			<string>Excellent exercise to get to know each other, and to learn to trust and touch each other. There are 5 volunteer players. 4 of these must try and hide the fifth person, using nothing but their bodies. The other students stand around the group and try and see pieces of the fifth`s clothes, shoes skin. It`s great fun for the other students to watch and try and find uncovered pieces of person. Don`t tell them they go next, with one person less. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Group</string>
-				<string>Icebreakers</string>
-				<string>Trust</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>8</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>Try this game with less and less `hiders`. If the task becomes impossible, tell them they can use parts of walls. Using a corner is easiest, of course, but let them figure that out themselves. </string>
-			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Bong</string>
-			<key>Title</key>
-			<string>Bong Bong Bong</string>
-			<key>Description</key>
-			<string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
-			<key>Tags</key>
-			<array>
-				<string>Guessing</string>
-				<string>Limitations</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>LCD</string>
-			<key>Title</key>
-			<string>LCD</string>
-			<key>Description</key>
-			<string>This improv game is called Location, Career, Death (LCD). One player on stage, the others off stage. The audience provides a location, an occupation, and an object, only known to the player on stage. Second player enters and a scene is played in gibberish. Player one needs to communicate the location to player 2, as soon as player 2 thinks he`s got it, he claps his hands and spins around. Then player 2 needs to guess the occupation, clap and spin when he thinks he’s got it. Finally, the object needs to be revealed. As soon as player 2 has the object, he needs to kill player 1 with it. Then the next player comes on stage and the game recommences, until all players have played. Afterwards, line up the players and ask them where they think they were, what their occupation was and what the murder weapon was - usually quite far off the original suggestion, much to the audience`s amusement. See also Hijacker for a similar game without the Gibberish component. </string>
-			<key>Tags</key>
-			<array>
-				<string>Endowment</string>
-				<string>Gibberish</string>
-				<string>Guessing</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>Use a bell, every 10 seconds or so. At the bell players need to clap and spin and proceed to the next step, even if they are not sure about the where, who and what. </string>
-			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Hijacker</string>
-			<key>Title</key>
-			<string>Hijacker</string>
-			<key>Description</key>
-			<string>Excellent improv game to train listening skills. 4 players, one leaves the room. Pick a means of transportation, and an object. The idea is that player number 4 needs to guess the means of transportation and then use the object to hijack the others. Finally, pick a goal for the hijacker to achieve. The players need to provide hints to the hijacker, but they cannot explicitly tell the hijacker what to do, with what or why. 
-Notes: Works best if players take risks. If they to the `wrong` thing or use the wrong object the audience will probably just laugh, and that should be enough to signal the player he`s going the wrong way. </string>
-			<key>Tags</key>
-			<array>
-				<string>Continuation</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>4</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Boris</string>
-			<key>Title</key>
-			<string>Boris</string>
-			<key>Description</key>
-			<string>2 players play an improvised interrogation scene. One is the interrogator, the other is a suspect. The interrogator randomly throws unconnected elements to the suspect, who needs to incorporate these and get himself into (even more) trouble. Then we have Boris, who is a nasty, huge, but invisible thug assisting the interrogator. Every time the interrogator does not like the suspect`s answers (and also when the suspect does not incriminate himself enough), the interrogator calls on Boris to torture the suspect, prodding him to confess or incriminate him even further. 
-Notes: We do not establish the crime beforehand. The suspect mimes being tortured by Boris the investigator and can tell Boris what to do (break his leg), but it is more fun to leave the choice of torture up to the suspect. If the torture does not go far enough to the investigator`s taste, he can always call in Boris` evil twin brother, Igor (also invisible);as a gag, the suspect can also incriminate Boris (who can turn out to be a witness/accomplice to the crime). 
-Origin: This improv game is attributed to Keith Johnstone. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Narration</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>2</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>DryCleaning</string>
-			<key>Title</key>
-			<string>We need three or four players for this improv game. During an improvised scene, one player is always off-stage, with his head inside a dry cleaning bag, slowly suffocating. He is not allowed out of the bag until some other player finds a way to exit the scene and `liberate` the suffocating player. New player puts his head into the bag until freed by another player, and first liberated player finds a way to justify his entrance into the scene.
-Note: Take special care in monitoring the player that has their head in the bag. </string>
-			<key>Description</key>
-			<string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
-			<key>Tags</key>
-			<array>
-				<string>Limitations</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string> Use a bucket of water instead of a dry cleaning bag. Substitute the bag with a time limit. </string>
-			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Callfrom</string>
-			<key>Title</key>
-			<string>Call from Ray</string>
-			<key>Description</key>
-			<string>A scene is begun. At some point in the scene an onstage player has to receive a "Call from Ray" (or any other name agreed upon). The call can come in any form like phone call, SMS, smoke signals, telepathy or whatever, and Ray himself may not appear in the scene. </string>
-			<key>Tags</key>
-			<array>
-				<string>Limitations</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>You can come up with any sentence that needs to come up. A variation would be to use: “I`ll have a coke".</string>
-			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>CardStatus</string>
-			<key>Title</key>
-			<string>Card Status</string>
-			<key>Description</key>
-			<string>Excellent Status improv game with at least 4 players. Ask an audience member to pick a number of cards out of a deck equal to the number of players, and attach a card to each player`s forehead, so that players can see each other`s card, but not their own. Use a rubber band or a piece of string for that. The idea is to improvise a scene, in which the status order of the characters is defined by the cards. Evidently, players don`t know their own status, so the other players will have to endow them. 
-Notes: Set up a location where status is important. Examples would be a Royal Palace or a highly organized bureaucracy (the White House?). </string>
-			<key>Tags</key>
-			<array>
-				<string>Endowment</string>
-				<string>Limitations</string>
-				<string>Look and Listen</string>
-				<string>Performance</string>
-				<string>Status</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>Players can only see their own card, but not the others. Give players multiple cards, and let them switch cards in the middle of the scene. Status should change accordingly. As an exercise, let players play a scene and then ask them to line up in status order to see if they `got` their status right. </string>
-			</array>
-		</dict>	
+        <dict>
+            <key>Image</key>
+            <string>LastLetter</string>
+            <key>Title</key>
+            <string>Last Letter</string>
+            <key>Description</key>
+            <string>This is an Association game, where instead of naming the first word you think of upon hearing a previous word, you name the first word you think of starting with the last letter of the previously heard word. </string>
+            <key>Tags</key>
+            <array>
+                <string>Association</string>
+                <string>Exercise</string>
+                <string>Warm-up</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+                <string>Try in combination with Walk-over Association or Word Ball. </string>
+            </array>
+        </dict>
+        <dict>
+            <key>Image</key>
+            <string>Walkover</string>
+            <key>Title</key>
+            <string>Walk-over Association</string>
+            <key>Description</key>
+            <string>Another way of playing association games. Place all players at one end of the room. Ask them to name, for themselves, all the things they think of when you throw them the word `Banana` (or anything else). For every word they come up with they can take a step. They should keep thinking of stuff until they reach the other side of the room. Then throw them another word. 
+                Notes: Watch for players that take unreasonably big steps. Ask them if they are afraid they will run out of ideas. </string>
+            <key>Tags</key>
+            <array>
+                <string>Association</string>
+                <string>Exercise</string>
+                <string>Warm-up</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+                <string>You can combine this with Last Letter. </string>
+            </array>
+            </dict>	
+        <dict>
+            <key>Image</key>
+            <string>WordBall</string>
+            <key>Title</key>
+            <string>Word Ball</string>
+            <key>Description</key>
+            <string>Another association game. All players in a circle. One player starts by tossing a word to another player. The receiver associates on this word, and throws his association to yet another player. </string>
+            <key>Tags</key>
+            <array>
+                <string>Association</string>
+                <string>Exercise</string>
+                <string>Warm-up</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+                <string>Try this in combination with Last Letter or Free Association Lines. Instead of just tossing word, have the players throw a soft ball, or a towel tied in a knot to each other. Try with multiple `tossers` at once. </string>
+                </array>
+            </dict>	
+            <dict>
+                <key>Image</key>
+                <string>FreeLines</string>
+                <key>Title</key>
+                <string>FreeAssociationLines</string>
+                <key>Description</key>
+                <string>Yet another way to play association games. Place all players on 2 lines facing each other. One player starts walking to another player in the other line. Just before he gets to that other player, he throws her a word. The receiver starts crossing the line towards someone else, and the first player takes her place in the line. The receiver now becomes the thrower, throwing the first word she can think of to another player, who then starts walking, and so on. </string>
+                <key>Tags</key>
+                <array>
+                    <string>Association</string>
+                    <string>Exercise</string>
+                </array>
+                <key>MinPlayers</key>
+                <integer>3</integer>
+                <key>MaxPlayers</key>
+                <integer>0</integer>
+                <key>MinTime</key>
+                <integer>4</integer>
+                <key>MaxTime</key>
+                <integer>20</integer>
+                <key>AudienceParticipation</key>
+                <false/>
+                <key>timerCountsUp</key>
+                <true/>
+                <key>Buzzer</key>
+                <false/>
+                <key>Variations</key>
+                <array/>
+            </dict>	
+            <dict>
+                <key>Image</key>
+                <string>BlindFreeze</string>
+                <key>Title</key>
+                <string>Blind Freeze</string>
+                <key>Description</key>
+                <string>This one is just like Freeze Tag, but here the MC calls Freeze, and calls in another player. If you`re not using an MC, any player might call Freeze and call in any other player. Many groups find this game more exciting than Freeze Tag, as players don`t know when they get pushed in the game, and hence are less prepared, and crazier, more exciting stuff tends to happen. </string>
+                <key>Tags</key>
+                <array>
+                    <string>Association</string>
+                    <string>Exercise</string>
+                    <string>Performance</string>
+                    <string>Warm-up</string>
+                </array>
+                <key>MinPlayers</key>
+                <integer>3</integer>
+                <key>MaxPlayers</key>
+                <integer>0</integer>
+                <key>MinTime</key>
+                <integer>4</integer>
+                <key>MaxTime</key>
+                <integer>20</integer>
+                <key>AudienceParticipation</key>
+                <false/>
+                <key>timerCountsUp</key>
+                <true/>
+                <key>Buzzer</key>
+                <false/>
+                <key>Variations</key>
+                <array/>
+            </dict>	
+            <dict>
+                <key>Image</key>
+                <string>FreezeTag</string>
+                <key>Title</key>
+                <string>Freeze Tsg</string>
+                <key>Description</key>
+                <string>2 actors start an improvised scene. At any point in time another player can call Freeze. This player then tags out one of the 2 actors, and takes his place. Both players then start a new scene, justifying their positions. 
+                    Notes: The way this improv game is played quite often goes a bit against good improv, as many groups hardly take the time to develop a story line. If played this way, it`s more a game of wit, and you would probably use it early in a show as an audience (and player) warm-up. Alternatively, you can take your time and play every scene for several minutes, see what develops, and only at the end of each scene tag into another scene. To avoid preconceptions, see Blind Freeze. </string>
+                <key>Tags</key>
+                <array>
+                    <string>Association</string>
+                    <string>Exercise</string>
+                    <string>Performance</string>
+                    <string>Warm-up</string>
+                </array>
+                <key>MinPlayers</key>
+                <integer>4</integer>
+                <key>MaxPlayers</key>
+                <integer>0</integer>
+                <key>MinTime</key>
+                <integer>4</integer>
+                <key>MaxTime</key>
+                <integer>20</integer>
+                <key>AudienceParticipation</key>
+                <false/>
+                <key>timerCountsUp</key>
+                <true/>
+                <key>Buzzer</key>
+                <false/>
+                <key>Variations</key>
+                <array/>
+            </dict>	
+            <dict>
+                <key>Image</key>
+                <string>BlindHarold</string>
+                <key>Title</key>
+                <string>Blind Harold</string>
+                <key>Description</key>
+                <string>This is really a listening exercise, though it has been performed as a Long Form for audiences. Basically, this is a Harold, played with all players sitting down with their eyes closed. For a performance one would turn all the lights off in the theater. </string>
+                <key>Tags</key>
+                <array>
+                    <string>Exercise</string>
+                    <string>Limitations</string>
+                    <string>Long Form</string>
+                    <string>Look and Listen</string>
+                    <string>Performance</string>
+                </array>
+                <key>MinPlayers</key>
+                <integer>4</integer>
+                <key>MaxPlayers</key>
+                <integer>16</integer>
+                <key>MinTime</key>
+                <integer>10</integer>
+                <key>MaxTime</key>
+                <integer>60</integer>
+                <key>AudienceParticipation</key>
+                <false/>
+                <key>timerCountsUp</key>
+                <true/>
+                <key>Buzzer</key>
+                <false/>
+                <key>Variations</key>
+                <array/>
+            </dict>	
+            <dict>
+                <key>Image</key>
+                <string>Harold</string>
+                <key>Title</key>
+                <string>Harold</string>
+                <key>Description</key>
+                <string>Harold is a long format, and consists of a number of sub-formats. It basically consists of 3 components: 
+                    Scenes, with 2 to 4 players
+                    Games: 
+                    Monologues: The format starts with a suggestion from the audience - this could really be anything. 
+                    Players will start associating around the suggestion, and then an opening game is played. In this game, a lot of associated elements round the audience suggestion are presented. The opening game might be a song a monologue, or simply a group association based on the audience suggestion. The idea is to use the elements and themes that come up or about in the opening game in what follows. Then follow 3 rounds of scenes, all based on the themes found in the opening game. Each round exists out of 3 scenes, all unrelated, but each loosely based on the themes and associations form the opening game. Since these themes originated for the same audience suggestion, the audience will (hopefully) feel some links between the scenes. After the first round of 3 scenes, an improv game is played, this game is unrelated to the 3 scenes played before. Then, in the second round, each of the 3 previous scenes is continued, and more or less obvious links between the scenes start to emerge. This is again followed by an improv game, and then the 3 scenes are played into a conclusion. It`s quite possible that in the third round not every scene is continued scenes may disappear or even merge with one another. A Harold can be played with a decent number of players (up to 12 or so) players can act in multiple scenes, as the same or as different characters. A Harold can be played with or without props, with or without directors. Whether one sticks to the 3 rounds or not is really not relevant, anything and any combination of games and loose scenes that finally more or less come together can be considered a Harold. 
+                    Origin: This is an American format, described in Del Close`s book Truth in Comedy. We`re not sure whether it`s copyrighted - if you know please let us know.</string>
+                <key>Tags</key>
+                <array>
+                    <string>Format</string>
+                    <string>Long Form</string>
+                    <string>Performance</string>
+                </array>
+                <key>MinPlayers</key>
+                <integer>4</integer>
+                <key>MaxPlayers</key>
+                <integer>16</integer>
+                <key>MinTime</key>
+                <integer>10</integer>
+                <key>MaxTime</key>
+                <integer>60</integer>
+                <key>AudienceParticipation</key>
+                <true/>
+                <key>timerCountsUp</key>
+                <true/>
+                <key>Buzzer</key>
+                <false/>
+                <key>Variations</key>
+                <array/>
+            </dict>	
+            <dict>
+                <key>Image</key>
+                <string>BlindLine</string>
+                <key>Title</key>
+                <string>Blind Line Offers</string>
+                <key>Description</key>
+                <string>Line up the players, give`em each a number. Call out 2 numbers. Those players step on stage immediately, with a physical Offer (do something, eat an apple, wipe the floor, whatever) as well as a vocal offer (say something). The idea is that the players accept and explore each other`s offers and figure out what the scene is about. </string>
+                <key>Tags</key>
+                <array>
+                    <string>Exercise</string>
+                </array>
+                <key>MinPlayers</key>
+                <integer>3</integer>
+                <key>MaxPlayers</key>
+                <integer>0</integer>
+                <key>MinTime</key>
+                <integer>4</integer>
+                <key>MaxTime</key>
+                <integer>20</integer>
+                <key>AudienceParticipation</key>
+                <false/>
+                <key>timerCountsUp</key>
+                <true/>
+                <key>Buzzer</key>
+                <false/>
+                <key>Variations</key>
+                <array/>
+            </dict>	
+        <dict>
+            <key>Image</key>
+            <string>BlindMusical</string>
+            <key>Title</key>
+            <string>Blind Musical</string>
+            <key>Description</key>
+            <string>This is like a musical version of Pockets: ask the audience to write simple sentences on slips of paper. Hand each player 2 or 3 slips (they`re not allowed to read them yet). Play a scene or series of improvised scenes. Players draw slips of paper at random, and every time they do, they start a song that starts with the sentence on the slip. Try to integrate the info on the slips into the story, of course! </string>
+            <key>Tags</key>
+            <array>
+                <string>Performance</string>
+                <string>SingSong</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Pockets</string>
+            <key>Title</key>
+            <string>Pockets</string>
+            <key>Description</key>
+            <string>Before the show, ask the audience to write simple sentences on slips of paper. Anything goes. The game is played by 2 players. Ask for a location, or a profession, and have every player draw 3 of these slips. Players put these in their pockets without reading them. Then a scene is played, in which at any point in time, players replace what they might have said, by whatever is on the piece of paper they draw out of their pocket. Try to incorporate/justify whatever is your line into the scene. 
+                Notes: Try to avoid thinks like `My granny always said` - you want your character to say whatever is on the piece of paper - don`t try to put those words into someone else`s mouth. See also a game called Bucket that uses audience lines as well. </string>
+            <key>Tags</key>
+            <array>
+                <string>Audience Participation</string>
+                <string>Limitations</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>
+        <dict>
+            <key>Image</key>
+            <string>BlindfoldedScene</string>
+            <key>Title</key>
+            <string>Blindfolded Scene</string>
+            <key>Description</key>
+            <string>Players are blindfolded and then play a scene. </string>
+            <key>Tags</key>
+            <array>
+                <string>Limitations</string>
+                <string>Performance</string>
+                <string>Trust</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>2</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>
+        <dict>
+            <key>Image</key>
+            <string>Scorpion</string>
+            <key>Title</key>
+            <string>Scorpion</string>
+            <key>Description</key>
+            <string>A number of players stand in the middle of the room, eyes closed, while the others stand by the walls. One of the middle players is tapped on the shoulder, and becomes the `killer` or the `vampire`. The trainer give a go-sign, and all `blinded` players start milling around the room. When the killer bumps into someone, the killer squeezes that person’s forearm to `kill` him. When a victim dies, he utters a scream, opens his eyes and is `out`. Game is over when all potential victims are dead. 
+                Notes: You may need people by the walls to make sure that blind players don`t bump into stuff or hurt themselves. </string>
+            <key>Tags</key>
+            <array>
+                <string>Exercise</string>
+                <string>Trust</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>6</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>3</integer>
+            <key>MaxTime</key>
+            <integer>15</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+				<string>When a `vampire` runs into a victim, the victim becomes a vampire too; When 2 vampires bump into one another, they become normal mortal souls again. See also Death and Retriever. </string>
+            </array>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Deathand</string>
+            <key>Title</key>
+            <string>Death and Retriever</string>
+            <key>Description</key>
+            <string>This one is like Scorpion, but in this version killed players are not `out`, but can be revived. Everyone eyes closed, one player becomes the killer (tap him on the shoulder) and another one becomes the retriever. The retriever gets a towel of a scarf around her neck. Dead players scream when they are killed, keep their eyes closed and stand still. When the retriever bumps into someone that does not move (a dead body) she can revive the dead by rubbing them with the towel. When the retriever gets killed, she screams and stops moving. When another living person bumps into the retriever (recognized by the scarf), the retriever is revived, and the one that revived the retriever becomes the new retriever. Play till everyone is dead or bored. </string>
+            <key>Tags</key>
+            <array>
+                <string>Exercise</string>
+                <string>Group</string>
+                <string>Trust</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>6</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>3</integer>
+            <key>MaxTime</key>
+            <integer>15</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>BluesJam</string>
+            <key>Title</key>
+            <string>Blues Jam</string>
+            <key>Description</key>
+            <string>Ask the audience for 5 things that give them the blues. Then improvise a blues jam about those elements. </string>
+            <key>Tags</key>
+            <array>
+                <string>Performance</string>
+                <string>SingSong</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Bobsledding</string>
+            <key>Title</key>
+            <string>Bobsledding Bodies</string>
+            <key>Description</key>
+            <string>This is a physical team game. Form teams of 4 - 6 players. Teams sit in a line and wrap their legs around the person in front of them. Place masking tape about 10 - 15 feet away to mark the end line. On "GO", teams must only use their hands to slide their way to the end. If a team breaks apart, they must get back together before they continue. </string>
+            <key>Tags</key>
+            <array>
+                <string>Energy</string>
+                <string>Icebreakers</string>
+                <string>Warm-up</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>8</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>BodyHide</string>
+            <key>Title</key>
+            <string>Body Hide</string>
+            <key>Description</key>
+            <string>Excellent exercise to get to know each other, and to learn to trust and touch each other. There are 5 volunteer players. 4 of these must try and hide the fifth person, using nothing but their bodies. The other students stand around the group and try and see pieces of the fifth`s clothes, shoes skin. It`s great fun for the other students to watch and try and find uncovered pieces of person. Don`t tell them they go next, with one person less. </string>
+            <key>Tags</key>
+            <array>
+                <string>Exercise</string>
+                <string>Group</string>
+                <string>Icebreakers</string>
+                <string>Trust</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>8</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+				<string>Try this game with less and less `hiders`. If the task becomes impossible, tell them they can use parts of walls. Using a corner is easiest, of course, but let them figure that out themselves. </string>
+            </array>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Bong</string>
+            <key>Title</key>
+            <string>Bong Bong Bong</string>
+            <key>Description</key>
+            <string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
+            <key>Tags</key>
+            <array>
+                <string>Guessing</string>
+                <string>Limitations</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>LCD</string>
+            <key>Title</key>
+            <string>LCD</string>
+            <key>Description</key>
+            <string>This improv game is called Location, Career, Death (LCD). One player on stage, the others off stage. The audience provides a location, an occupation, and an object, only known to the player on stage. Second player enters and a scene is played in gibberish. Player one needs to communicate the location to player 2, as soon as player 2 thinks he`s got it, he claps his hands and spins around. Then player 2 needs to guess the occupation, clap and spin when he thinks he’s got it. Finally, the object needs to be revealed. As soon as player 2 has the object, he needs to kill player 1 with it. Then the next player comes on stage and the game recommences, until all players have played. Afterwards, line up the players and ask them where they think they were, what their occupation was and what the murder weapon was - usually quite far off the original suggestion, much to the audience`s amusement. See also Hijacker for a similar game without the Gibberish component. </string>
+            <key>Tags</key>
+            <array>
+                <string>Endowment</string>
+                <string>Gibberish</string>
+                <string>Guessing</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>4</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+				<string>Use a bell, every 10 seconds or so. At the bell players need to clap and spin and proceed to the next step, even if they are not sure about the where, who and what. </string>
+            </array>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Hijacker</string>
+            <key>Title</key>
+            <string>Hijacker</string>
+            <key>Description</key>
+            <string>Excellent improv game to train listening skills. 4 players, one leaves the room. Pick a means of transportation, and an object. The idea is that player number 4 needs to guess the means of transportation and then use the object to hijack the others. Finally, pick a goal for the hijacker to achieve. The players need to provide hints to the hijacker, but they cannot explicitly tell the hijacker what to do, with what or why. 
+                Notes: Works best if players take risks. If they to the `wrong` thing or use the wrong object the audience will probably just laugh, and that should be enough to signal the player he`s going the wrong way. </string>
+            <key>Tags</key>
+            <array>
+                <string>Continuation</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>4</integer>
+            <key>MaxPlayers</key>
+            <integer>4</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Boris</string>
+            <key>Title</key>
+            <string>Boris</string>
+            <key>Description</key>
+            <string>2 players play an improvised interrogation scene. One is the interrogator, the other is a suspect. The interrogator randomly throws unconnected elements to the suspect, who needs to incorporate these and get himself into (even more) trouble. Then we have Boris, who is a nasty, huge, but invisible thug assisting the interrogator. Every time the interrogator does not like the suspect`s answers (and also when the suspect does not incriminate himself enough), the interrogator calls on Boris to torture the suspect, prodding him to confess or incriminate him even further. 
+                Notes: We do not establish the crime beforehand. The suspect mimes being tortured by Boris the investigator and can tell Boris what to do (break his leg), but it is more fun to leave the choice of torture up to the suspect. If the torture does not go far enough to the investigator`s taste, he can always call in Boris` evil twin brother, Igor (also invisible);as a gag, the suspect can also incriminate Boris (who can turn out to be a witness/accomplice to the crime). 
+                Origin: This improv game is attributed to Keith Johnstone. </string>
+            <key>Tags</key>
+            <array>
+                <string>Exercise</string>
+                <string>Narration</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>2</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <false/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array/>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>DryCleaning</string>
+            <key>Title</key>
+            <string>We need three or four players for this improv game. During an improvised scene, one player is always off-stage, with his head inside a dry cleaning bag, slowly suffocating. He is not allowed out of the bag until some other player finds a way to exit the scene and `liberate` the suffocating player. New player puts his head into the bag until freed by another player, and first liberated player finds a way to justify his entrance into the scene.
+                Note: Take special care in monitoring the player that has their head in the bag. </string>
+            <key>Description</key>
+            <string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
+            <key>Tags</key>
+            <array>
+                <string>Limitations</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+				<string> Use a bucket of water instead of a dry cleaning bag. Substitute the bag with a time limit. </string>
+            </array>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>Callfrom</string>
+            <key>Title</key>
+            <string>Call from Ray</string>
+            <key>Description</key>
+            <string>A scene is begun. At some point in the scene an onstage player has to receive a "Call from Ray" (or any other name agreed upon). The call can come in any form like phone call, SMS, smoke signals, telepathy or whatever, and Ray himself may not appear in the scene. </string>
+            <key>Tags</key>
+            <array>
+                <string>Limitations</string>
+                <string>Performance</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+				<string>You can come up with any sentence that needs to come up. A variation would be to use: “I`ll have a coke".</string>
+            </array>
+        </dict>	
+        <dict>
+            <key>Image</key>
+            <string>CardStatus</string>
+            <key>Title</key>
+            <string>Card Status</string>
+            <key>Description</key>
+            <string>Excellent Status improv game with at least 4 players. Ask an audience member to pick a number of cards out of a deck equal to the number of players, and attach a card to each player`s forehead, so that players can see each other`s card, but not their own. Use a rubber band or a piece of string for that. The idea is to improvise a scene, in which the status order of the characters is defined by the cards. Evidently, players don`t know their own status, so the other players will have to endow them. 
+                Notes: Set up a location where status is important. Examples would be a Royal Palace or a highly organized bureaucracy (the White House?). </string>
+            <key>Tags</key>
+            <array>
+                <string>Endowment</string>
+                <string>Limitations</string>
+                <string>Look and Listen</string>
+                <string>Performance</string>
+                <string>Status</string>
+            </array>
+            <key>MinPlayers</key>
+            <integer>3</integer>
+            <key>MaxPlayers</key>
+            <integer>0</integer>
+            <key>MinTime</key>
+            <integer>4</integer>
+            <key>MaxTime</key>
+            <integer>20</integer>
+            <key>AudienceParticipation</key>
+            <true/>
+            <key>timerCountsUp</key>
+            <true/>
+            <key>Buzzer</key>
+            <false/>
+            <key>Variations</key>
+            <array>
+				<string>Players can only see their own card, but not the others. Give players multiple cards, and let them switch cards in the middle of the scene. Status should change accordingly. As an exercise, let players play a scene and then ask them to line up in status order to see if they `got` their status right. </string>
+            </array>
+        </dict>
 		<dict>
 			<key>Image</key>
 			<string>Cards</string>
@@ -2753,7 +2753,7 @@ Notes: Set up a location where status is important. Examples would be a Royal Pa
 			<key>Variations</key>
 			<array/>
 		</dict>
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>Chivalrous</string>
 			<key>Title</key>
@@ -2810,7 +2810,7 @@ Notes: Set up a location where status is important. Examples would be a Royal Pa
 			<false/>
 			<key>Variations</key>
 			<array>
-			<string>Try a line instead of a circle. Try with eyes closed or blindfolded. </string>
+                <string>Try a line instead of a circle. Try with eyes closed or blindfolded. </string>
 			</array>
 		</dict>	
 		<dict>
@@ -2879,7 +2879,7 @@ Notes: Set up a location where status is important. Examples would be a Royal Pa
 			<string>Columbian Hypnosis</string>
 			<key>Description</key>
 			<string>Played in pairs. One player holds her open hand, fingers upward, about 2-3 inches from her partner`s face. She then starts moving her hand about slowly, while her partner tried to keep his face at exactly the same distance from her hand, like her hand is pulling of pushing his face about. Switch sides and partners after a couple of minutes.
-Notes: This is really also an exercise for the hypnotized, as she needs to ensure that her partner is able to follow her. Origin: Described in Augusto Boal`s Games for Actors and Non-actors. </string>
+                Notes: This is really also an exercise for the hypnotized, as she needs to ensure that her partner is able to follow her. Origin: Described in Augusto Boal`s Games for Actors and Non-actors. </string>
 			<key>Tags</key>
 			<array>
 				<string>Exercise</string>
@@ -2901,7 +2901,7 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<false/>
 			<key>Variations</key>
 			<array>
-			<string>Use both hands. </string>
+                <string>Use both hands. </string>
 			</array>
 		</dict>	
 		<dict>
@@ -2934,7 +2934,7 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<false/>
 			<key>Variations</key>
 			<array>
-			<string>You can come up with other situations in which characters enter a location. </string>
+                <string>You can come up with other situations in which characters enter a location. </string>
 			</array>
 		</dict>	
 		<dict>
@@ -2964,10 +2964,10 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<false/>
 			<key>Variations</key>
 			<array>
-			<string>You can do this as a radio commercial. Cut the lights in the theater. You can play the whole development of the commercial, starting with the brainstorming by the marketing guys, the work of the production company coming up with a slogan, jingle, etc. You can even play the bloopers at the actual taping of the commercial. </string>
+                <string>You can do this as a radio commercial. Cut the lights in the theater. You can play the whole development of the commercial, starting with the brainstorming by the marketing guys, the work of the production company coming up with a slogan, jingle, etc. You can even play the bloopers at the actual taping of the commercial. </string>
 			</array>
 		</dict>	
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>CommunalMonologue</string>
 			<key>Title</key>
@@ -3145,7 +3145,7 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<key>Variations</key>
 			<array/>
 		</dict>	
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>Continuing Styles</string>
 			<key>Title</key>
@@ -3174,7 +3174,7 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<key>Variations</key>
 			<array/>
 		</dict>	
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>CopyCat</string>
 			<key>Title</key>
@@ -3200,10 +3200,20 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<key>Buzzer</key>
 			<false/>
 			<key>Variations</key>
-			</array>
-			<string>Feel free to actually continue the ongoing scene rather than to start a completely new one. Feel free to replace all the players instead of just the player who said the last line. Rather than just stepping in and repeating a line, you might want to call `FLIP` (or freeze). </string>
 			<array>
+                <string>Feel free to actually continue the ongoing scene rather than to start a completely new one. Feel free to replace all the players instead of just the player who said the last line. Rather than just stepping in and repeating a line, you might want to call `FLIP` (or freeze). </string>
+			</array>
 		</dict>	
+        
+        
+        
+        
+        
+        
+        
+		
+        
+        
 		<dict>
 			<key>Image</key>
 			<string>Crabtrees</string>
@@ -3211,8 +3221,8 @@ Notes: This is really also an exercise for the hypnotized, as she needs to ensur
 			<string>Crabtrees Conundrum</string>
 			<key>Description</key>
 			<string>This game is taking from Mrs. Crabtree from South Park. 2 players start a scene and every now and then a player will say “What`d you say?" And the other player must come up with a completely different phrase that rhymes with the one just said. For instance: Player 1: “Christine, I think you are as sick as a dog!!”
-Player 2: “What`d you say?”
-Player 1: “I said I think we should go for a jog, it`s a really nice day” and so forth. See Ding for a similar game. </string>
+                Player 2: “What`d you say?”
+                Player 1: “I said I think we should go for a jog, it`s a really nice day” and so forth. See Ding for a similar game. </string>
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
@@ -3242,7 +3252,7 @@ Player 1: “I said I think we should go for a jog, it`s a really nice day” an
 			<string>Ding</string>
 			<key>Description</key>
 			<string>A scene is played. Whenever the MC ring a bell (or yells `Ding`) the player that is doing something/saying something needs to say/do something else.
-Notes: Doing `something else` is quite often interpreted as doing/saying the opposite of what you did before. One can be more creative, e.g. repeat what was said in a different emotion. If you use this as an exercise on Spontaneity the trainer can `Ding` quite often (very frustrating for the players, but they will come up with stuff they never would have thought of before). The disadvantage of this is that the story/characters tend to get lost. Use sparingly for performance. </string>
+                Notes: Doing `something else` is quite often interpreted as doing/saying the opposite of what you did before. One can be more creative, e.g. repeat what was said in a different emotion. If you use this as an exercise on Spontaneity the trainer can `Ding` quite often (very frustrating for the players, but they will come up with stuff they never would have thought of before). The disadvantage of this is that the story/characters tend to get lost. Use sparingly for performance. </string>
 			<key>Tags</key>
 			<array>
 				<string>Exercise</string>
@@ -3333,11 +3343,11 @@ Notes: Doing `something else` is quite often interpreted as doing/saying the opp
 			<string>Crisis Situation</string>
 			<key>Description</key>
 			<string>Great exercise for spontaneity. 2 players on stage approach each other with a crisis, and an object unrelated to the crisis. After each has presented his or hers, each solves the other`s crisis with their own object. Replies must be instantaneous and may be ridiculous.
-Example:
-Player A: My wife left me and I`m stuck here with this t-shirt
-Player B: I got robbed and all I have left is my good looks.
-Player A: Here`s my t-shirt; you can sell it and make some money.
-Player B: Erm... Marry me. </string>
+                Example:
+                Player A: My wife left me and I`m stuck here with this t-shirt
+                Player B: I got robbed and all I have left is my good looks.
+                Player A: Here`s my t-shirt; you can sell it and make some money.
+                Player B: Erm... Marry me. </string>
 			<key>Tags</key>
 			<array>
 				<string>Exercise</string>
@@ -3391,7 +3401,7 @@ Player B: Erm... Marry me. </string>
 			<false/>
 			<key>Variations</key>
 			<array>
-			<string>Instead of calling names, players can pick another player by making eye contact (and nodding to acknowledge that eye contact has been made). This demands a lot of concentration. You can have more than one cycle going, if the group is big enough. </string> 
+                <string>Instead of calling names, players can pick another player by making eye contact (and nodding to acknowledge that eye contact has been made). This demands a lot of concentration. You can have more than one cycle going, if the group is big enough. </string> 
 			</array>
 		</dict>	
 		<dict>
@@ -3430,11 +3440,11 @@ Player B: Erm... Marry me. </string>
 			<string>Cut</string>
 			<key>Description</key>
 			<string>Usually, we decide on a category before the start of this game. Possible categories are:
--Soap series, like The Bold and the Beautiful, Dallas, Eastenders
--Hospital drama, like E.R.
--Cop drama, like Hill Street Blues
--Romantic Comedy, like The Love Boat
--Crime series or murder mysteries</string>
+                -Soap series, like The Bold and the Beautiful, Dallas, Eastenders
+                -Hospital drama, like E.R.
+                -Cop drama, like Hill Street Blues
+                -Romantic Comedy, like The Love Boat
+                -Crime series or murder mysteries</string>
 			<key>Tags</key>
 			<array>
 				<string>Format</string>
@@ -3486,7 +3496,7 @@ Player B: Erm... Marry me. </string>
 			<false/>
 			<key>Variations</key>
 			<array/>
-		</dict>	
+		</dict>
 	</array>
 </dict>
 </plist>
