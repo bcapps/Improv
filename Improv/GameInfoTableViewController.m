@@ -171,11 +171,9 @@
 
 - (void)pop{
     
-	BOOL didPop = NO;
 	for (UIViewController *vC in self.navigationController.viewControllers){
 		if ([vC isKindOfClass: [GamesTableViewController class]]){					
 			[self.navigationController popToViewController:(UIViewController *)vC animated:YES];
-			didPop = YES;
 			break;
 		}
 	}

@@ -30,7 +30,7 @@
 @property (nonatomic, retain) Game *similarGames;
 @property (nonatomic, retain) NSSet *tags;
 
-@property (nonatomic, retain) NSString *firstSentenceOfDescription;
+- (NSString *)firstSentenceOfDescriptionUsingOrthography:(NSOrthography *)stringOrthography;
 - (NSString *)minimumNumberOfPlayersString;
 @property (nonatomic, retain) NSMutableArray *tagsAsStringsArray;
 

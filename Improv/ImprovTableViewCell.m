@@ -43,7 +43,6 @@
         [self.contentView addSubview:descriptionLabel];
         [self.contentView addSubview:imageView];
         self.backgroundColor = [UIColor whiteColor];
-        
     }
     return self;
 }
@@ -56,6 +55,7 @@
 }
 
 - (void) layoutSubviews {
+
     [super layoutSubviews];
     CGSize sizeToFit = [self.descriptionLabel.text sizeWithFont:descriptionLabel.font constrainedToSize:CGSizeMake(240, 30) lineBreakMode:descriptionLabel.lineBreakMode];
 

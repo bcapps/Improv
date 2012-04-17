@@ -7,7 +7,6 @@
 //
 
 #import "Game.h"
-#import "Game.h"
 #import "Tag.h"
 
 
@@ -30,7 +29,7 @@
 @dynamic similarGames;
 @dynamic tags;
 @synthesize tagsAsStringsArray;
-@synthesize firstSentenceOfDescription;
+//@synthesize firstSentenceOfDescriptionUsingOrthography;
 
 
 - (NSString *)minimumNumberOfPlayersString {
@@ -39,20 +38,20 @@
     [self didAccessValueForKey:@"minimumNumberOfPlayersString"];
     return playersString; 
 }
+- (NSString *)firstSentenceOfDescriptionUsingOrthography:(NSOrthography *)stringOrthography {
 
-- (NSString *)firstSentenceOfDescription {
     __block NSString *firstSentence = nil;
     __block int blockCount = 0;
     NSRange stringRange = [self.gameDescription rangeOfString:self.gameDescription];
     NSString *stringScheme = NSLinguisticTagSchemeTokenType;
-    NSOrthography *stringOrthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"en"] forKey:@"Latn"]];
+
     [self.gameDescription enumerateLinguisticTagsInRange:stringRange scheme:stringScheme options:0 orthography:stringOrthography usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
         if(blockCount == 0) {
             firstSentence = [self.gameDescription substringWithRange:sentenceRange];
             blockCount++;
         }
     }];
-    
+
     return firstSentence;
 }
 

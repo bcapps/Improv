@@ -23,4 +23,5 @@
 @property (strong, nonatomic, readonly) NSFetchedResultsController *currentFetchedResultsController;
 @property (strong, nonatomic) FiltersTableViewController *filtersTableViewController;
 @property (nonatomic) BOOL isSearching;
+@property (strong, nonatomic) NSOrthography *stringOrthography;
 @end

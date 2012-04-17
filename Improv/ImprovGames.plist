@@ -512,7 +512,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>AllIntro</string>
+			<string>AlliterationIntroduction</string>
 			<key>Title</key>
 			<string>Alliteration Introduction</string>
 			<key>Description</key>
@@ -574,7 +574,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>AlphaCircle</string>
+			<string>AlphabetCircle</string>
 			<key>Title</key>
 			<string>Alphabet Circle</string>
 			<key>Description</key>
@@ -634,7 +634,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>AlphaLetters</string>
+			<string>AlphabetLetters</string>
 			<key>Title</key>
 			<string>Alphabet Letters</string>
 			<key>Description</key>
@@ -840,7 +840,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Helping</string>
+			<string>HelpingHands</string>
 			<key>Title</key>
 			<string>Helping Hands</string>
 			<key>Description</key>
@@ -926,7 +926,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Association</string>
+			<string>AssociationJump</string>
 			<key>Title</key>
 			<string>Association Jump</string>
 			<key>Description</key>
@@ -2107,39 +2107,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
         </dict>
         <dict>
             <key>Image</key>
-            <string>Scorpion</string>
-            <key>Title</key>
-            <string>Scorpion</string>
-            <key>Description</key>
-            <string>A number of players stand in the middle of the room, eyes closed, while the others stand by the walls. One of the middle players is tapped on the shoulder, and becomes the `killer` or the `vampire`. The trainer give a go-sign, and all `blinded` players start milling around the room. When the killer bumps into someone, the killer squeezes that person’s forearm to `kill` him. When a victim dies, he utters a scream, opens his eyes and is `out`. Game is over when all potential victims are dead. 
-                Notes: You may need people by the walls to make sure that blind players don`t bump into stuff or hurt themselves. </string>
-            <key>Tags</key>
-            <array>
-                <string>Exercise</string>
-                <string>Trust</string>
-            </array>
-            <key>MinPlayers</key>
-            <integer>6</integer>
-            <key>MaxPlayers</key>
-            <integer>0</integer>
-            <key>MinTime</key>
-            <integer>3</integer>
-            <key>MaxTime</key>
-            <integer>15</integer>
-            <key>AudienceParticipation</key>
-            <false/>
-            <key>timerCountsUp</key>
-            <true/>
-            <key>Buzzer</key>
-            <false/>
-            <key>Variations</key>
-            <array>
-				<string>When a `vampire` runs into a victim, the victim becomes a vampire too; When 2 vampires bump into one another, they become normal mortal souls again. See also Death and Retriever. </string>
-            </array>
-        </dict>	
-        <dict>
-            <key>Image</key>
-            <string>Deathand</string>
+            <string>DeathAndRetriever</string>
             <key>Title</key>
             <string>Death and Retriever</string>
             <key>Description</key>
@@ -2512,7 +2480,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>
         <dict>
 			<key>Image</key>
-			<string>Chivalrous</string>
+			<string>ChivalrousCouples</string>
 			<key>Title</key>
 			<string>Chivalrous Couples</string>
 			<key>Description</key>
@@ -2571,7 +2539,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>	
 		<dict>
 			<key>Image</key>
-			<string>ClapSnap</string>
+			<string>ClapSnapStamp</string>
 			<key>Title</key>
 			<string>Clap Snap Stamp</string>
 			<key>Description</key>

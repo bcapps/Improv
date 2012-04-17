@@ -30,6 +30,7 @@
 @synthesize currentFetchedResultsController;
 @synthesize filtersTableViewController;
 @synthesize isSearching;
+@synthesize stringOrthography;
 
 - (void)didReceiveMemoryWarning
 {
@@ -84,6 +85,9 @@
     self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     self.timeAsInt = -1;
     
+    self.stringOrthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"en"] forKey:@"Latn"]];
+
+    
     [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -113,7 +117,6 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     
-    NSLog(@"Search String: %@", searchString);
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
@@ -145,7 +148,6 @@
     self.fetchedResultsController = nil;
     self.filteredResultsController = nil;
     [self.tableView reloadData];
-    NSLog(@"Will End");
 }
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller {
@@ -169,8 +171,8 @@
 }
 
 - (void)timerButtonPushed {
-    UIBarButtonItem *timerButton = [self.toolbarItems objectAtIndex:2];
-    NSString *time = [timerButton.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    UIBarButtonItem *aTimerButton = [self.toolbarItems objectAtIndex:2];
+    NSString *time = [aTimerButton.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if(![time isEqualToString:@"0:00"]) {
         //[self.timer invalidate];
@@ -491,7 +493,7 @@
 {
         Game *game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
         cell.titleLabel.text = game.title;
-        cell.descriptionLabel.text = game.firstSentenceOfDescription;
+        cell.descriptionLabel.text = [game firstSentenceOfDescriptionUsingOrthography:self.stringOrthography];
         cell.imageView.image = [UIImage imageNamed:game.image];
         cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
 }
