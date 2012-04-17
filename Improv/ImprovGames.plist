@@ -986,7 +986,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Feature</string>
+			<string>FeatureFilm</string>
 			<key>Title</key>
 			<string>Feature Film</string>
 			<key>Description</key>
@@ -1193,7 +1193,7 @@
 			<key>Image</key>
 			<string>Balladeer</string>
 			<key>Title</key>
-			<string>Balladeer(1)</string>
+			<string>Balladeer</string>
 			<key>Description</key>
 			<string>In this musical improv handle, one player is the balladeer, who starts singing a ballad about an audience suggestion. The other players actually play what the balladeer sings about, in slow motion. This is actually group story-building, as the players are inspired by the what the balladeer sings (obviously) but also, their actions can/should inspire the balladeer. Notes: You`re not limited to ballads, of course. Origin: The Improvoholics.</string>
 			<key>Tags</key>
@@ -1218,37 +1218,7 @@
 			<key>Variations</key>
 			<array/>
 		</dict>
-		<dict>
-			<key>Image</key>
-			<string>Balla2</string>
-			<key>Title</key>
-			<string>Balladeer(2)</string>
-			<key>Description</key>
-			<string>This is like the short form version  Balladeer(1), but in this long form improv format, as soon as the balladeer stops singing or finishes the song, the characters start playing and talking independently. When their scene is done the balladeer starts a new song, and so forth.</string>
-			<key>Tags</key>
-			<array>
-				<string>Long Form</string>
-				<string>Performance</string>
-				<string>SingSong</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>2</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>2</integer>
-			<key>MaxTime</key>
-			<integer>6</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>Bandaid</string>
 			<key>Title</key>
@@ -1280,9 +1250,9 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Bop1</string>
+			<string>BibbetyBop</string>
 			<key>Title</key>
-			<string>Bibbety Bop(1)</string>
+			<string>Bibbety Bop</string>
 			<key>Description</key>
 			<string>Silly warm-up to get the blood flowing. A players in a circle, one player in the middle. The player in the middle closes his eyes, holds right hand pointing in front of him, and spins around. When done spinning, open your eyes and say, as fast as you can `Bippety Bippety Bop`. The player you`re pointing to, and his 2 neighbors, need to build an elephant in less than the time the middle player needs to say `Bippety Bippety Bop`. An elephant consists of a trunk, made by the middle player, by holding your nose with one hand, and extending your other arm through the arm that holds the hand that holds the nose (does this make any sense?). The neighboring players each form a big ear, using both arms. Don`t forget to attach the ears to the elephant`s head. Any player that cannot get his/her part done by the time the middle player does `Bippety Bippety Bop` becomes `it` and takes place in the middle of the circle.</string>
 			<key>Tags</key>
@@ -1308,37 +1278,7 @@
 			<key>Variations</key>
 			<array/>
 		</dict>
-		<dict>
-			<key>Image</key>
-			<string>Bop2</string>
-			<key>Title</key>
-			<string>Bippety Bop(2)</string>
-			<key>Description</key>
-			<string>This is a variation on Bippety Bop(1) : all players in a circle, one player in the middle who is `it`. This player picks a player in the circle and yells `bippety-bippety-bop` at her. If he manages to get to `bop` before she can say `bop`, she becomes `it`. See variations for more ideas.</string>
-			<key>Tags</key>
-			<array>
-				<string>Concentration</string>
-				<string>Exercise</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>2</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>3</integer>
-			<key>MaxTime</key>
-			<integer>8</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>Barney</string>
 			<key>Title</key>
@@ -1429,9 +1369,9 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Catch</string>
+			<string>Catchem</string>
 			<key>Title</key>
-			<string>Catch&apos;em</string>
+			<string>Catch'em</string>
 			<key>Description</key>
 			<string>One player is `it` and stands at one end of the room, facing the wall. The other players at the other end of the room. Players need to try and get to the player who is `it` without `it` seeing them move. The player who is `it` can turn around at any time - at that point everybody else needs to freeze. Anyone who is caught moving is out.</string>
 			<key>Tags</key>
@@ -1460,7 +1400,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Beatnik</string>
+			<string>BeatnikPoet</string>
 			<key>Title</key>
 			<string>Beatnik Poet</string>
 			<key>Description</key>
@@ -1525,7 +1465,7 @@
 			<key>Title</key>
 			<string>Become</string>
 			<key>Description</key>
-			<string>This one can be player with all players at a time, or you can ask the group to watch as players come up with different ideas on how to do this. Ask the players to become-- A jar of mayonnaise. A pack of cigarettes. Dentures. At first, this will probably not lead to much. Add side coachings, like: You are a jar of mayonnaise. Opened or not? Full or empty? Fresh or not? Show it. You are a pack of smokes. Empty or full? Filter cigarettes or not? Where are you? In someone`s pocket or on a shelve in a shop? Show it. You are a flower. What kind of flower? Blooming or not? In a vase or in a field? What color? Freshly picked or not? A present to a lover or at a funeral? You are water. Still or not? In a glass? A jar, a puddle, a lake or an ocean? Fresh or dirty? You are stone, air, sand, fire. Your are blue, red, green. You are a clock. Big Ben or grandfather clock? Working or not. Is your time right or not? A watch? Who is wearing you? A nun or a pimp? How could you show that? You are French fries. McDonalds or Wendy`s? Hot or cold? Any ketchup? On a plate or in a cardboard box? Eaten or not? Yummy or yuck? After a while, players should be able to come up with the side coachings for themselves. Encourage the players to try out different kind of stuff, see what they come up with.</string>
+			<string>This one can be played with all players at a time, or you can ask the group to watch as players come up with different ideas on how to do this. Ask the players to become-- A jar of mayonnaise. A pack of cigarettes. Dentures. At first, this will probably not lead to much. Add side coachings, like: You are a jar of mayonnaise. Opened or not? Full or empty? Fresh or not? Show it. You are a pack of smokes. Empty or full? Filter cigarettes or not? Where are you? In someone`s pocket or on a shelve in a shop? Show it. You are a flower. What kind of flower? Blooming or not? In a vase or in a field? What color? Freshly picked or not? A present to a lover or at a funeral? You are water. Still or not? In a glass? A jar, a puddle, a lake or an ocean? Fresh or dirty? You are stone, air, sand, fire. Your are blue, red, green. You are a clock. Big Ben or grandfather clock? Working or not. Is your time right or not? A watch? Who is wearing you? A nun or a pimp? How could you show that? You are French fries. McDonalds or Wendy`s? Hot or cold? Any ketchup? On a plate or in a cardboard box? Eaten or not? Yummy or yuck? After a while, players should be able to come up with the side coachings for themselves. Encourage the players to try out different kind of stuff, see what they come up with.</string>
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
@@ -1612,9 +1552,9 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Image</key>
 			<string>Bidirectional</string>
 			<key>Title</key>
-			<string>Fairly difficult combination of the Satellite TV and Satellite Radio improv games: players in pairs, establish a beat. Every beat, player 1 offers a movement and player 2 offers a word of a story. At the same time, players mirror each other, with a delay of 1 beat. </string>
+			<string>Bidirectional</string>
 			<key>Description</key>
-			<string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
+			<string>Fairly difficult combination of the Satellite TV and Satellite Radio improv games: players in pairs, establish a beat. Every beat, player 1 offers a movement and player 2 offers a word of a story. At the same time, players mirror each other, with a delay of 1 beat. </string>
 			<key>Tags</key>
 			<array>
 				<string>Exercise</string>
@@ -1672,7 +1612,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Title</key>
 			<string>Satellite TV</string>
 			<key>Description</key>
-			<string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
+			<string>Same as Satellite Radio, but with movements. Players in pairs. Establish a beat. Player 1 makes a new movement on every beat. Player 2 mirrors the movements, but with a delay of 1 beat.</string>
 			<key>Tags</key>
 			<array>
 				<string>Exercise</string>
@@ -1756,11 +1696,14 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>		
 		<dict>
 			<key>Image</key>
-			<string>BigFish</string>
+			<string>BigFishSmallFish</string>
 			<key>Title</key>
 			<string>Big Fish Small Fish</string>
 			<key>Description</key>
-			<string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
+			<string>Fun energizer game. Everyone in a circle. We are going to pass a pattern along the circle. Everyone, at their turn does either:
+                Say Big Fish, and hold both hands in front of you, about 3 inches or 10cm apart. "It" then passes to the next person in the circle.
+                Say Small Fish, and hold both hands in front of you, about 15 inches or 50cm apart. When this is done, the direction changes.
+                Players that miss (e.g. say Small Fish and keep your hands too close together or say Big Fish and move hands wide) do a forfeit, or die with a loud noise.</string>
 			<key>Tags</key>
 			<array>
 				<string>Energy</string>
@@ -2012,35 +1955,6 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
             </dict>	
             <dict>
                 <key>Image</key>
-                <string>FreeLines</string>
-                <key>Title</key>
-                <string>FreeAssociationLines</string>
-                <key>Description</key>
-                <string>Yet another way to play association games. Place all players on 2 lines facing each other. One player starts walking to another player in the other line. Just before he gets to that other player, he throws her a word. The receiver starts crossing the line towards someone else, and the first player takes her place in the line. The receiver now becomes the thrower, throwing the first word she can think of to another player, who then starts walking, and so on. </string>
-                <key>Tags</key>
-                <array>
-                    <string>Association</string>
-                    <string>Exercise</string>
-                </array>
-                <key>MinPlayers</key>
-                <integer>3</integer>
-                <key>MaxPlayers</key>
-                <integer>0</integer>
-                <key>MinTime</key>
-                <integer>4</integer>
-                <key>MaxTime</key>
-                <integer>20</integer>
-                <key>AudienceParticipation</key>
-                <false/>
-                <key>timerCountsUp</key>
-                <true/>
-                <key>Buzzer</key>
-                <false/>
-                <key>Variations</key>
-                <array/>
-            </dict>	
-            <dict>
-                <key>Image</key>
                 <string>BlindFreeze</string>
                 <key>Title</key>
                 <string>Blind Freeze</string>
@@ -2074,7 +1988,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
                 <key>Image</key>
                 <string>FreezeTag</string>
                 <key>Title</key>
-                <string>Freeze Tsg</string>
+                <string>Freeze Tag</string>
                 <key>Description</key>
                 <string>2 actors start an improvised scene. At any point in time another player can call Freeze. This player then tags out one of the 2 actors, and takes his place. Both players then start a new scene, justifying their positions. 
                     Notes: The way this improv game is played quite often goes a bit against good improv, as many groups hardly take the time to develop a story line. If played this way, it`s more a game of wit, and you would probably use it early in a show as an audience (and player) warm-up. Alternatively, you can take your time and play every scene for several minutes, see what develops, and only at the end of each scene tag into another scene. To avoid preconceptions, see Blind Freeze. </string>
@@ -2325,7 +2239,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
             <key>Title</key>
             <string>Death and Retriever</string>
             <key>Description</key>
-            <string>This one is like Scorpion, but in this version killed players are not `out`, but can be revived. Everyone eyes closed, one player becomes the killer (tap him on the shoulder) and another one becomes the retriever. The retriever gets a towel of a scarf around her neck. Dead players scream when they are killed, keep their eyes closed and stand still. When the retriever bumps into someone that does not move (a dead body) she can revive the dead by rubbing them with the towel. When the retriever gets killed, she screams and stops moving. When another living person bumps into the retriever (recognized by the scarf), the retriever is revived, and the one that revived the retriever becomes the new retriever. Play till everyone is dead or bored. </string>
+            <string>This one is like Scorpion, but in this version killed players are not `out`, but can be revived. Everyone eyes closed, one player becomes the killer (tap him on the shoulder) and another one becomes the retriever. The retriever gets a towel or a scarf around their neck. Dead players scream when they are killed, keep their eyes closed and stand still. When the retriever bumps into someone that does not move (a dead body) she can revive the dead by rubbing them with the towel. When the retriever gets killed, she screams and stops moving. When another living person bumps into the retriever (recognized by the scarf), the retriever is revived, and the one that revived the retriever becomes the new retriever. Play till everyone is dead or bored. </string>
             <key>Tags</key>
             <array>
                 <string>Exercise</string>
@@ -2443,36 +2357,6 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
         </dict>	
         <dict>
             <key>Image</key>
-            <string>Bong</string>
-            <key>Title</key>
-            <string>Bong Bong Bong</string>
-            <key>Description</key>
-            <string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
-            <key>Tags</key>
-            <array>
-                <string>Guessing</string>
-                <string>Limitations</string>
-                <string>Performance</string>
-            </array>
-            <key>MinPlayers</key>
-            <integer>3</integer>
-            <key>MaxPlayers</key>
-            <integer>0</integer>
-            <key>MinTime</key>
-            <integer>4</integer>
-            <key>MaxTime</key>
-            <integer>20</integer>
-            <key>AudienceParticipation</key>
-            <false/>
-            <key>timerCountsUp</key>
-            <true/>
-            <key>Buzzer</key>
-            <false/>
-            <key>Variations</key>
-            <array/>
-        </dict>	
-        <dict>
-            <key>Image</key>
             <string>LCD</string>
             <key>Title</key>
             <string>LCD</string>
@@ -2568,39 +2452,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
         </dict>	
         <dict>
             <key>Image</key>
-            <string>DryCleaning</string>
-            <key>Title</key>
-            <string>We need three or four players for this improv game. During an improvised scene, one player is always off-stage, with his head inside a dry cleaning bag, slowly suffocating. He is not allowed out of the bag until some other player finds a way to exit the scene and `liberate` the suffocating player. New player puts his head into the bag until freed by another player, and first liberated player finds a way to justify his entrance into the scene.
-                Note: Take special care in monitoring the player that has their head in the bag. </string>
-            <key>Description</key>
-            <string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
-            <key>Tags</key>
-            <array>
-                <string>Limitations</string>
-                <string>Performance</string>
-            </array>
-            <key>MinPlayers</key>
-            <integer>3</integer>
-            <key>MaxPlayers</key>
-            <integer>0</integer>
-            <key>MinTime</key>
-            <integer>4</integer>
-            <key>MaxTime</key>
-            <integer>20</integer>
-            <key>AudienceParticipation</key>
-            <true/>
-            <key>timerCountsUp</key>
-            <true/>
-            <key>Buzzer</key>
-            <false/>
-            <key>Variations</key>
-            <array>
-				<string> Use a bucket of water instead of a dry cleaning bag. Substitute the bag with a time limit. </string>
-            </array>
-        </dict>	
-        <dict>
-            <key>Image</key>
-            <string>Callfrom</string>
+            <string>CallFromRay</string>
             <key>Title</key>
             <string>Call from Ray</string>
             <key>Description</key>
@@ -2727,7 +2579,8 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 			<key>Title</key>
 			<string>Character Swap</string>
 			<key>Description</key>
-			<string>A short scene is improvised. After that the host asks the audience whether they want to see what happened before this scene, or what happens after this scene.</string>
+			<string>2 players improvise a scene, and make distinct strong physical and vocal choices. Scene is played until we know the characters. Then the roles are reversed, and every player plays the other's character, in the same scene, same location.
+                The exercise trains listening and physical observation, and is a great way to get players to break away from their stock characters.</string>
 			<key>Tags</key>
 			<array>
 				<string>Characters</string>
@@ -2874,7 +2727,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 		</dict>	
 		<dict>
 			<key>Image</key>
-			<string>Columbian</string>
+			<string>ColumbianHypnosis</string>
 			<key>Title</key>
 			<string>Columbian Hypnosis</string>
 			<key>Description</key>
@@ -3059,7 +2912,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 		</dict>	
 		<dict>
 			<key>Image</key>
-			<string>StoryStory</string>
+			<string>StoryStoryDie</string>
 			<key>Title</key>
 			<string>Story Story Die</string>
 			<key>Description</key>
@@ -3147,7 +3000,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 		</dict>	
         <dict>
 			<key>Image</key>
-			<string>Continuing Styles</string>
+			<string>ContinuingStyles</string>
 			<key>Title</key>
 			<string>Continuing Styles</string>
 			<key>Description</key>
@@ -3204,21 +3057,11 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
                 <string>Feel free to actually continue the ongoing scene rather than to start a completely new one. Feel free to replace all the players instead of just the player who said the last line. Rather than just stepping in and repeating a line, you might want to call `FLIP` (or freeze). </string>
 			</array>
 		</dict>	
-        
-        
-        
-        
-        
-        
-        
-		
-        
-        
 		<dict>
 			<key>Image</key>
-			<string>Crabtrees</string>
+			<string>CrabtreesConundrum</string>
 			<key>Title</key>
-			<string>Crabtrees Conundrum</string>
+			<string>Crabtree's Conundrum</string>
 			<key>Description</key>
 			<string>This game is taking from Mrs. Crabtree from South Park. 2 players start a scene and every now and then a player will say “What`d you say?" And the other player must come up with a completely different phrase that rhymes with the one just said. For instance: Player 1: “Christine, I think you are as sick as a dog!!”
                 Player 2: “What`d you say?”
@@ -3373,7 +3216,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 		</dict>	
 		<dict>
 			<key>Image</key>
-			<string>Cross</string>
+			<string>CrossCircle</string>
 			<key>Title</key>
 			<string>Cross Circle</string>
 			<key>Description</key>
