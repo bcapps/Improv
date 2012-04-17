@@ -1013,37 +1013,9 @@
 			<key>Variations</key>
 			<array/>
 		</dict>
-		<dict>
+        <dict>
 			<key>Image</key>
-			<string>Audience</string>
-			<key>Title</key>
-			<string>Audience Warm-ups</string>
-			<key>Description</key>
-			<string>Often an improv show starts with an audience warm-up. Here are some suggestions Do a Mexican wave (audience making fluent waves with their hands above their head). Have he pianist/keyboard man make all kinds of sounds and have the audience imitate them Ask the audience to stand up and do some physical warm-up. Have them shake their arms and legs. Have the audience introduce themselves to strangers, tell a secret their spouse/partner doesn`t know about to a stranger, have them hug a stranger, tell your neighbor waht you ate today, your pin code Do an interview with the audience, where the MC is one character (say, a headmaster) and all of the audience another (say a naughty child). The audience needs to reply to the interview in one voice (all saying the same at the same time - see  One Mouth Not an easy one, and if the audience does not feel like doing this it really sucks. When it works it`s a real thrill. divide the audience in 3 or 4 groups, and give each group a sound. Rehearse the sound with each group. Then tell a silly story, and use these sounds as sound effects. (We saw a pretty gruesome one in which one group was a car (roar), another a dog (bark) and the third group got a kind of splashing sound. The poor dog got run over by the car... not exactly nice but the audience had fun with it) Do a cheering competition between the men and the women. Rehearse different kinds of applause (from the `polite` applause when a scene sucks, over an `ooh` applause for a touching scene, to a wild roar for a hilarious scene). Have them rehearse voting for a team by cheering the team name (if that`s your format). Rehearse a `Die` ( see  Die ) if i you`re going to be playing scenes in which the audience can decide to throw a player out of the game. Give the men and the women a different sound and play with that. Tell them they are members of a wild tribe, the women go `Ugh` when you raise your left hand and the man go `Hagawaga` when you raise your right hand.</string>
-			<key>Tags</key>
-			<array>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>2</integer>
-			<key>MaxTime</key>
-			<integer>6</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>Image</key>
-			<string>Automatic</string>
+			<string>AutomaticStorytelling</string>
 			<key>Title</key>
 			<string>Automatic Storytelling</string>
 			<key>Description</key>
@@ -1430,7 +1402,7 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>BeforeorAfter</string>
+			<string>BeforeOrAfter</string>
 			<key>Title</key>
 			<string>Before or After</string>
 			<key>Description</key>
@@ -1665,36 +1637,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Variations</key>
 			<array/>
 		</dict>
-		<dict>
-			<key>Image</key>
-			<string>BigBooty</string>
-			<key>Title</key>
-			<string>Big Booty</string>
-			<key>Description</key>
-			<string>Everyone in a circle. One player is Big Booty. The others, going clockwise are numbered: 1, 2, 3 and so on. Now Big Booty establishes a 4-beat rhythm, saying Big Booty, Big Booty, Big Booty (followed by a rest) - repeat this until everyone got the rhythm. The game then goes as follows: Big Booty passes the buck to someone else saying ‘Big Booty to 7’  (this takes 2 beats, one for saying `Big Booty` and one for saying `to 7`). Number 7 then passes in 2 beats to, say number 2 saying `7 to 2`. It then continues until someone makes a mistake: if and when that happens everyone says (in 2 beats) `Oh Shit`, after which we repeat Big Booty, Big Booty, Big Booty (+ rest on 4th beat), twice. After that, the player that made the mistake becomes Big Booty, and everyone`s number changes. The new Big Booty starts the game again. </string>
-			<key>Tags</key>
-			<array>
-				<string>Concentration</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>8</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>		
-		<dict>
+        <dict>
 			<key>Image</key>
 			<string>BigFishSmallFish</string>
 			<key>Title</key>
@@ -1787,7 +1730,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>	
 		<dict>
 			<key>Image</key>
-			<string>FreeAssociation</string>
+			<string>FreeAssociationLines</string>
 			<key>Title</key>
 			<string>Free Association Lines</string>
 			<key>Description</key>
@@ -1815,45 +1758,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Variations</key>
 			<array>
 			<string>Try this in combination with Last Letter. </string>
-			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>ClapSnap</string>
-			<key>Title</key>
-			<string>Clap Snap Association</string>
-			<key>Description</key>
-			<string>This one is like the game Free Association Circle, except that the rhythm is more explicit. Here`s how to do the rhythm: each beat consists of 4 phases:
--Slap both hands on your thighs
--Clap your hands
--Snap your left hand fingers
--Snap your right hand fingers
-
-With every right hand snap, a word should be thrown to your neighbor. Once the rhythm is established, you can leave out the snaps - that`ll make things more understandable. </string>
-
-			<key>Tags</key>
-			<array>
-				<string>Association</string>
-				<string>Exercise</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>3</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-			<string>You can use this for both Last Letter or Free Association Circle games. Try this with two circles. Have one circle associate freely, and another circle on Last Letter. Whenever a player misses a beat she should switch circles. If you do this with 2 circles, you will probably find that the rhythms for both circles synchronize.</string>
 			</array>
 		</dict>	
         <dict>
@@ -1890,9 +1794,9 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
         </dict>
         <dict>
             <key>Image</key>
-            <string>Walkover</string>
+            <string>WalkOverAssociation</string>
             <key>Title</key>
-            <string>Walk-over Association</string>
+            <string>Walk Over Association</string>
             <key>Description</key>
             <string>Another way of playing association games. Place all players at one end of the room. Ask them to name, for themselves, all the things they think of when you throw them the word `Banana` (or anything else). For every word they come up with they can take a step. They should keep thinking of stuff until they reach the other side of the room. Then throw them another word. 
                 Notes: Watch for players that take unreasonably big steps. Ask them if they are afraid they will run out of ideas. </string>
@@ -2085,7 +1989,7 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
             </dict>	
             <dict>
                 <key>Image</key>
-                <string>BlindLine</string>
+                <string>BlindLineOffers</string>
                 <key>Title</key>
                 <string>Blind Line Offers</string>
                 <key>Description</key>
@@ -3246,35 +3150,6 @@ With every right hand snap, a word should be thrown to your neighbor. Once the r
 			<array>
                 <string>Instead of calling names, players can pick another player by making eye contact (and nodding to acknowledge that eye contact has been made). This demands a lot of concentration. You can have more than one cycle going, if the group is big enough. </string> 
 			</array>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>Crossthe</string>
-			<key>Title</key>
-			<string>Cross the Circle</string>
-			<key>Description</key>
-			<string>This Long Form improv game is played with 6 to 15 players. 2 players start a scene, perhaps based on an audience suggestion. In the middle of the scene, any other player can call `Cut`, and start another scene, dragging one or more other players in the scene. All scenes are interrupted this way, and the idea is that all scenes come together in one story. Cut scenes can be continued later. Usually, every player sticks to one character. This game can be played with or without a director. </string>
-			<key>Tags</key>
-			<array>
-				<string>Icebreakers,Warm-up</string>
-				<string>Long Form</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>6</integer>
-			<key>MaxPlayers</key>
-			<integer>15</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
 		</dict>	
 		<dict>
 			<key>Image</key>
