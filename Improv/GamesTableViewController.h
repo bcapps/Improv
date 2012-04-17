@@ -22,4 +22,5 @@
 @property (strong, nonatomic) NSFetchedResultsController *filteredResultsController;
 @property (strong, nonatomic, readonly) NSFetchedResultsController *currentFetchedResultsController;
 @property (strong, nonatomic) FiltersTableViewController *filtersTableViewController;
+@property (nonatomic) BOOL isSearching;
 @end

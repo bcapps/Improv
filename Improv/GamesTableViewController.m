@@ -29,7 +29,7 @@
 @synthesize filteredResultsController = __filteredResultsController;
 @synthesize currentFetchedResultsController;
 @synthesize filtersTableViewController;
-
+@synthesize isSearching;
 
 - (void)didReceiveMemoryWarning
 {
@@ -64,25 +64,25 @@
     internalTimerButton.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     internalTimerButton.titleLabel.shadowOffset = CGSizeMake(0.0, -1.0);
     
-    timerButton = [[UIBarButtonItem alloc] init];
-    timerButton.style = UIBarButtonItemStyleBordered;
-    timerButton.title = @"    0:00    ";
-    [timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
-    [timerButton setTarget:self];
-    [timerButton setAction:@selector(timerButtonPushed)];
-    timerButton.enabled = NO;
+    self.timerButton = [[UIBarButtonItem alloc] init];
+    self.timerButton.style = UIBarButtonItemStyleBordered;
+    self.timerButton.title = @"    0:00    ";
+    [self.timerButton setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:16.0f] forKey:UITextAttributeFont] forState:UIControlStateNormal];
+    [self.timerButton setTarget:self];
+    [self.timerButton setAction:@selector(timerButtonPushed)];
+    self.timerButton.enabled = NO;
 
     self.navigationItem.rightBarButtonItem = suggestionButton;
     
-    self.toolbarItems = [NSArray arrayWithObjects:random,space,timerButton,space,filter, nil];
+    self.toolbarItems = [NSArray arrayWithObjects:random,space,self.timerButton,space,filter, nil];
 
     UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Games" style: UIBarButtonItemStyleBordered target: nil action:nil];
     [[self navigationItem] setBackBarButtonItem: newBackButton];
     
     self.navigationItem.title = @"Improv Games";
     //self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"furley_bg"]];
-    timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-    timeAsInt = -1;
+    self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    self.timeAsInt = -1;
     
     [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -90,7 +90,7 @@
 
 - (void)updateTimer {
     NSMutableArray *items = [self.toolbarItems mutableCopy];
-    UIBarButtonItem *timerButton = [items objectAtIndex:2];
+    UIBarButtonItem *aTimerButton = [items objectAtIndex:2];
     
     timeAsInt += 1;
     
@@ -101,7 +101,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.locale = [NSLocale currentLocale];
     dateFormatter.dateFormat = dateFormat;
-    timerButton.title = [dateFormatter stringFromDate:date];
+    aTimerButton.title = [dateFormatter stringFromDate:date];
 }
 
 - (void)suggestionButtonPushed {
@@ -141,10 +141,15 @@
     return YES;
 }
 - (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller {
+    self.isSearching = NO;
     self.fetchedResultsController = nil;
     self.filteredResultsController = nil;
     [self.tableView reloadData];
     NSLog(@"Will End");
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller {
+    self.isSearching = YES;
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller willHideSearchResultsTableView:(UITableView *)tableView {
@@ -283,9 +288,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.fetchedResultsController = nil;
-    self.filteredResultsController = nil;
-    [self.tableView reloadData];
+    if(!self.isSearching) {
+        self.fetchedResultsController = nil;
+        self.filteredResultsController = nil;
+        [self.tableView reloadData];
+    }
     
 }
 
