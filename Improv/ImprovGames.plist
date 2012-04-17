@@ -1700,9 +1700,9 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>BlindAssociation</string>
-			<key>Title</key>
 			<string>BlindAssociationCircle</string>
+			<key>Title</key>
+			<string>Blind Association Circle</string>
 			<key>Description</key>
 			<string>This one starts just like Free Association Circle: players in a circle, establish a rhythm, and freely associate on previous player`s word. As this is going on, the trainer will tap all players gently on the shoulder, at 3 times first tap: players close their eyes but continue the free association, sticking to the rhythm second tap: everyone starts walking around (carefully!), eyes still closed. Players have to recognize the voice of their ex-neighbor in the circle to know when it`s their turn. Third tap: all players, still eyes closed, and still associating, try to reconstruct the circle. Exercise is over when everyone is in a circle again. Trainer should keep an eye on players to make sure they don`t run into things. It helps if there`s not too much clutter around, of course. </string>
 			<key>Tags</key>
@@ -2538,37 +2538,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<false/>
 			<key>Variations</key>
 			<array/>
-		</dict>	
-		<dict>
-			<key>Image</key>
-			<string>CircleofKnots</string>
-			<key>Title</key>
-			<string>Circle of Knots</string>
-			<key>Description</key>
-			<string>Form a circle, holding hands. Then, any player can start moving about, making knots in the circle. Do this gently, and keep holding hands. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Group</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>6</integer>
-			<key>MaxPlayers</key>
-			<integer>0</integer>
-			<key>MinTime</key>
-			<integer>4</integer>
-			<key>MaxTime</key>
-			<integer>20</integer>
-			<key>AudienceParticipation</key>
-			<true/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array>
-                <string>Try a line instead of a circle. Try with eyes closed or blindfolded. </string>
-			</array>
 		</dict>	
 		<dict>
 			<key>Image</key>

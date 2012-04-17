@@ -20,7 +20,7 @@
         titleLabel = [[UILabel alloc] init];
         titleLabel.textAlignment = UITextAlignmentLeft;
         titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
-        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.backgroundColor = [UIColor whiteColor];
         titleLabel.minimumFontSize = 13.0f;
         titleLabel.adjustsFontSizeToFitWidth = YES;
         titleLabel.highlightedTextColor = [UIColor whiteColor];
@@ -29,7 +29,7 @@
         descriptionLabel = [[UILabel alloc] init];
         descriptionLabel.textAlignment = UITextAlignmentLeft;
         descriptionLabel.font = [UIFont systemFontOfSize:11.0f];
-        descriptionLabel.backgroundColor = [UIColor clearColor];
+        descriptionLabel.backgroundColor = [UIColor whiteColor];
         descriptionLabel.minimumFontSize = 8.0f;
         descriptionLabel.adjustsFontSizeToFitWidth = YES;
         descriptionLabel.highlightedTextColor = [UIColor whiteColor];
@@ -37,11 +37,12 @@
         
         imageView = [[UIImageView alloc] init];
         imageView.contentMode = UIViewContentModeCenter;
-        
+        imageView.backgroundColor = [UIColor whiteColor];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin;
         [self.contentView addSubview:titleLabel];
         [self.contentView addSubview:descriptionLabel];
         [self.contentView addSubview:imageView];
+        self.backgroundColor = [UIColor whiteColor];
         
     }
     return self;
