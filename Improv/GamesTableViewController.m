@@ -87,6 +87,16 @@
     
     self.stringOrthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"en"] forKey:@"Latn"]];
 
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *arr = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    for(Tag *tag in arr) {
+        [[[ImprovSingleton sharedImprov] tagsArray] addObject:tag];        
+    }        
     
     [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.

@@ -7,7 +7,8 @@
 //
 
 #import "FiltersTableViewController.h"
-
+#import "ImprovSingleton.h"
+#import "Tag.h"
 @interface FiltersTableViewController ()
 
 @end
@@ -29,7 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPushed)];
     
    [self.navigationItem setRightBarButtonItem:doneButton];
@@ -40,7 +40,7 @@
     [self.resetButton setTitle:@"Reset Filters" forState:UIControlStateNormal];
     [self.resetButton addTarget:self action:@selector(resetButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:self.resetButton];
+    //[self.view addSubview:self.resetButton];
     
     //[playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];    
     
@@ -67,7 +67,23 @@
     [self.minStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.maxStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
 
-    self.tableView.allowsSelection = NO;
+    //self.tableView.allowsSelection = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"%@", [[[ImprovSingleton sharedImprov] currentlySelectTags] description]);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    int k = [self.tableView numberOfRowsInSection:1];
+    
+    for(int i = 0; i < k; i++) {
+        if([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]].accessoryType == UITableViewCellAccessoryCheckmark) {
+            [[[ImprovSingleton sharedImprov] currentlySelectTags] addObject:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]].textLabel.text];
+        }
+    }
+    
+    NSLog(@"%@", [[[ImprovSingleton sharedImprov] currentlySelectTags] description]);
 }
 
 - (void)stepperValueChanged:(UIStepper *)stepper {
@@ -129,35 +145,60 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Players";
+    if(section == 0) {
+        return @"Players";
+    }
+    else {
+        return @"Tags";
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 2;
+    if(section == 0) {
+        return 2;
+    } else {
+        return [[[ImprovSingleton sharedImprov] tagsArray] count];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+    UITableViewCell *cell;
     //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
-    
-    if(indexPath.row == 0) {
+    if(indexPath.section == 0) {
+         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+
+        if(indexPath.row == 0) {
         cell.textLabel.text = @"min";
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", [[NSUserDefaults standardUserDefaults] integerForKey:@"MinStepperValue"]];
         
         [cell addSubview:self.minStepper];
 
-    } else if (indexPath.row == 1) {
+        } else if (indexPath.row == 1) {
         cell.textLabel.text = @"max";
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", [[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]];
         [cell addSubview:self.maxStepper];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    } else {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        
+        cell.textLabel.text = ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).name;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+        
+        if([[[ImprovSingleton sharedImprov] currentlySelectTags] containsObject:cell.textLabel.text]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
     }
     
     // Configure the cell...
@@ -208,13 +249,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if(indexPath.section != 0) {
+        if([[tableView cellForRowAtIndexPath:indexPath] accessoryType] == UITableViewCellAccessoryNone) { 
+            [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
+            [[[ImprovSingleton sharedImprov] currentlySelectTags] addObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+        } else {
+            [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
+            [[[ImprovSingleton sharedImprov] currentlySelectTags] removeObjectAtIndex:indexPath.row];
+        }
+        
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

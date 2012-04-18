@@ -13,6 +13,22 @@
 		<string>Mother and Daughter</string>
 		<string>Friends</string>
 		<string>Lovers</string>
+		<string>Cousins</string>
+		<string>Best Friends</string>
+		<string>Boyfriend/Girlfriend</string>
+		<string>Boyfriend/Boyfriend</string>
+		<string>Girlfriend/Girlfriend</string>
+		<string>Boss/Employee</string>
+		<string>Doctor/Patient</string>
+		<string>Therapist/Patient</string>
+		<string>Lawyer/Criminal</string>
+		<string>Business Partners</string>
+		<string>Twins</string>
+		<string>Clones</string>
+		<string>Divorcees</string>
+		<string>Rivals</string>
+		<string>Cashier/Customer</string>
+		<string>Kidnapper/Captive</string>
 	</array>
 	<key>Locations</key>
 	<array>
@@ -24,6 +40,183 @@
 		<string>Post Office</string>
 		<string>Caves</string>
 		<string>Dormitory</string>
+		<string>Broadway </string>
+		<string>Leaning Tower of Pisa</string>
+		<string>Buckingham Palace</string>
+		<string>Louvre</string>
+		<string>Paris</string>
+		<string>London</string>
+		<string>Saudi Arabia</string>
+		<string>Canada</string>
+		<string>France</string>
+		<string>Rome</string>
+		<string>Eiffel Tower</string>
+		<string>Italy</string>
+		<string>Empire State Building</string>
+		<string>Egypt</string>
+		<string>Statue of Liberty</string>
+		<string>Wall Street</string>
+		<string>Vatican</string>
+		<string>An Island</string>
+		<string>Las Vegas</string>
+		<string>Bar</string>
+		<string>Movie Theatre</string>
+		<string>Bathroom</string>
+		<string>Kitchen</string>
+		<string>Restaurant</string>
+		<string>Art Gallery</string>
+		<string>Ambulance</string>
+		<string>Adoption Clinic</string>
+		<string>Amazon Rainforest</string>
+		<string>Antique Store</string>
+		<string>Attic</string>
+		<string>Barbershop</string>
+		<string>Balcony</string>
+		<string>Boat</string>
+		<string>Bird&apos;s Nest</string>
+		<string>Blacksmith</string>
+		<string>Bakery</string>
+		<string>Butterfly Habitat</string>
+		<string>Beaver Dam</string>
+		<string>Bootcamp</string>
+		<string>Castle</string>
+		<string>Cat Lady&apos;s House</string>
+		<string>Chessboard</string>
+		<string>Cheese Factory</string>
+		<string>Classroom Cemetery</string>
+		<string>Chiropractor&apos;s Office</string>
+		<string>Circus</string>
+		<string>Dance Studio</string>
+		<string>Dragon&apos;s Lair</string>
+		<string>Desert</string>
+		<string>Deep Sea Diving</string>
+		<string>Department of Motor Vehicles</string>
+		<string>Detention</string>
+		<string>Drunk Tank</string>
+		<string>Egypt</string>
+		<string>Elephant Sanctuary</string>
+		<string>Execution Chamber</string>
+		<string>Earthquake Preparedness Class</string>
+		<string>Ferris Wheel</string>
+		<string>Fire Station</string>
+		<string>Fishing Pond</string>
+		<string>Football Stadium</string>
+		<string>Future</string>
+		<string>Fortune Teller&apos;s Shop</string>
+		<string>Grocery Store</string>
+		<string>Golf Course</string>
+		<string>Ghost Town</string>
+		<string>Gondola</string>
+		<string>Garbage Dump</string>
+		<string>Garage</string>
+		<string>Goldmine</string>
+		<string>Gypsy Camp</string>
+		<string>Grand Canyon</string>
+		<string>Hardware Store</string>
+		<string>Helicopter</string>
+		<string>Henhouse</string>
+		<string>Hogwarts</string>
+		<string>Hospital</string>
+		<string>Hawaii</string>
+		<string>Igloo</string>
+		<string>Iceberg</string>
+		<string>Ice Cream Shop</string>
+		<string>Ice Age</string>
+		<string>Jungle</string>
+		<string>Jet Pilot&apos;s Cockpit</string>
+		<string>Judge&apos;s Chambers</string>
+		<string>Jury Box</string>
+		<string>Jewelry Store</string>
+		<string>Jurassic Age</string>
+		<string>Karate Class</string>
+		<string>Karaoke Bar</string>
+		<string>Knight&apos;s Training Grounds</string>
+		<string>King Kong&apos;s Cage</string>
+		<string>Knitting Circle</string>
+		<string>Kangaroo Farm</string>
+		<string>Lagoon</string>
+		<string>Lighthouse</string>
+		<string>Library</string>
+		<string>Lifeboat</string>
+		<string>Lumberjack Camp</string>
+		<string>Laundromat</string>
+		<string>Make-up Counter</string>
+		<string>Marathon Finish Line</string>
+		<string>Mechanic&apos;s Shop</string>
+		<string>Moon</string>
+		<string>Mousetrap</string>
+		<string>Mummy&apos;s Tomb</string>
+		<string>Mountain Top</string>
+		<string>Nursing Home</string>
+		<string>News Station</string>
+		<string>Neverland</string>
+		<string>Nature Trail</string>
+		<string>Nightclub</string>
+		<string>Newspaper Office</string>
+		<string>Orchestra Pit</string>
+		<string>Office Cubicle</string>
+		<string>Orchard</string>
+		<string>Outback (Australia)</string>
+		<string>Open House (Real Estate)</string>
+		<string>Optometrist</string>
+		<string>Picnic Spot</string>
+		<string>Panda Exhibit</string>
+		<string>Prom</string>
+		<string>Pirate Ship</string>
+		<string>Pet Store</string>
+		<string>Photography Class</string>
+		<string>Police Station</string>
+		<string>Queen Elizabeth&apos;s Court</string>
+		<string>Quiz Show</string>
+		<string>Quicksand</string>
+		<string>Radio Program</string>
+		<string>Restaurant Grand Opening</string>
+		<string>Red Carpet (Movie Premiere)</string>
+		<string>Riverboat</string>
+		<string>Robber&apos;s Hideout</string>
+		<string>Safari</string>
+		<string>School Lunchroom</string>
+		<string>School Nurse&apos;s Office</string>
+		<string>Santa&apos;s Workshop</string>
+		<string>Ski Slope</string>
+		<string>Spider Web</string>
+		<string>Summer Camp</string>
+		<string>Smurf Village</string>
+		<string>Softball Game</string>
+		<string>Spaceship</string>
+		<string>Second Hand Store</string>
+		<string>Submarine</string>
+		<string>Stable</string>
+		<string>Treehouse</string>
+		<string>Travel Agency</string>
+		<string>Truckstop</string>
+		<string>Theater Audition</string>
+		<string>Tidepool</string>
+		<string>Tribal Ceremony</string>
+		<string>Tourist Trap</string>
+		<string>Ugly Princess&apos; Birthday Party</string>
+		<string>Underground</string>
+		<string>Underwater</string>
+		<string>Unemployment Office</string>
+		<string>Utopian Society</string>
+		<string>Vampire&apos;s Home</string>
+		<string>Volleyball Court</string>
+		<string>Volcano</string>
+		<string>Voting Booth</string>
+		<string>Witch&apos;s Cavern</string>
+		<string>Warehouse</string>
+		<string>The White House</string>
+		<string>Waterslide Park</string>
+		<string>Wrestling Ring</string>
+		<string>Wild West</string>
+		<string>Woodshop Class</string>
+		<string>Wedding Ceremony</string>
+		<string>X-Ray Lab</string>
+		<string>Yard Sale</string>
+		<string>Yoga Class</string>
+		<string>Yearbook Club</string>
+		<string>Zeppelin (Blimp)</string>
+		<string>Zoo</string>
 	</array>
 	<key>Professions</key>
 	<array>

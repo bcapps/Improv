@@ -242,8 +242,8 @@
                 Tag *tag = [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
                 tag.name = [obj description];
                 [game addTagsObject:tag];
+                [[[ImprovSingleton sharedImprov] currentlySelectTags] addObject:tag.name];
             }
-
         }
         
         game.timerType = [dictionary objectForKey:@"timerCountsUp"];

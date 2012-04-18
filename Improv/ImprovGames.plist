@@ -14,7 +14,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Icebreakers</string>
-				<string>Warmup</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -700,7 +700,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Performance</string>
-				<string>SingSong</string>
+				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -1171,7 +1171,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Performance</string>
-				<string>SingSong</string>
+				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -1320,7 +1320,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Performance</string>
-				<string>SingSong</string>
+				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -2025,7 +2025,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Performance</string>
-				<string>SingSong</string>
+				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -2145,7 +2145,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Performance</string>
-				<string>SingSong</string>
+				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -3154,6 +3154,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>
 	</array>
 	<key>Version</key>
-	<string>0.84</string>
+	<string>0.85</string>
 </dict>
 </plist>
