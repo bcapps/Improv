@@ -40,11 +40,30 @@
     else {
         [[ImprovSingleton sharedImprov] setStartingMax:[NSNumber numberWithInt:[[NSUserDefaults standardUserDefaults] integerForKey:@"MaxStepperValue"]]];    }
     
-    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"GamesAdded"]) {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ImprovGames" ofType:@"plist"];
+    NSString *version = [[NSDictionary dictionaryWithContentsOfFile:path] objectForKey:@"Version"];
+    
+    if(![[[NSUserDefaults standardUserDefaults] stringForKey:@"Version"] isEqualToString:version]) {
+        NSError *error = nil;
+        NSPersistentStore *store = [[self.persistentStoreCoordinator persistentStores] objectAtIndex:0];
+
+        NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Improv.sqlite"];
+        NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+        [coordinator removePersistentStore:store error:&error];
+        [[NSFileManager defaultManager] removeItemAtPath:storeURL.path error:&error];
+
+        __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+        if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+            
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }        
+        
         [self importSuggestionData];
         [self importGameData];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"GamesAdded"];
+        [[NSUserDefaults standardUserDefaults] setValue:version forKey:@"Version"];
     }
+    
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     GamesTableViewController *tableViewController = [[GamesTableViewController alloc] initWithStyle:UITableViewStylePlain];

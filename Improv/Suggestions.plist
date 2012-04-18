@@ -12,6 +12,7 @@
 		<string>Mother and Son</string>
 		<string>Mother and Daughter</string>
 		<string>Friends</string>
+		<string>Lovers</string>
 	</array>
 	<key>Locations</key>
 	<array>
@@ -26,14 +27,59 @@
 	</array>
 	<key>Professions</key>
 	<array>
-		<string>Doctor</string>
-		<string>Police Officer</string>
+		<string>Accountant</string>
+		<string>Actor</string>
+		<string>Actuary</string>
+		<string>Architect</string>
 		<string>Artist</string>
-		<string>Mime</string>
+		<string>Automotive Mechanic</string>
 		<string>Beast Tamer</string>
+		<string>Bookkeeping Clerk</string>
+		<string>Carpenter</string>
+		<string>Chemist</string>
+		<string>Childcare Worker</string>
+		<string>Civil Engineer</string>
+		<string>Coach</string>
+		<string>Court Reporter</string>
+		<string>Dancer</string>
+		<string>Designer</string>
+		<string>Disc Jockey</string>
+		<string>Doctor</string>
+		<string>Economist</string>
+		<string>Electrician</string>
+		<string>Engineering Technician</string>
+		<string>Environmental Scientist</string>
+		<string>Farmer</string>
+		<string>Financial Analyst</string>
+		<string>Firefighter</string>
 		<string>Hunter</string>
-		<string>Office Worker</string>
+		<string>Judge</string>
+		<string>Lawyer</string>
+		<string>Librarian</string>
+		<string>Mime</string>
+		<string>Musician</string>
+		<string>Nurse</string>
+		<string>Paralegal</string>
+		<string>Pharmacist</string>
+		<string>Photographer</string>
+		<string>Physicist</string>
+		<string>Pilot</string>
+		<string>Police Officer</string>
+		<string>Politician</string>
+		<string>Professional Athlete</string>
 		<string>Programmer</string>
+		<string>Psychologist</string>
+		<string>Real Estate Agent</string>
+		<string>Recreational Therapist</string>
+		<string>Reporter</string>
+		<string>Secretary</string>
+		<string>Social Worker</string>
+		<string>Statistician</string>
+		<string>Surveyor</string>
+		<string>Systems Analyst</string>
+		<string>Teacher</string>
+		<string>Urban Planner</string>
+		<string>Veterinarian</string>
 	</array>
 </dict>
 </plist>
