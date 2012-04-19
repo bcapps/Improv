@@ -19,6 +19,8 @@
 @synthesize maxStepper;
 @synthesize resetButton;
 
+#define TAGS_ACTION_SHEET_TAG 100
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -68,10 +70,56 @@
     [self.minStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.maxStepper addTarget:self action:@selector(stepperValueChanged:) forControlEvents:UIControlEventValueChanged];
 
+   // UIBarButtonItem *toolbar = [[UIToolbar alloc] init];
+
+    UIBarButtonItem *tagsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tags"] style:UIBarButtonItemStylePlain target:self action:@selector(tagsButtonPushed)];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+
+    self.toolbarItems = [NSArray arrayWithObjects:space, tagsButton, nil];
+    self.navigationController.toolbarHidden = NO;
+    //[toolbar setItems:[NSArray arrayWithObjects:tagsButton, nil]];
+    
+    //[self.view addSubview:toolbar];
+    
     //self.tableView.allowsSelection = NO;
 }
 
+- (void)tagsButtonPushed {
+       UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Check All Tags", @"Uncheck All Tags", nil];
+        sheet.tag = TAGS_ACTION_SHEET_TAG;
+        [sheet showFromToolbar:self.navigationController.toolbar];
+}
+
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(actionSheet.tag == TAGS_ACTION_SHEET_TAG) {
+        int numberOfRows = [self.tableView numberOfRowsInSection:1];
+
+        if(buttonIndex == 0) {
+            
+            for(int k = 0; k < numberOfRows; k++) {
+                [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:k inSection:1]].accessoryType = UITableViewCellAccessoryCheckmark;
+                ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:k]).isSelected = YES;
+                for(Game *game in ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:k]).game) {
+                    [game setHasSelectedTag:game.hasSelectedTag];
+                }
+            }
+        }
+        else if (buttonIndex == 1) {
+            for(int k = 0; k < numberOfRows; k++) {
+                [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:k inSection:1]].accessoryType = UITableViewCellAccessoryNone;
+                ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:k]).isSelected = NO;
+                for(Game *game in ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:k]).game) {
+                    [game setHasSelectedTag:game.hasSelectedTag];
+                }
+            }
+
+        }
+    }
+}
 - (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.toolbarHidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -231,7 +279,7 @@
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the item to be re-orderable.
+    // Return NO if you do not want the item to be .
     return YES;
 }
 */

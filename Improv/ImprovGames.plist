@@ -43,7 +43,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -102,7 +102,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -132,7 +131,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Environment</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Narration</string>
 				<string>Object Work</string>
 				<string>Solo</string>
@@ -164,7 +163,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Energy</string>
 				<string>Warm-up</string>
 				<string>Icebreaker</string>
 			</array>
@@ -195,7 +193,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -224,7 +221,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -253,8 +249,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
-				<string>Prop</string>
+				<string>Object Work</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -283,7 +278,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -311,7 +305,7 @@
 			<string>Simple exercise, useful for players that are too verbal. One player starts a scene. As soon as the trainer claps his hands, the player needs to make whatever he was doing more interesting, without advancing. If our player was opening a briefcase at the clap, he needs to make opening a briefcase more interesting, he is not allowed to take something out of the briefcase, as that would be advancing, player needs to stick to opening the briefcase. Notes Simple to explain but not so easy to play. When done well you move into the clownesque. Think about Chaplin, Laurel Hardy or Mr. Bean.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -340,7 +334,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Characters</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Icebreaker</string>
 				<string>Look and Listen</string>
 			</array>
@@ -371,7 +365,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -399,8 +392,7 @@
 			<string>One player is blindfolded, and the room is filled with obstacles (put a couple of chairs everywhere, leave all kinds of junk on the floor). The idea is that the rest of the group will lead the blindfolded player through the room, by talking. A helpful reader offered us an explanation for the name `Airplane`: The blindfoldee (or just eyes closed) is led through a maze composed of furniture and the other actors. He is an &quot;Airplane&quot; lost in the fog being talked down by the &quot;Air Traffic Controller&quot;, who must remain in his/her &quot;Tower&quot;. Standing on a chair/rehearsal block lends visibility for the controller. The airplane also only has a limited amount of fuel left (1-3 minutes, whatever) to reach a safe landing (arriving at the Tower). The airplane is also allowed two &quot;brushes&quot;-limited contact with an obstacle. The third brush or a direct hit or stepping on something directly causes a &quot;crash&quot;. They may step around, over or under the obstacles. Also, the airplane can only fly forward. It can turn in any direction, however. The directions must be given from the pilot`s point of view, a good exercise for fledgling directors. You can also destroy all the trust you`ve built up in your class by completely clearing the deck and torturing the Pilot. Believe us someone will suggest it.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -430,7 +422,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Energy</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -459,8 +450,7 @@
 			<string>Fun game to warm up and to teach players some  Chivalry. Everyone in a circle. There are 3 things a player can be An alien: hold you index fingers up next to your head, as little antenna`s and say `Bleeb bleeb`, bending inwards into the circle A cow: bend forward, hold your right hand on your tummy and go `Moooo` A tiger: push your right hand forward, imitating a claw and roar. On your sign, every player decides to become one of the three. The idea is for everyone to become the same, which obviously won`t be the case, the first time. We re-do this until everyone is in sync. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -489,8 +479,7 @@
 -This game was originally created as a pattern game for long form shows at the Theatresports London Impro Lab in the late 1980`s. The whole point of the game is NOT to actively try and exclude anyone. The exclusion of one player should happen as a result of the other players making alliances with one another. If you don`t do this, the scene doesn`t form very good patterns and the players get too competitive. You also miss the slow, sliding status drops and the desperate attempts to hook into an existing alliance, that happen when a player is starting to realize that they are being excluded. A good way to start this game would be start in a black-out seated round a table While the lights are still down the entire ensemble starts to laugh (as if someone has just told the punchline to a hilarious joke) The lights slowly fade up as the cast`s laughter winds down and the alliances begin to form. By the end of the scene, which climaxes in a final, dramatic exclusion, we usually end up with four to six threads and a clear protagonist.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -519,7 +508,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Icebreaker</string>
 			</array>
 			<key>MinPlayers</key>
@@ -550,9 +539,8 @@
 			<array>
 				<string>Association</string>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
-				<string>Prop</string>
+				<string>Object Work</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -581,7 +569,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -611,7 +598,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Die</string>
-				<string>Performance</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -640,7 +626,6 @@
 			<string>Players in groups of 4 or 5. When a letter is called, each group forms that letter with their bodies.</string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
 				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
@@ -670,7 +655,7 @@
 			<string>An improvized scene is played, which any player can stop at any time by yelling freeze. At that point, the player steps out of the scene, and tells the audience what his character is really thinking, after which the scene continues. The other characters of course are not supposed to know what players are thinking, but the players do,and should use this.Notes: Players can use this to reveal their hidden motives. Other players can play into this, or purposely ignore this knowledge. Gimmick: characters may actually have other things on their minds than what`s going on in the scene. E.g. a driver stopped by a cop may be thinking about the groceries his wife told him to get at the supermarket.</string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
+				<string>Continuation</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -698,7 +683,6 @@
 			<string>This is a spoof of the format of (American) Idol, the TV show in which new singers are discovered. One player is the host, another is the bad judge, and at least 2 others are candidates. Both candidates introduce themselves (or are introduced by the host) and then sing their song based on an audience suggestion. Afterwards the judge tears them apart.</string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
 				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
@@ -727,8 +711,7 @@
 			<string>One player in the middle, the others sit aside. Any person can give the middle player a task, which she performs, and then she asks `What happens next` ? Any player may suggest what needs to happen next, but the idea is for the group to construct a coherent story. Notes: The player in the middle should only and strictly be doing what she`s told, it is up to the players at the side to construct the story.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 				<string>Narration</string>
 			</array>
 			<key>MinPlayers</key>
@@ -759,8 +742,7 @@
 			<array>
 				<string>Association</string>
 				<string>Characters</string>
-				<string>Exercise</string>
-				<string>Performance</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -789,7 +771,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Characters</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -818,7 +800,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Long Form</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -847,7 +828,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -875,8 +855,7 @@
 			<string>3 players. One is a lump of clay - behind her is a second player who is a model. Model takes a pose, which the `clay` is not supposed to see. The third player becomes the artist, who will model the clay after the model. The artist is not supposed to touch the clay, can`t speak and it not allowed to show the clay what to do or to become. When done, let the model inspect the artwork and see if details fit.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -933,8 +912,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
-				<string>Group</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -964,7 +941,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Narration</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -993,7 +969,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Long Form</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -1021,7 +996,7 @@
 			<string>This is an exercise you can only do once with a group. Use the exercise to show that making stories is not all that difficult. Split the group in 2. Half of the players leave the room while you explain the game to the others: we are going to make stories in pairs. We will tell the other players that we came up with a great story, and they have to guess it. The catch is that they can only ask yes/no questions, and we do not really have a story. We will answer `no` to every question that starts with a vowel or with a conjugation of `to be` (or some other criterion). In addition, after having answered 2 consecutive No`s we will always answer a yes. Let the other players back in and pair them up with the others. Each couple starts guessing the story, unknowingly creating a story as they go. Continue till they get it. Origin :This exercise is described by  Keith Johnstone in  Impro for Storytellers.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Narration</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1050,8 +1025,7 @@
 			<string>Played in pairs. Actors stand back to back, and dance on different kinds of music. Back must stay in touch at all times.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1081,7 +1055,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -1109,9 +1082,7 @@
 			<string>Ask at least 2 players to play a short scene. One could limit the scene to 8 lines of dialog per player. Then ask the players to replay the scene, based on some audience suggestions for: A particular emotion. An era. A different location. A film / TV / literature style. In Gibberish backwards.</string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
 				<string>Replay</string>
-				<string>Timed</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -1140,7 +1111,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Look and Listen</string>
-				<string>Performance</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1169,7 +1139,6 @@
 			<string>In this musical improv handle, one player is the balladeer, who starts singing a ballad about an audience suggestion. The other players actually play what the balladeer sings about, in slow motion. This is actually group story-building, as the players are inspired by the what the balladeer sings (obviously) but also, their actions can/should inspire the balladeer. Notes: You`re not limited to ballads, of course. Origin: The Improvoholics.</string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
 				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1199,7 +1168,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1229,7 +1197,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Spontaneity</string>
 				<string>Warm-up</string>
 			</array>
@@ -1259,7 +1226,6 @@
 			<string>Each person is given the name of an animal with approximately three-five people having the same animal. Spread the group across the room. No one is allowed to tell which animal he is. At the signal each person makes the noise of the animal that he has been given. The first group to find all of their animals and sit down are the winners.</string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1288,7 +1254,6 @@
 			<string>A silly Short Form handle: ask for a silly problem. Player 1 goes into a bar and explains his woes to the bartender in an improvized song. The bartender then fixes the problem in another improvized song. See also: Three Melodies.</string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
 				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1318,8 +1283,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Energy</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1350,7 +1313,6 @@
 			<array>
 				<string>Die</string>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -1379,7 +1341,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -1410,7 +1371,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Spontaneity</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1440,7 +1401,6 @@
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -1470,7 +1430,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -1498,7 +1457,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Fairly difficult combination of the Satellite TV and Satellite Radio improv games: players in pairs, establish a beat. Every beat, player 1 offers a movement and player 2 offers a word of a story. At the same time, players mirror each other, with a delay of 1 beat. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1527,7 +1486,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Excellent listening exercise. Players in pairs. Establish a beat. Player 1 provides a story, one word per beat. Player 2, within the beat, repeats the story, but with one beat delay (like the delay we have on a satellite radio). Try with 2 or 3 beats delay as well. See also Satellite TV for an variation on this exercise. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1556,7 +1515,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Same as Satellite Radio, but with movements. Players in pairs. Establish a beat. Player 1 makes a new movement on every beat. Player 2 mirrors the movements, but with a delay of 1 beat.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1585,9 +1544,8 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Players perform a scene in a location that contains an enormous blob of blubber. Something yukkie. Players must walk or move through this blob as the scene continues, but their characters are not supposed to acknowledge that this Big Blob is there.</string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -1618,8 +1576,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
                 Players that miss (e.g. say Small Fish and keep your hands too close together or say Big Fish and move hands wide) do a forfeit, or die with a loud noise.</string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1648,7 +1604,8 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>This improv game is played by 2 players. One holds a (mimed) black box, which has 3 buttons, one of which is red. These buttons control a player, one button might be the `jerk your leg` button. The exact functions of each button are not defined. The other player enters and asks if he can play with the box. Player 1 agrees, but adds something like &quot;Whatever you do, don`t push the red button&quot;. Player 2 begins to play with the buttons, controlling player 2. Then we slowly work up to the use of the dreaded red button, which will make player 2 do something not-so-obvious. This can be anything, but it should not be preconceived. The red button might become a Mood swing button a Start Screaming, Start Giggling, Sing Opera, or Switch-to-Gibberish button. </string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
+				<string>Object Work</string>
+				<string>Concentration</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -1677,7 +1634,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1707,7 +1664,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1739,7 +1695,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1772,7 +1727,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1804,7 +1758,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1836,8 +1789,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
-				<string>Performance</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1868,8 +1819,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Association</string>
-				<string>Exercise</string>
-				<string>Performance</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1898,7 +1847,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Line up the players, give`em each a number. Call out 2 numbers. Those players step on stage immediately, with a physical Offer (do something, eat an apple, wipe the floor, whatever) as well as a vocal offer (say something). The idea is that the players accept and explore each other`s offers and figure out what the scene is about. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -1926,7 +1875,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>This is like a musical version of Pockets: ask the audience to write simple sentences on slips of paper. Hand each player 2 or 3 slips (they`re not allowed to read them yet). Play a scene or series of improvised scenes. Players draw slips of paper at random, and every time they do, they start a song that starts with the sentence on the slip. Try to integrate the info on the slips into the story, of course! </string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
 				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1958,7 +1906,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Audience Participation</string>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -1987,7 +1934,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2013,11 +1959,10 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Title</key>
 			<string>Death and Retriever</string>
 			<key>Description</key>
-			<string>This one is like Scorpion, but in this version killed players are not `out`, but can be revived. Everyone eyes closed, one player becomes the killer (tap him on the shoulder) and another one becomes the retriever. The retriever gets a towel or a scarf around their neck. Dead players scream when they are killed, keep their eyes closed and stand still. When the retriever bumps into someone that does not move (a dead body) she can revive the dead by rubbing them with the towel. When the retriever gets killed, she screams and stops moving. When another living person bumps into the retriever (recognized by the scarf), the retriever is revived, and the one that revived the retriever becomes the new retriever. Play till everyone is dead or bored. </string>
+			<string>Everyone eyes closed, one player becomes the killer (tap him on the shoulder) and another one becomes the retriever. The retriever gets a towel or a scarf around their neck. Dead players scream when they are killed, keep their eyes closed and stand still. When the retriever bumps into someone that does not move (a dead body) she can revive the dead by rubbing them with the towel. When the retriever gets killed, she screams and stops moving. When another living person bumps into the retriever (recognized by the scarf), the retriever is revived, and the one that revived the retriever becomes the new retriever. Play till everyone is dead or bored. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2046,7 +1991,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Ask the audience for 5 things that give them the blues. Then improvise a blues jam about those elements. </string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
 				<string>Sing Song</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2075,7 +2019,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>This is a physical team game. Form teams of 4 - 6 players. Teams sit in a line and wrap their legs around the person in front of them. Place masking tape about 10 - 15 feet away to mark the end line. On &quot;GO&quot;, teams must only use their hands to slide their way to the end. If a team breaks apart, they must get back together before they continue. </string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
 				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
@@ -2105,8 +2048,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Excellent exercise to get to know each other, and to learn to trust and touch each other. There are 5 volunteer players. 4 of these must try and hide the fifth person, using nothing but their bodies. The other students stand around the group and try and see pieces of the fifth`s clothes, shoes skin. It`s great fun for the other students to watch and try and find uncovered pieces of person. Don`t tell them they go next, with one person less. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Group</string>
+				<string>Warm-up</string>
 				<string>Icebreaker</string>
 				<string>Trust</string>
 			</array>
@@ -2141,7 +2083,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 				<string>Endowment</string>
 				<string>Gibberish</string>
 				<string>Guessing</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -2173,7 +2114,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -2203,9 +2143,8 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
                 Origin: This improv game is attributed to Keith Johnstone. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Narration</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -2234,7 +2173,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -2268,7 +2206,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 				<string>Endowment</string>
 				<string>Limitations</string>
 				<string>Look and Listen</string>
-				<string>Performance</string>
 				<string>Status</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2299,7 +2236,8 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Ask the audience to write short sentences on cards. Give 2 players 3 cards, which they put in their pockets. Then they play a scene. At any point in time, instead of saying whatever they think they might say, they take a card, and read what`s on the card. Whatever is said should be justified. See also Actor`s Nightmare. </string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
+				<string>Limitations</string>
+				<string>Endowment</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -2327,7 +2265,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>All players in pairs. One player is cat, one other player is mouse, and all others stay in pairs arms hooked together. Cat chases mouse, when mouse is caught then mouse becomes cat and vice versa. However, mouse can escape chase by hooking into any pair of other players. At that point the player at the other end of the pair becomes cat and the cat becomes mouse. </string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2359,7 +2296,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Characters</string>
 				<string>Concentration</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 				<string>Replay</string>
 			</array>
@@ -2389,7 +2326,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>One person with a loud voice will stand on a chair or other high place so that they can be seen above the heads of the group. After you have explained the game and everyone is ready the person on the chair will call out one of the following couples: Knight and Queen, Prince and Princess, and Horse and Rider. When one of these three couples is called people must get into pairs. If Horse and Rider were called one of the people in the pairs will be the Horse and one will be the Rider. Then the pairs will get into the correct formation. Each of the three chivalrous couples has its own formation that goes with it. The Knight and Queen&apos;s formation is one person as the &quot;Knight&quot; down on one knee and the other person as the &quot;Queen&quot; sitting on the &quot;Knight&apos;s&quot; knee. The Prince and Princess formation is one person as the &quot;Prince&quot; will have the other person, the &quot;Princess,&quot; in their arms. The Horse and Rider formation is the &quot;Horse&quot; will be standing up and the &quot;Rider&quot; will be riding piggy-back on the &quot;Horse. The last pair to get into the correct formation is either out of the game or they &quot;Take 5&quot; off to the side of the group. After one chivalrous couple has been called and one or two pairs of people have been eliminated have the group mingle. Then randomly call another couple. Have the group try to get into pairs with different people at every round. </string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2418,7 +2354,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Have everyone stand in a circle, really close to each other, facing inwards. Then ask everyone to make a quarter turn left. Make everyone stand even closer to each other. When ask the whole group to sit down. If everyone is really close, they will end up sitting on one another`s knees, and the whole construction supports itself. If well done it`s even possible to make the circle walk. Indicate which foot to start though! </string>
 			<key>Tags</key>
 			<array>
-				<string>Group</string>
 				<string>Trust</string>
 				<string>Warm-up</string>
 			</array>
@@ -2478,7 +2413,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
                 Notes: This is really also an exercise for the hypnotized, as she needs to ensure that her partner is able to follow her. Origin: Described in Augusto Boal`s Games for Actors and Non-actors. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2511,7 +2446,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Characters</string>
 				<string>Environment</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Object Work</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2542,7 +2477,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Ask for a product (existing or non-existing). Then play a commercial for that product. </string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
+				<string>Audience Participation</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -2553,7 +2488,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>MaxTime</key>
 			<integer>20</integer>
 			<key>AudienceParticipation</key>
-			<false/>
+			<true/>
 			<key>timerCountsUp</key>
 			<true/>
 			<key>Buzzer</key>
@@ -2574,7 +2509,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Characters</string>
 				<string>Continuation</string>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2603,7 +2538,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Players in pairs. One player takes a position, using all parts of her body. The other player completes that position, by folding over/in/around the first player, without touching her. First player then completes second player in another pose, again without touching. As a next step, do the same, but tell a story, one sentence at a time, providing a sentence every time you move. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Look and Listen</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2633,7 +2568,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2664,7 +2598,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Die</string>
 				<string>Narration</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -2692,8 +2625,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Not exactly theater but fun when played well. The MC gets a bunch of `confessions` from the audience. These can be really lame, like e.g. “I vote democratic”, “I used to be a man”, “I sold a kidney`, whatever. Then players line up. One player steps forward, and gets a confession from the host. Player utters the confession in a character, and immediately another player jumps in and offers a witty reply. Do this as long as players have ideas for replies. Then replace the first player by a new one, give her a new confession and repeat ad libitum. </string>
 			<key>Tags</key>
 			<array>
-				<string>Performance</string>
-				<string>Verbal Wit</string>
+				<string>Audience Participation</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>4</integer>
@@ -2704,7 +2636,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>MaxTime</key>
 			<integer>20</integer>
 			<key>AudienceParticipation</key>
-			<false/>
+			<true/>
 			<key>timerCountsUp</key>
 			<true/>
 			<key>Buzzer</key>
@@ -2722,7 +2654,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -2751,7 +2682,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Continuation</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -2812,7 +2742,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>2</integer>
@@ -2841,8 +2770,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
                 Notes: Doing `something else` is quite often interpreted as doing/saying the opposite of what you did before. One can be more creative, e.g. repeat what was said in a different emotion. If you use this as an exercise on Spontaneity the trainer can `Ding` quite often (very frustrating for the players, but they will come up with stuff they never would have thought of before). The disadvantage of this is that the story/characters tend to get lost. Use sparingly for performance. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
-				<string>Performance</string>
+				<string>Warm-up</string>
 				<string>Spontaneity</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2871,7 +2799,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<string>Two players chase each other about the room. The player that is being chased mimes obstacles for the other, who then has to overcome these obstacles. </string>
 			<key>Tags</key>
 			<array>
-				<string>Energy</string>
 				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
@@ -2903,7 +2830,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Endowment</string>
 				<string>Guessing</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -2936,7 +2862,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
                 Player B: Erm... Marry me. </string>
 			<key>Tags</key>
 			<array>
-				<string>Exercise</string>
+				<string>Warm-up</string>
 				<string>Object Work</string>
 				<string>Spontaneity</string>
 			</array>
@@ -2967,7 +2893,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Concentration</string>
-				<string>Exercise</string>
 				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
@@ -3035,7 +2960,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Audience Participation</string>
 				<string>Limitations</string>
-				<string>Performance</string>
 			</array>
 			<key>MinPlayers</key>
 			<integer>3</integer>
@@ -3056,6 +2980,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>
 	</array>
 	<key>Version</key>
-	<string>0.88</string>
+	<string>0.90</string>
 </dict>
 </plist>

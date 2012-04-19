@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FiltersTableViewController : UITableViewController
+@interface FiltersTableViewController : UITableViewController <UIActionSheetDelegate>
 @property (nonatomic, strong) UIStepper *minStepper;
 @property (nonatomic, strong) UIStepper *maxStepper;
 @property (nonatomic, strong) UIButton *resetButton;
