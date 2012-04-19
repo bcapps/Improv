@@ -130,7 +130,7 @@
         
     }
     else if(gamesTableViewController.currentlyPlayingGame) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"You are currently playing a game. Would you like to stop that game and start a new one?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"Would you like to stop your current game and start a new one?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         
         [alertView show];
     }

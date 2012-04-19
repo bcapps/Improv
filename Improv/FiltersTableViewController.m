@@ -17,9 +17,9 @@
 @implementation FiltersTableViewController
 @synthesize minStepper;
 @synthesize maxStepper;
-@synthesize resetButton;
 
 #define TAGS_ACTION_SHEET_TAG 100
+#define PLAYERS_ACTION_SHEET_TAG 101
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,14 +37,7 @@
     
    [self.navigationItem setRightBarButtonItem:doneButton];
     self.navigationItem.title = @"Filters";
-    
-    self.resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.resetButton.frame = CGRectMake(70, 340, 180, 51);
-    [self.resetButton setTitle:@"Reset Filters" forState:UIControlStateNormal];
-    [self.resetButton addTarget:self action:@selector(resetButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    
-    //[self.view addSubview:self.resetButton];
-    
+        
     //[playButton addTarget:self action:@selector(playButtonTapped) forControlEvents:UIControlEventTouchUpInside];    
     
     self.minStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 115.0f, 10.0f, 0.0f, 0.0f)];
@@ -72,10 +65,11 @@
 
    // UIBarButtonItem *toolbar = [[UIToolbar alloc] init];
 
+    UIBarButtonItem *playersButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"players"] style:UIBarButtonItemStylePlain target:self action:@selector(playersButtonPushed)];
     UIBarButtonItem *tagsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tags"] style:UIBarButtonItemStylePlain target:self action:@selector(tagsButtonPushed)];
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
 
-    self.toolbarItems = [NSArray arrayWithObjects:space, tagsButton, nil];
+    self.toolbarItems = [NSArray arrayWithObjects:playersButton, space, tagsButton, nil];
     self.navigationController.toolbarHidden = NO;
     //[toolbar setItems:[NSArray arrayWithObjects:tagsButton, nil]];
     
@@ -88,6 +82,12 @@
        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Check All Tags", @"Uncheck All Tags", nil];
         sheet.tag = TAGS_ACTION_SHEET_TAG;
         [sheet showFromToolbar:self.navigationController.toolbar];
+}
+
+- (void)playersButtonPushed {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Reset Players", nil];
+    sheet.tag = PLAYERS_ACTION_SHEET_TAG;
+    [sheet showFromToolbar:self.navigationController.toolbar];
 }
 
 
@@ -115,6 +115,15 @@
                 }
             }
 
+        }
+    }
+    else if (actionSheet.tag == PLAYERS_ACTION_SHEET_TAG) {
+        if(buttonIndex == 0) {
+            self.minStepper.value = 1;
+            self.maxStepper.value = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxCountValue"];
+            
+            [self stepperValueChanged:self.minStepper];
+            [self stepperValueChanged:self.maxStepper];
         }
     }
 }
@@ -154,14 +163,6 @@
     }
     
     [self.tableView reloadData];
-}
-
-- (void)resetButtonTapped {
-    self.minStepper.value = 1;
-    self.maxStepper.value = 15;
-    
-    [self stepperValueChanged:self.minStepper];
-    [self stepperValueChanged:self.maxStepper];
 }
 
 - (void)doneButtonPushed {
