@@ -45,8 +45,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
+    self.filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    self.callConfigureCell = YES;
+
     UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:@selector(suggestionButtonPushed)];
     
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
@@ -205,9 +207,12 @@
 }
 
 - (void)randomButtonPushed {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Filtered Game", nil];
-    sheet.tag = RANDOM_ACTION_SHEET_TAG;
-    [sheet showFromToolbar:self.navigationController.toolbar];
+//    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random Game", @"Random Filtered Game", nil];
+//    sheet.tag = RANDOM_ACTION_SHEET_TAG;
+//    [sheet showFromToolbar:self.navigationController.toolbar];
+    GameInfoTableViewController *gameInfo = [[GameInfoTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    gameInfo.game = [self.currentFetchedResultsController objectAtIndexPath:[self selectRandomGame]];
+    [self.navigationController pushViewController:gameInfo animated:YES];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -407,7 +412,7 @@
     if([maxStepperValue intValue] == 0) {
         maxStepperValue = [[ImprovSingleton sharedImprov] startingMax];
     }    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K BETWEEN %@ && %K BETWEEN %@", @"minPlayers", arr, @"maxPlayers", arr]];
-    
+
     [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K >= %f && ((%K == %f && %K <= %f) || (%K != %f && %K <= %f)) && %K == %i", @"minPlayers", [minStepperValue floatValue], @"maxPlayers", 0.0f, @"minPlayers", [maxStepperValue floatValue], @"maxPlayers", 0.0f, @"maxPlayers", [maxStepperValue floatValue], @"hasSelectedTag", 1]];
     
     // Edit the sort key as appropriate.

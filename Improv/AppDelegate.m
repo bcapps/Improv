@@ -65,8 +65,26 @@
     }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
-
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *arr = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    if(![[[ImprovSingleton sharedImprov] tagsArray] count]) {
+        for(Tag *tag in arr) {
+            [[[ImprovSingleton sharedImprov] tagsArray] addObject:tag];        
+        }      
+        
+        [[ImprovSingleton sharedImprov] setTagsArray:[[[[ImprovSingleton sharedImprov] tagsArray] sortedArrayUsingComparator:^NSComparisonResult(Tag *obj1, Tag *obj2) {
+            return [obj1.name localizedStandardCompare:obj2.name];
+        }] mutableCopy]];
+        
+    }
+    
     GamesTableViewController *tableViewController = [[GamesTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    tableViewController.callConfigureCell = YES;
     tableViewController.managedObjectContext = self.managedObjectContext;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
     navController.toolbarHidden = NO;
@@ -80,23 +98,9 @@
         [TestFlight takeOff:@"b6ff894ad79974e300c096c44c7180d1_MzY0MTk4MjAxMi0wMy0yMCAxNToxNjozNS4xNTA3MDI"];
     #endif
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
+
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSArray *arr = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    if(![[[ImprovSingleton sharedImprov] tagsArray] count]) {
-        for(Tag *tag in arr) {
-            [[[ImprovSingleton sharedImprov] tagsArray] addObject:tag];        
-        }      
-    
-        [[ImprovSingleton sharedImprov] setTagsArray:[[[[ImprovSingleton sharedImprov] tagsArray] sortedArrayUsingComparator:^NSComparisonResult(Tag *obj1, Tag *obj2) {
-        return [obj1.name localizedStandardCompare:obj2.name];
-    }] mutableCopy]];
-    
-    }
+
     return YES;
 }
 
@@ -241,7 +245,6 @@
     
     for(NSDictionary *dictionary in sortedGames) {
         Game *game = [NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
-        game.hasSelectedTag = YES;
         game.image = [dictionary objectForKey:@"Image"];
         game.title = [dictionary objectForKey:@"Title"];
         game.gameDescription = [dictionary objectForKey:@"Description"];
@@ -267,10 +270,24 @@
                 [game addTagsObject:tag];
             }
         }
-        
+        [game setHasSelectedTag:YES];
+
         game.timerType = [dictionary objectForKey:@"timerCountsUp"];
         game.minPlayers = [dictionary objectForKey:@"MinPlayers"];
         game.maxPlayers = [dictionary objectForKey:@"MaxPlayers"];
+        
+        if([game.maxPlayers doubleValue] > [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxCountValue"]) {
+            [[NSUserDefaults standardUserDefaults] setDouble:[game.maxPlayers doubleValue] forKey:@"MaxCountValue"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+        
+        if([game.minPlayers doubleValue] > [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxCountValue"]) {
+            [[NSUserDefaults standardUserDefaults] setDouble:[game.minPlayers doubleValue] forKey:@"MaxCountValue"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }       
+    
+        
+        
         game.buzzer = [dictionary objectForKey:@"Buzzer"];
         game.minTime = [dictionary objectForKey:@"MinTime"];
         game.maxTime = [dictionary objectForKey:@"MaxTime"];

@@ -101,7 +101,6 @@
 			<string>Get everyone in a big circle. One player starts by making a little gesture perhaps with a little sound. His or her neighbor then tries and does exactly the same. And so on. Although we expect the gesture/sound not to change, it will. Notes Watch for movements that suddenly change left/right arm or leg. This is not really supposed to happen, but it will. Once happened, it should be accepted by the next player. Also watch/listen for little moans or sighs that players might make before or after their turn - these should also be taken over by the next player.</string>
 			<key>Tags</key>
 			<array>
-				<string>Accepting</string>
 				<string>Concentration</string>
 				<string>Exercise</string>
 				<string>Warm-up</string>
@@ -1192,36 +1191,6 @@
 		</dict>
 		<dict>
 			<key>Image</key>
-			<string>Bandaid</string>
-			<key>Title</key>
-			<string>Bandaid Tag</string>
-			<key>Description</key>
-			<string>One person is &quot;it.&quot; Whenever someone is tagged by &quot;it&quot; they must hold a bandaid (their hand) on the spot where they were tagged. Then the game continues. When someone runs out of bandaids, (they get tagged three times), they are frozen until two other people come over to them and &quot;operate.&quot; The two other people need to tag the frozen person at the same time and count to five.</string>
-			<key>Tags</key>
-			<array>
-				<string>Energy</string>
-				<string>Icebreaker</string>
-				<string>Warm-up</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>6</integer>
-			<key>MaxPlayers</key>
-			<integer>20</integer>
-			<key>MinTime</key>
-			<integer>1</integer>
-			<key>MaxTime</key>
-			<integer>5</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>Image</key>
 			<string>BibbetyBop</string>
 			<key>Title</key>
 			<string>Bibbety Bop</string>
@@ -1913,73 +1882,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<integer>20</integer>
 			<key>AudienceParticipation</key>
 			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>Image</key>
-			<string>BlindHarold</string>
-			<key>Title</key>
-			<string>Blind Harold</string>
-			<key>Description</key>
-			<string>This is really a listening exercise, though it has been performed as a Long Form for audiences. Basically, this is a Harold, played with all players sitting down with their eyes closed. For a performance one would turn all the lights off in the theater. </string>
-			<key>Tags</key>
-			<array>
-				<string>Exercise</string>
-				<string>Limitations</string>
-				<string>Long Form</string>
-				<string>Look and Listen</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>16</integer>
-			<key>MinTime</key>
-			<integer>10</integer>
-			<key>MaxTime</key>
-			<integer>60</integer>
-			<key>AudienceParticipation</key>
-			<false/>
-			<key>timerCountsUp</key>
-			<true/>
-			<key>Buzzer</key>
-			<false/>
-			<key>Variations</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>Image</key>
-			<string>Harold</string>
-			<key>Title</key>
-			<string>Harold</string>
-			<key>Description</key>
-			<string>Harold is a long format, and consists of a number of sub-formats. It basically consists of 3 components: 
-                    Scenes, with 2 to 4 players
-                    Games: 
-                    Monologues: The format starts with a suggestion from the audience - this could really be anything. 
-                    Players will start associating around the suggestion, and then an opening game is played. In this game, a lot of associated elements round the audience suggestion are presented. The opening game might be a song a monologue, or simply a group association based on the audience suggestion. The idea is to use the elements and themes that come up or about in the opening game in what follows. Then follow 3 rounds of scenes, all based on the themes found in the opening game. Each round exists out of 3 scenes, all unrelated, but each loosely based on the themes and associations form the opening game. Since these themes originated for the same audience suggestion, the audience will (hopefully) feel some links between the scenes. After the first round of 3 scenes, an improv game is played, this game is unrelated to the 3 scenes played before. Then, in the second round, each of the 3 previous scenes is continued, and more or less obvious links between the scenes start to emerge. This is again followed by an improv game, and then the 3 scenes are played into a conclusion. It`s quite possible that in the third round not every scene is continued scenes may disappear or even merge with one another. A Harold can be played with a decent number of players (up to 12 or so) players can act in multiple scenes, as the same or as different characters. A Harold can be played with or without props, with or without directors. Whether one sticks to the 3 rounds or not is really not relevant, anything and any combination of games and loose scenes that finally more or less come together can be considered a Harold. 
-                    Origin: This is an American format, described in Del Close`s book Truth in Comedy. We`re not sure whether it`s copyrighted - if you know please let us know.</string>
-			<key>Tags</key>
-			<array>
-				<string>Format</string>
-				<string>Long Form</string>
-				<string>Performance</string>
-			</array>
-			<key>MinPlayers</key>
-			<integer>4</integer>
-			<key>MaxPlayers</key>
-			<integer>16</integer>
-			<key>MinTime</key>
-			<integer>10</integer>
-			<key>MaxTime</key>
-			<integer>60</integer>
-			<key>AudienceParticipation</key>
-			<true/>
 			<key>timerCountsUp</key>
 			<true/>
 			<key>Buzzer</key>
@@ -3099,10 +3001,10 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
                 -Hospital drama, like E.R.
                 -Cop drama, like Hill Street Blues
                 -Romantic Comedy, like The Love Boat
-                -Crime series or murder mysteries</string>
+                -Crime series or murder mysteries
+                In the middle of the scene, any other player can call `Cut`, and start another scene, dragging one or more other players in the scene.</string>
 			<key>Tags</key>
 			<array>
-				<string>Format</string>
 				<string>Long Form</string>
 			</array>
 			<key>MinPlayers</key>
@@ -3154,6 +3056,6 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 		</dict>
 	</array>
 	<key>Version</key>
-	<string>0.85</string>
+	<string>0.88</string>
 </dict>
 </plist>

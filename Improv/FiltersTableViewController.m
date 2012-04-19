@@ -50,7 +50,7 @@
     
     self.minStepper.minimumValue = 1;
     self.maxStepper.minimumValue = 1;
-    
+    self.maxStepper.maximumValue = [[NSUserDefaults standardUserDefaults] doubleForKey:@"MaxCountValue"];
     self.minStepper.tag = 100;
     self.maxStepper.tag = 101;
     
@@ -250,6 +250,7 @@
         }
         for(Game *game in ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).game) {
             [game setHasSelectedTag:game.hasSelectedTag];
+            NSLog(@"%@", game.title);
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
