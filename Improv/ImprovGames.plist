@@ -13,7 +13,7 @@
 			<string>Great game for getting to know each other in a new group. All players in a circle, holding all 10 fingers up in the air. One person at a time, start asking personal questions that take yes-no answers, whoever cannot answer yes to a question, drops a finger. Last person with a finger left wins. Good questions are things like &quot;I have a cat&quot;, &quot;I have never stolen anything&quot; and so on.</string>
 			<key>Tags</key>
 			<array>
-				<string>Icebreakers</string>
+				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -1200,7 +1200,7 @@
 			<key>Tags</key>
 			<array>
 				<string>Energy</string>
-				<string>Icebreakers</string>
+				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2174,7 +2174,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Energy</string>
-				<string>Icebreakers</string>
+				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2205,7 +2205,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Exercise</string>
 				<string>Group</string>
-				<string>Icebreakers</string>
+				<string>Icebreaker</string>
 				<string>Trust</string>
 			</array>
 			<key>MinPlayers</key>
@@ -2970,7 +2970,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Energy</string>
-				<string>Icebreakers</string>
+				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>
@@ -3035,7 +3035,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<key>Tags</key>
 			<array>
 				<string>Exercise</string>
-				<string>Object</string>
+				<string>Object Work</string>
 				<string>Spontaneity</string>
 			</array>
 			<key>MinPlayers</key>
@@ -3066,7 +3066,7 @@ Notes: A gimmick is Commenting on the fact that characters `jump` in space when 
 			<array>
 				<string>Concentration</string>
 				<string>Exercise</string>
-				<string>Icebreakers</string>
+				<string>Icebreaker</string>
 				<string>Warm-up</string>
 			</array>
 			<key>MinPlayers</key>

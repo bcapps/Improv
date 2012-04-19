@@ -29,6 +29,7 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) Game *similarGames;
 @property (nonatomic, retain) NSSet *tags;
+@property (nonatomic) BOOL hasSelectedTag;
 
 - (NSString *)firstSentenceOfDescriptionUsingOrthography:(NSOrthography *)stringOrthography;
 - (NSString *)minimumNumberOfPlayersString;
@@ -43,5 +44,5 @@
 - (void)removeTagsObject:(Tag *)value;
 - (void)addTags:(NSSet *)values;
 - (void)removeTags:(NSSet *)values;
-
+- (BOOL)hasSelectedTag;
 @end

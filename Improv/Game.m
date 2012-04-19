@@ -28,9 +28,20 @@
 @dynamic title;
 @dynamic similarGames;
 @dynamic tags;
+@dynamic hasSelectedTag;
 @synthesize tagsAsStringsArray;
 //@synthesize firstSentenceOfDescriptionUsingOrthography;
 
+- (BOOL)hasSelectedTag {
+    for (Tag *tag in self.tags) {
+        if(tag.isSelected) {
+            return YES;
+            break;
+        }
+    }
+    
+    return NO;
+}
 
 - (NSString *)minimumNumberOfPlayersString {
     [self willAccessValueForKey:@"minimumNumberOfPlayersString"];

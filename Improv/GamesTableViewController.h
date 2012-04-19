@@ -24,4 +24,5 @@
 @property (strong, nonatomic) FiltersTableViewController *filtersTableViewController;
 @property (nonatomic) BOOL isSearching;
 @property (strong, nonatomic) NSOrthography *stringOrthography;
+@property (nonatomic) BOOL callConfigureCell;
 @end

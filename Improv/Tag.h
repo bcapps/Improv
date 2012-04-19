@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *game;
+@property (nonatomic) BOOL isSelected;
 @end
 
 @interface Tag (CoreDataGeneratedAccessors)

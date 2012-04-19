@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1170" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Game" representedClassName="Game" syncable="YES">
         <attribute name="alternateNames" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="audienceParticipation" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="buzzer" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="gameDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSelectedTag" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="maxPlayers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="maxTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -23,12 +24,14 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="isSelected" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="game" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="tags" inverseEntity="Game" syncable="YES"/>
     </entity>
+    <fetchRequest name="FetchRequest" entity="Game" predicateString="FALSEPREDICATE"/>
     <elements>
-        <element name="Game" positionX="160" positionY="192" width="128" height="285"/>
-        <element name="Tag" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Game" positionX="160" positionY="192" width="128" height="300"/>
         <element name="Suggestion" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Tag" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

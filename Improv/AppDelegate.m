@@ -79,7 +79,24 @@
     #ifdef CONFIGURATION_Beta
         [TestFlight takeOff:@"b6ff894ad79974e300c096c44c7180d1_MzY0MTk4MjAxMi0wMy0yMCAxNToxNjozNS4xNTA3MDI"];
     #endif
-
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *arr = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    if(![[[ImprovSingleton sharedImprov] tagsArray] count]) {
+        for(Tag *tag in arr) {
+            [[[ImprovSingleton sharedImprov] tagsArray] addObject:tag];        
+        }      
+    
+        [[ImprovSingleton sharedImprov] setTagsArray:[[[[ImprovSingleton sharedImprov] tagsArray] sortedArrayUsingComparator:^NSComparisonResult(Tag *obj1, Tag *obj2) {
+        return [obj1.name localizedStandardCompare:obj2.name];
+    }] mutableCopy]];
+    
+    }
     return YES;
 }
 
@@ -92,7 +109,8 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
-{
+{    
+    [self.managedObjectContext save:nil];
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -101,6 +119,8 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [self.managedObjectContext save:nil];
+
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
@@ -115,6 +135,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [self.managedObjectContext save:nil];
     /*
      Called when the application is about to terminate.
      Save data if appropriate.
@@ -220,7 +241,7 @@
     
     for(NSDictionary *dictionary in sortedGames) {
         Game *game = [NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
-        
+        game.hasSelectedTag = YES;
         game.image = [dictionary objectForKey:@"Image"];
         game.title = [dictionary objectForKey:@"Title"];
         game.gameDescription = [dictionary objectForKey:@"Description"];
@@ -241,8 +262,9 @@
             else {
                 Tag *tag = [NSEntityDescription insertNewObjectForEntityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
                 tag.name = [obj description];
+                tag.isSelected = YES;
+                [tag addGameObject:game];
                 [game addTagsObject:tag];
-                [[[ImprovSingleton sharedImprov] currentlySelectTags] addObject:tag.name];
             }
         }
         

@@ -14,5 +14,6 @@
 
 @dynamic name;
 @dynamic game;
+@dynamic isSelected;
 
 @end

@@ -14,6 +14,7 @@
 #import "TKAlertCenter.h"
 #import "Suggestion.h"
 #import "ImprovSingleton.h"
+#import "Tag.h"
 
 #define RANDOM_ACTION_SHEET_TAG 100
 #define SUGGESTION_ACTION_SHEET_TAG 101
@@ -31,6 +32,7 @@
 @synthesize filtersTableViewController;
 @synthesize isSearching;
 @synthesize stringOrthography;
+@synthesize callConfigureCell;
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,7 +46,7 @@
 {
     [super viewDidLoad];
     self.filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-
+    
     UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:@selector(suggestionButtonPushed)];
     
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
@@ -87,17 +89,6 @@
     
     self.stringOrthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"en"] forKey:@"Latn"]];
 
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Tag" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSArray *arr = [[self.managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    for(Tag *tag in arr) {
-        [[[ImprovSingleton sharedImprov] tagsArray] addObject:tag];        
-    }        
-    
     [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -300,11 +291,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.callConfigureCell = YES;
     if(!self.isSearching) {
         self.fetchedResultsController = nil;
         self.filteredResultsController = nil;
         [self.tableView reloadData];
+                
     }
+    
+
     
 }
 
@@ -316,6 +311,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    self.callConfigureCell = NO;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -350,7 +346,7 @@
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     if([[self.currentFetchedResultsController sections] count] == 0) {
-        return 1;
+        return 0;
     }
     return [[self.currentFetchedResultsController sections] count];
 }
@@ -395,7 +391,9 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
+    
     [fetchRequest setEntity:entity];
+    
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
@@ -410,14 +408,13 @@
         maxStepperValue = [[ImprovSingleton sharedImprov] startingMax];
     }    //[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K BETWEEN %@ && %K BETWEEN %@", @"minPlayers", arr, @"maxPlayers", arr]];
     
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K >= %f && ((%K == %f && %K <= %f) || (%K != %f && %K <= %f))", @"minPlayers", [minStepperValue floatValue], @"maxPlayers", 0.0f, @"minPlayers", [maxStepperValue floatValue], @"maxPlayers", 0.0f, @"maxPlayers", [maxStepperValue floatValue]]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"%K >= %f && ((%K == %f && %K <= %f) || (%K != %f && %K <= %f)) && %K == %i", @"minPlayers", [minStepperValue floatValue], @"maxPlayers", 0.0f, @"minPlayers", [maxStepperValue floatValue], @"maxPlayers", 0.0f, @"maxPlayers", [maxStepperValue floatValue], @"hasSelectedTag", 1]];
     
     // Edit the sort key as appropriate.
     NSSortDescriptor *sectionSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"minPlayers" ascending:YES];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sectionSortDescriptor, sortDescriptor, nil];
 
-    
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     // Edit the section name key path and cache name if appropriate.
@@ -501,11 +498,13 @@
 
 - (void)configureCell:(ImprovTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    if(self.callConfigureCell) {
         Game *game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
         cell.titleLabel.text = game.title;
         cell.descriptionLabel.text = [game firstSentenceOfDescriptionUsingOrthography:self.stringOrthography];
         cell.imageView.image = [UIImage imageNamed:game.image];
         cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
+    }
 }
 
 

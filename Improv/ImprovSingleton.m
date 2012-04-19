@@ -6,7 +6,6 @@ static ImprovSingleton *sharedImprov = nil;
 @synthesize startingMax;
 @synthesize startingMin;
 @synthesize tagsArray;
-@synthesize currentlySelectTags;
 // Get the shared instance and create it if necessary.
 + (ImprovSingleton *)sharedImprov {
     if (sharedImprov == nil) {
@@ -24,7 +23,6 @@ static ImprovSingleton *sharedImprov = nil;
     if (self) {
         // Work your initialising magic here as you normally would
         tagsArray = [[NSMutableArray alloc] init];
-        currentlySelectTags = [[NSMutableArray alloc] init];
     }
     
     return self;

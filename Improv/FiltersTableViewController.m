@@ -9,6 +9,7 @@
 #import "FiltersTableViewController.h"
 #import "ImprovSingleton.h"
 #import "Tag.h"
+#import "Game.h"
 @interface FiltersTableViewController ()
 
 @end
@@ -71,19 +72,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"%@", [[[ImprovSingleton sharedImprov] currentlySelectTags] description]);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    int k = [self.tableView numberOfRowsInSection:1];
     
-    for(int i = 0; i < k; i++) {
-        if([self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]].accessoryType == UITableViewCellAccessoryCheckmark) {
-            [[[ImprovSingleton sharedImprov] currentlySelectTags] addObject:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:1]].textLabel.text];
-        }
-    }
-    
-    NSLog(@"%@", [[[ImprovSingleton sharedImprov] currentlySelectTags] description]);
 }
 
 - (void)stepperValueChanged:(UIStepper *)stepper {
@@ -171,7 +163,6 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell;
-    //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
     if(indexPath.section == 0) {
          cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
 
@@ -193,7 +184,7 @@
         cell.textLabel.text = ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).name;
         cell.selectionStyle = UITableViewCellSelectionStyleBlue;
         
-        if([[[ImprovSingleton sharedImprov] currentlySelectTags] containsObject:cell.textLabel.text]) {
+        if(((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).isSelected) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         }
         else {
@@ -246,18 +237,20 @@
 */
 
 #pragma mark - Table view delegate
-
+ 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section != 0) {
         if([[tableView cellForRowAtIndexPath:indexPath] accessoryType] == UITableViewCellAccessoryNone) { 
             [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryCheckmark];
-            [[[ImprovSingleton sharedImprov] currentlySelectTags] addObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+            ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).isSelected = YES;
         } else {
             [[tableView cellForRowAtIndexPath:indexPath] setAccessoryType:UITableViewCellAccessoryNone];
-            [[[ImprovSingleton sharedImprov] currentlySelectTags] removeObjectAtIndex:indexPath.row];
+            ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).isSelected = NO;
         }
-        
+        for(Game *game in ((Tag *)[[[ImprovSingleton sharedImprov] tagsArray] objectAtIndex:indexPath.row]).game) {
+            [game setHasSelectedTag:game.hasSelectedTag];
+        }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

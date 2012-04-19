@@ -16,5 +16,4 @@
 @property (nonatomic, retain) NSNumber *startingMin;
 @property (nonatomic, retain) NSNumber *startingMax;
 @property (nonatomic, retain) NSMutableArray *tagsArray;
-@property (nonatomic, retain) NSMutableArray *currentlySelectTags;
 @end
