@@ -354,6 +354,12 @@
 		6879D4701540B21300A88652 /* CatAndMouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D46E1540B21300A88652 /* CatAndMouse@2x.png */; };
 		6879D4731540B22200A88652 /* ConcentrationCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4711540B22200A88652 /* ConcentrationCircle.png */; };
 		6879D4741540B22200A88652 /* ConcentrationCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4721540B22200A88652 /* ConcentrationCircle@2x.png */; };
+		6879D4771540B40400A88652 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4751540B40400A88652 /* settings.png */; };
+		6879D4781540B40400A88652 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4761540B40400A88652 /* settings@2x.png */; };
+		6879D47B1540B43000A88652 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6879D47A1540B42D00A88652 /* SettingsViewController.m */; };
+		6879D4871540B88600A88652 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6879D4861540B88500A88652 /* MessageUI.framework */; };
+		6879D4891540BF2D00A88652 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4881540BF2C00A88652 /* Default.png */; };
+		6879D48B1540BF3100A88652 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D48A1540BF3000A88652 /* Default@2x.png */; };
 		687A009515190FC4002E7CCD /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 687A009115190FC4002E7CCD /* libTestFlight.a */; };
 		687A009615190FC4002E7CCD /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 687A009215190FC4002E7CCD /* README.txt */; };
 		687A009715190FC4002E7CCD /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 687A009315190FC4002E7CCD /* release_notes.txt */; };
@@ -827,6 +833,13 @@
 		6879D46E1540B21300A88652 /* CatAndMouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatAndMouse@2x.png"; sourceTree = "<group>"; };
 		6879D4711540B22200A88652 /* ConcentrationCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConcentrationCircle.png; sourceTree = "<group>"; };
 		6879D4721540B22200A88652 /* ConcentrationCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ConcentrationCircle@2x.png"; sourceTree = "<group>"; };
+		6879D4751540B40400A88652 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		6879D4761540B40400A88652 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		6879D4791540B42B00A88652 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		6879D47A1540B42D00A88652 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		6879D4861540B88500A88652 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6879D4881540BF2C00A88652 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6879D48A1540BF3000A88652 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		687A009115190FC4002E7CCD /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		687A009215190FC4002E7CCD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		687A009315190FC4002E7CCD /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -970,6 +983,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6879D4871540B88600A88652 /* MessageUI.framework in Frameworks */,
 				687A00AA15191371002E7CCD /* libz.dylib in Frameworks */,
 				68C8872C14FD7E2100DF473B /* CoreData.framework in Frameworks */,
 				F286101414DB6B410014B045 /* UIKit.framework in Frameworks */,
@@ -2292,6 +2306,9 @@
 		F286100414DB6B410014B045 = {
 			isa = PBXGroup;
 			children = (
+				6879D48A1540BF3000A88652 /* Default@2x.png */,
+				6879D4881540BF2C00A88652 /* Default.png */,
+				6879D4861540B88500A88652 /* MessageUI.framework */,
 				687A00A915191371002E7CCD /* libz.dylib */,
 				687A00A715191201002E7CCD /* Entitlements.plist */,
 				68FF8AEB1512BF3D00D714B0 /* Libraries */,
@@ -2329,6 +2346,8 @@
 				F286102314DB6B410014B045 /* AppDelegate.m */,
 				F286102514DB6B410014B045 /* GamesTableViewController.h */,
 				F286102614DB6B410014B045 /* GamesTableViewController.m */,
+				6879D4791540B42B00A88652 /* SettingsViewController.h */,
+				6879D47A1540B42D00A88652 /* SettingsViewController.m */,
 				68D133561534CF2F0047FE16 /* ImprovSingleton.h */,
 				68D133571534CF2F0047FE16 /* ImprovSingleton.m */,
 				68FF8ADD1512B86200D714B0 /* FiltersTableViewController.h */,
@@ -2357,6 +2376,8 @@
 		F29B4F0514E88C6C00F57207 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6879D4751540B40400A88652 /* settings.png */,
+				6879D4761540B40400A88652 /* settings@2x.png */,
 				6879D3FF1540A4C900A88652 /* players.png */,
 				6879D4001540A4C900A88652 /* players@2x.png */,
 				6879D3FA15409FA700A88652 /* tags.png */,
@@ -2888,6 +2909,10 @@
 				6879D4701540B21300A88652 /* CatAndMouse@2x.png in Resources */,
 				6879D4731540B22200A88652 /* ConcentrationCircle.png in Resources */,
 				6879D4741540B22200A88652 /* ConcentrationCircle@2x.png in Resources */,
+				6879D4771540B40400A88652 /* settings.png in Resources */,
+				6879D4781540B40400A88652 /* settings@2x.png in Resources */,
+				6879D4891540BF2D00A88652 /* Default.png in Resources */,
+				6879D48B1540BF3100A88652 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2911,6 +2936,7 @@
 				68FF8C8A1512C4E400D714B0 /* UIView+TKCategory.m in Sources */,
 				68FF8C901512C88200D714B0 /* Suggestion.m in Sources */,
 				68D133581534CF2F0047FE16 /* ImprovSingleton.m in Sources */,
+				6879D47B1540B43000A88652 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

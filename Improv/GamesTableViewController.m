@@ -11,6 +11,7 @@
 #import "Game.h"
 #import "GameInfoTableViewController.h"
 #import "FiltersTableViewController.h"
+#import "SettingsViewController.h"
 #import "TKAlertCenter.h"
 #import "Suggestion.h"
 #import "ImprovSingleton.h"
@@ -50,6 +51,8 @@
     self.callConfigureCell = YES;
 
     UIBarButtonItem *suggestionButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lightbulb"] style:UIBarButtonItemStylePlain target:self action:@selector(suggestionButtonPushed)];
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(settingsButtonPushed)];
+    
     
     UIBarButtonItem *random = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"random"] style:UIBarButtonItemStylePlain target:self action:@selector(randomButtonPushed)];
     UIBarButtonItem *filter = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterButtonPushed)];
@@ -77,6 +80,7 @@
     [self.timerButton setAction:@selector(timerButtonPushed)];
     self.timerButton.enabled = NO;
 
+    self.navigationItem.leftBarButtonItem = settingsButton;
     self.navigationItem.rightBarButtonItem = suggestionButton;
     
     self.toolbarItems = [NSArray arrayWithObjects:random,space,self.timerButton,space,filter, nil];
@@ -93,6 +97,16 @@
 
     [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.
+
+}
+
+- (void)settingsButtonPushed {
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+
+    [self.navigationController presentModalViewController:navController animated:YES];
+    
 }
 
 - (void)updateTimer {
