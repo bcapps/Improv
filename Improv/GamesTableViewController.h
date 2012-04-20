@@ -23,6 +23,7 @@
 @property (strong, nonatomic, readonly) NSFetchedResultsController *currentFetchedResultsController;
 @property (strong, nonatomic) FiltersTableViewController *filtersTableViewController;
 @property (nonatomic) BOOL isSearching;
-@property (strong, nonatomic) NSOrthography *stringOrthography;
 @property (nonatomic) BOOL callConfigureCell;
+@property (nonatomic, retain) NSCache *imageCache;
+
 @end

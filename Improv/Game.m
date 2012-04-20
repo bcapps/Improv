@@ -29,6 +29,7 @@
 @dynamic similarGames;
 @dynamic tags;
 @dynamic hasSelectedTag;
+@dynamic firstSentenceDescription;
 @synthesize tagsAsStringsArray;
 //@synthesize firstSentenceOfDescriptionUsingOrthography;
 
@@ -43,27 +44,28 @@
     return NO;
 }
 
-- (NSString *)minimumNumberOfPlayersString {
-    [self willAccessValueForKey:@"minimumNumberOfPlayersString"];
+- (NSString *)minimumNumberOfPlayersString {     [self willAccessValueForKey:@"minimumNumberOfPlayersString"];
     NSString *playersString = [[NSString alloc] initWithFormat:@"%i", [self.minPlayers intValue]];
     [self didAccessValueForKey:@"minimumNumberOfPlayersString"];
     return playersString; 
 }
 - (NSString *)firstSentenceOfDescriptionUsingOrthography:(NSOrthography *)stringOrthography {
 
-    __block NSString *firstSentence = nil;
+    __block NSString *description = nil;
     __block int blockCount = 0;
     NSRange stringRange = [self.gameDescription rangeOfString:self.gameDescription];
     NSString *stringScheme = NSLinguisticTagSchemeTokenType;
 
-    [self.gameDescription enumerateLinguisticTagsInRange:stringRange scheme:stringScheme options:0 orthography:stringOrthography usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
-        if(blockCount == 0) {
-            firstSentence = [self.gameDescription substringWithRange:sentenceRange];
+    if(![self.firstSentenceDescription length]) {
+        [self.gameDescription enumerateLinguisticTagsInRange:stringRange scheme:stringScheme options:0 orthography:stringOrthography usingBlock:^(NSString *tag, NSRange tokenRange, NSRange sentenceRange, BOOL *stop) {
+            if(blockCount == 0) {
+            description = [self.gameDescription substringWithRange:sentenceRange];
             blockCount++;
-        }
-    }];
+            }
+        }];
+    }
 
-    return firstSentence;
+    return description;
 }
 
 - (NSMutableArray*)tagsAsStringsArray {

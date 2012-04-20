@@ -27,6 +27,7 @@
 @property (nonatomic, retain) NSNumber * rating;
 @property (nonatomic, retain) NSNumber * timerType;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * firstSentenceDescription;
 @property (nonatomic, retain) Game *similarGames;
 @property (nonatomic, retain) NSSet *tags;
 @property (nonatomic) BOOL hasSelectedTag;

@@ -5,6 +5,7 @@
         <attribute name="audienceParticipation" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="buzzer" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="firstSentenceDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gameDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hasSelectedTag" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>

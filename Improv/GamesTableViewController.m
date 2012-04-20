@@ -32,8 +32,9 @@
 @synthesize currentFetchedResultsController;
 @synthesize filtersTableViewController;
 @synthesize isSearching;
-@synthesize stringOrthography;
 @synthesize callConfigureCell;
+@synthesize imageCache;
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -47,6 +48,7 @@
 {
     [super viewDidLoad];
     
+    self.imageCache = [[NSCache alloc] init];
     self.filtersTableViewController = [[FiltersTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     self.callConfigureCell = YES;
 
@@ -93,8 +95,6 @@
     self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     self.timeAsInt = -1;
     
-    self.stringOrthography = [NSOrthography orthographyWithDominantScript:@"Latn" languageMap:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"en"] forKey:@"Latn"]];
-
     [self.tableView reloadData];
 	// Do any additional setup after loading the view, typically from a nib.
 
@@ -311,15 +311,7 @@
 {
     [super viewWillAppear:animated];
     self.callConfigureCell = YES;
-    if(!self.isSearching) {
-        self.fetchedResultsController = nil;
-        self.filteredResultsController = nil;
-        [self.tableView reloadData];
-                
-    }
-    
-
-    
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -405,7 +397,7 @@
     if (__fetchedResultsController != nil) {
         return __fetchedResultsController;
     }
-    [NSFetchedResultsController deleteCacheWithName:@"Master"];
+    //[NSFetchedResultsController deleteCacheWithName:@"Master"];
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
@@ -438,7 +430,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"minimumNumberOfPlayersString" cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"minimumNumberOfPlayersString" cacheName:nil];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
@@ -449,6 +441,16 @@
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        for(Game *game in [self.fetchedResultsController fetchedObjects]) {
+            NSLog(@"%@", game.title);
+
+            [self.imageCache setObject:[UIImage imageNamed:game.image] forKey:[NSString stringWithFormat:@"%@", game.objectID]];
+            [self.imageCache setObject:[UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]] forKey:[NSString stringWithFormat:@"%@-white", game.objectID]];
+        }
+    });
+
     
     return __fetchedResultsController;
 }    
@@ -464,10 +466,18 @@
     
 }
 
+- (UITableView *)currentTableView {
+    if(self.isSearching) {
+        return self.searchDisplayController.searchResultsTableView;
+    } else {
+        return self.tableView;
+    }
+}
+
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.tableView beginUpdates];
+    [[self currentTableView] beginUpdates];
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
@@ -475,11 +485,11 @@
 {
     switch(type) {
         case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            [[self currentTableView] insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            [[self currentTableView] deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
 }
@@ -488,7 +498,7 @@
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
       newIndexPath:(NSIndexPath *)newIndexPath
 {
-    UITableView *tableView = self.tableView;
+    UITableView *tableView = [self currentTableView];
     
     switch(type) {
         case NSFetchedResultsChangeInsert:
@@ -512,7 +522,7 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    [self.tableView endUpdates];
+    [[self currentTableView] endUpdates];
 }
 
 - (void)configureCell:(ImprovTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
@@ -520,9 +530,23 @@
     if(self.callConfigureCell) {
         Game *game = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
         cell.titleLabel.text = game.title;
-        cell.descriptionLabel.text = [game firstSentenceOfDescriptionUsingOrthography:self.stringOrthography];
-        cell.imageView.image = [UIImage imageNamed:game.image];
-        cell.imageView.highlightedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
+        cell.descriptionLabel.text = game.firstSentenceDescription;
+
+        UIImage *regularImage = [self.imageCache objectForKey:[NSString stringWithFormat:@"%@", game.objectID]];
+        UIImage *whiteImage = [self.imageCache objectForKey:[NSString stringWithFormat:@"%@-white", game.objectID]];
+        
+//        if(!regularImage) {
+//            regularImage = [UIImage imageNamed:game.image];
+//            [self.imageCache setObject:regularImage forKey:[NSString stringWithFormat:@"%@", game.objectID]];
+//        }
+//        
+//        if(!whiteImage) {
+//            whiteImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@-white", game.image]];
+//            [self.imageCache setObject:whiteImage forKey:[NSString stringWithFormat:@"%@-white", game.objectID]];
+//        }
+        
+        cell.imageView.image = regularImage;
+        cell.imageView.highlightedImage = whiteImage;
     }
 }
 

@@ -354,8 +354,6 @@
 		6879D4701540B21300A88652 /* CatAndMouse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D46E1540B21300A88652 /* CatAndMouse@2x.png */; };
 		6879D4731540B22200A88652 /* ConcentrationCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4711540B22200A88652 /* ConcentrationCircle.png */; };
 		6879D4741540B22200A88652 /* ConcentrationCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4721540B22200A88652 /* ConcentrationCircle@2x.png */; };
-		6879D4771540B40400A88652 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4751540B40400A88652 /* settings.png */; };
-		6879D4781540B40400A88652 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4761540B40400A88652 /* settings@2x.png */; };
 		6879D47B1540B43000A88652 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6879D47A1540B42D00A88652 /* SettingsViewController.m */; };
 		6879D4871540B88600A88652 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6879D4861540B88500A88652 /* MessageUI.framework */; };
 		6879D4891540BF2D00A88652 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6879D4881540BF2C00A88652 /* Default.png */; };
@@ -367,6 +365,8 @@
 		687A00AA15191371002E7CCD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 687A00A915191371002E7CCD /* libz.dylib */; };
 		687BD9A215112A2700C4EAB0 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 687BD9A115112A2700C4EAB0 /* Game.m */; };
 		687BD9A515112A2700C4EAB0 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 687BD9A415112A2700C4EAB0 /* Tag.m */; };
+		687C006A1540DEA000DE3BCB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 687C00681540DEA000DE3BCB /* settings.png */; };
+		687C006B1540DEA000DE3BCB /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 687C00691540DEA000DE3BCB /* settings@2x.png */; };
 		687DD8DF1536268E00528406 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 687DD8D81536268E00528406 /* Icon-72.png */; };
 		687DD8E01536268E00528406 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 687DD8D91536268E00528406 /* Icon-Small-50.png */; };
 		687DD8E11536268E00528406 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 687DD8DA1536268E00528406 /* Icon-Small.png */; };
@@ -833,8 +833,6 @@
 		6879D46E1540B21300A88652 /* CatAndMouse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CatAndMouse@2x.png"; sourceTree = "<group>"; };
 		6879D4711540B22200A88652 /* ConcentrationCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ConcentrationCircle.png; sourceTree = "<group>"; };
 		6879D4721540B22200A88652 /* ConcentrationCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ConcentrationCircle@2x.png"; sourceTree = "<group>"; };
-		6879D4751540B40400A88652 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		6879D4761540B40400A88652 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		6879D4791540B42B00A88652 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		6879D47A1540B42D00A88652 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		6879D4861540B88500A88652 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -850,6 +848,8 @@
 		687BD9A115112A2700C4EAB0 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		687BD9A315112A2700C4EAB0 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		687BD9A415112A2700C4EAB0 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		687C00681540DEA000DE3BCB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		687C00691540DEA000DE3BCB /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		687DD8D81536268E00528406 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		687DD8D91536268E00528406 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		687DD8DA1536268E00528406 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -2376,8 +2376,8 @@
 		F29B4F0514E88C6C00F57207 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6879D4751540B40400A88652 /* settings.png */,
-				6879D4761540B40400A88652 /* settings@2x.png */,
+				687C00681540DEA000DE3BCB /* settings.png */,
+				687C00691540DEA000DE3BCB /* settings@2x.png */,
 				6879D3FF1540A4C900A88652 /* players.png */,
 				6879D4001540A4C900A88652 /* players@2x.png */,
 				6879D3FA15409FA700A88652 /* tags.png */,
@@ -2909,10 +2909,10 @@
 				6879D4701540B21300A88652 /* CatAndMouse@2x.png in Resources */,
 				6879D4731540B22200A88652 /* ConcentrationCircle.png in Resources */,
 				6879D4741540B22200A88652 /* ConcentrationCircle@2x.png in Resources */,
-				6879D4771540B40400A88652 /* settings.png in Resources */,
-				6879D4781540B40400A88652 /* settings@2x.png in Resources */,
 				6879D4891540BF2D00A88652 /* Default.png in Resources */,
 				6879D48B1540BF3100A88652 /* Default@2x.png in Resources */,
+				687C006A1540DEA000DE3BCB /* settings.png in Resources */,
+				687C006B1540DEA000DE3BCB /* settings@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2979,6 +2979,8 @@
 		687A009A15190FEF002E7CCD /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Bischoff";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew Bischoff";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Improv/Improv-Prefix.pch";
 				INFOPLIST_FILE = "Improv/Improv-Info.plist";
@@ -2987,6 +2989,8 @@
 					"\"$(SRCROOT)/Improv/TestFlightSDK0.8.3\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9D381706-4C88-4BCE-8EDF-CD533DBF7E06";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9D381706-4C88-4BCE-8EDF-CD533DBF7E06";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Beta;
@@ -3039,6 +3043,7 @@
 		F286102E14DB6B410014B045 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Improv/Improv-Prefix.pch";
 				INFOPLIST_FILE = "Improv/Improv-Info.plist";
@@ -3047,6 +3052,7 @@
 					"\"$(SRCROOT)/Improv/TestFlightSDK0.8.3\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3054,6 +3060,8 @@
 		F286102F14DB6B410014B045 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Improv/Improv-Prefix.pch";
 				INFOPLIST_FILE = "Improv/Improv-Info.plist";
@@ -3062,6 +3070,8 @@
 					"\"$(SRCROOT)/Improv/TestFlightSDK0.8.3\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

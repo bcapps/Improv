@@ -270,8 +270,11 @@
                 [game addTagsObject:tag];
             }
         }
+        
         [game setHasSelectedTag:YES];
-
+        
+        game.firstSentenceDescription = [game firstSentenceOfDescriptionUsingOrthography:[NSOrthography orthographyWithDominantScript:@"Latn" languageMap:[NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"en"] forKey:@"Latn"]]];
+        
         game.timerType = [dictionary objectForKey:@"timerCountsUp"];
         game.minPlayers = [dictionary objectForKey:@"MinPlayers"];
         game.maxPlayers = [dictionary objectForKey:@"MaxPlayers"];
